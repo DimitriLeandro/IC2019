@@ -1,0 +1,1195 @@
+
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21 22]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.21575641401152343
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.21575641401152343
+
+Testando a feature 2
+A média das acurácias no KFold é 0.1937098912853948
+A melhor acurácia até agora tinha sido 0.21575641401152343
+
+Testando a feature 3
+A média das acurácias no KFold é 0.1977254220806308
+A melhor acurácia até agora tinha sido 0.21575641401152343
+
+Testando a feature 4
+A média das acurácias no KFold é 0.23818213359638324
+A melhor acurácia até agora tinha sido 0.21575641401152343
+Nova melhor feature identificada!
+Melhor feature: 4. Melhor acurácia: 0.23818213359638324
+
+Testando a feature 5
+A média das acurácias no KFold é 0.194029117156875
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 6
+A média das acurácias no KFold é 0.2002171137352052
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 7
+A média das acurácias no KFold é 0.2005943665124895
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 8
+A média das acurácias no KFold é 0.183370785846164
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 9
+A média das acurácias no KFold é 0.17871397767152736
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 10
+A média das acurácias no KFold é 0.18302251707959372
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 11
+A média das acurácias no KFold é 0.1563705461603131
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 12
+A média das acurácias no KFold é 0.14975632359761681
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 13
+A média das acurácias no KFold é 0.1774155344129053
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 14
+A média das acurácias no KFold é 0.20012178171439596
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 15
+A média das acurácias no KFold é 0.2255829156568792
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 16
+A média das acurácias no KFold é 0.191550454272914
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 17
+A média das acurácias no KFold é 0.17941258753336814
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 18
+A média das acurácias no KFold é 0.19971124577834823
+A melhor acurácia até agora tinha sido 0.23818213359638324
+
+Testando a feature 19
+A média das acurácias no KFold é 0.27094358790942
+A melhor acurácia até agora tinha sido 0.23818213359638324
+Nova melhor feature identificada!
+Melhor feature: 19. Melhor acurácia: 0.27094358790942
+
+Testando a feature 20
+A média das acurácias no KFold é 0.16956518606541995
+A melhor acurácia até agora tinha sido 0.27094358790942
+
+Testando a feature 21
+A média das acurácias no KFold é 0.2667121393740407
+A melhor acurácia até agora tinha sido 0.27094358790942
+
+Testando a feature 22
+A média das acurácias no KFold é 0.18750954033631884
+A melhor acurácia até agora tinha sido 0.27094358790942
+
+Terminou o while. A melhor feature foi a 19. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 20 21 22]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.21830360739549487
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.21830360739549487
+
+Testando a feature 2
+A média das acurácias no KFold é 0.20433974539607877
+A melhor acurácia até agora tinha sido 0.21830360739549487
+
+Testando a feature 3
+A média das acurácias no KFold é 0.21895885872963153
+A melhor acurácia até agora tinha sido 0.21830360739549487
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.21895885872963153
+
+Testando a feature 4
+A média das acurácias no KFold é 0.2720436877114937
+A melhor acurácia até agora tinha sido 0.21895885872963153
+Nova melhor feature identificada!
+Melhor feature: 4. Melhor acurácia: 0.2720436877114937
+
+Testando a feature 5
+A média das acurácias no KFold é 0.21467105963396405
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 6
+A média das acurácias no KFold é 0.25206975009231813
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 7
+A média das acurácias no KFold é 0.23925345129040596
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 8
+A média das acurácias no KFold é 0.2466068753533118
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 9
+A média das acurácias no KFold é 0.22947156959668308
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 10
+A média das acurácias no KFold é 0.25537469834076215
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 11
+A média das acurácias no KFold é 0.21867713255815224
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 12
+A média das acurácias no KFold é 0.22672889599081114
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 13
+A média das acurácias no KFold é 0.23486061716555612
+A melhor acurácia até agora tinha sido 0.2720436877114937
+
+Testando a feature 14
+A média das acurácias no KFold é 0.3231261720429201
+A melhor acurácia até agora tinha sido 0.2720436877114937
+Nova melhor feature identificada!
+Melhor feature: 14. Melhor acurácia: 0.3231261720429201
+
+Testando a feature 15
+A média das acurácias no KFold é 0.2255829156568792
+A melhor acurácia até agora tinha sido 0.3231261720429201
+
+Testando a feature 16
+A média das acurácias no KFold é 0.191550454272914
+A melhor acurácia até agora tinha sido 0.3231261720429201
+
+Testando a feature 17
+A média das acurácias no KFold é 0.30784853445969296
+A melhor acurácia até agora tinha sido 0.3231261720429201
+
+Testando a feature 18
+A média das acurácias no KFold é 0.19957923315607268
+A melhor acurácia até agora tinha sido 0.3231261720429201
+
+Testando a feature 20
+A média das acurácias no KFold é 0.3053528476940601
+A melhor acurácia até agora tinha sido 0.3231261720429201
+
+Testando a feature 21
+A média das acurácias no KFold é 0.3575940269866632
+A melhor acurácia até agora tinha sido 0.3231261720429201
+Nova melhor feature identificada!
+Melhor feature: 21. Melhor acurácia: 0.3575940269866632
+
+Testando a feature 22
+A média das acurácias no KFold é 0.32256951491595476
+A melhor acurácia até agora tinha sido 0.3575940269866632
+
+Terminou o while. A melhor feature foi a 21. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 20 22]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.31222350503314233
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.31222350503314233
+
+Testando a feature 2
+A média das acurácias no KFold é 0.3170169245834499
+A melhor acurácia até agora tinha sido 0.31222350503314233
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.3170169245834499
+
+Testando a feature 3
+A média das acurácias no KFold é 0.2954935674015323
+A melhor acurácia até agora tinha sido 0.3170169245834499
+
+Testando a feature 4
+A média das acurácias no KFold é 0.36668917754072217
+A melhor acurácia até agora tinha sido 0.3170169245834499
+Nova melhor feature identificada!
+Melhor feature: 4. Melhor acurácia: 0.36668917754072217
+
+Testando a feature 5
+A média das acurácias no KFold é 0.29513940329689764
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 6
+A média das acurácias no KFold é 0.327634379241209
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 7
+A média das acurácias no KFold é 0.3141270897005623
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 8
+A média das acurácias no KFold é 0.31114061623463535
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 9
+A média das acurácias no KFold é 0.3030009792627899
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 10
+A média das acurácias no KFold é 0.31992449759559544
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 11
+A média das acurácias no KFold é 0.28665022377524885
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 12
+A média das acurácias no KFold é 0.2914560909609984
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 13
+A média das acurácias no KFold é 0.3013015964391769
+A melhor acurácia até agora tinha sido 0.36668917754072217
+
+Testando a feature 14
+A média das acurácias no KFold é 0.3879399074384385
+A melhor acurácia até agora tinha sido 0.36668917754072217
+Nova melhor feature identificada!
+Melhor feature: 14. Melhor acurácia: 0.3879399074384385
+
+Testando a feature 15
+A média das acurácias no KFold é 0.2851253638725613
+A melhor acurácia até agora tinha sido 0.3879399074384385
+
+Testando a feature 16
+A média das acurácias no KFold é 0.25812306607493263
+A melhor acurácia até agora tinha sido 0.3879399074384385
+
+Testando a feature 17
+A média das acurácias no KFold é 0.3600311990011285
+A melhor acurácia até agora tinha sido 0.3879399074384385
+
+Testando a feature 18
+A média das acurácias no KFold é 0.23887183552427976
+A melhor acurácia até agora tinha sido 0.3879399074384385
+
+Testando a feature 20
+A média das acurácias no KFold é 0.3477383651344631
+A melhor acurácia até agora tinha sido 0.3879399074384385
+
+Testando a feature 22
+A média das acurácias no KFold é 0.3723308187931307
+A melhor acurácia até agora tinha sido 0.3879399074384385
+
+Terminou o while. A melhor feature foi a 14. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 15 16 17 18 20 22]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.3129604786131417
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.3129604786131417
+
+Testando a feature 2
+A média das acurácias no KFold é 0.31858328730233054
+A melhor acurácia até agora tinha sido 0.3129604786131417
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.31858328730233054
+
+Testando a feature 3
+A média das acurácias no KFold é 0.29244032723215424
+A melhor acurácia até agora tinha sido 0.31858328730233054
+
+Testando a feature 4
+A média das acurácias no KFold é 0.36938123316303
+A melhor acurácia até agora tinha sido 0.31858328730233054
+Nova melhor feature identificada!
+Melhor feature: 4. Melhor acurácia: 0.36938123316303
+
+Testando a feature 5
+A média das acurácias no KFold é 0.29595742355822996
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 6
+A média das acurácias no KFold é 0.3306543401779444
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 7
+A média das acurácias no KFold é 0.31354107808710263
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 8
+A média das acurácias no KFold é 0.31180272812370663
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 9
+A média das acurácias no KFold é 0.30702886758241865
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 10
+A média das acurácias no KFold é 0.3183853206917936
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 11
+A média das acurácias no KFold é 0.2915116127117585
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 12
+A média das acurácias no KFold é 0.2986688860501018
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 13
+A média das acurácias no KFold é 0.3086781228220418
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 15
+A média das acurácias no KFold é 0.28558261844065336
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 16
+A média das acurácias no KFold é 0.25812630564782735
+A melhor acurácia até agora tinha sido 0.36938123316303
+
+Testando a feature 17
+A média das acurácias no KFold é 0.3879627976680973
+A melhor acurácia até agora tinha sido 0.36938123316303
+Nova melhor feature identificada!
+Melhor feature: 17. Melhor acurácia: 0.3879627976680973
+
+Testando a feature 18
+A média das acurácias no KFold é 0.23887183552427976
+A melhor acurácia até agora tinha sido 0.3879627976680973
+
+Testando a feature 20
+A média das acurácias no KFold é 0.37904029928449623
+A melhor acurácia até agora tinha sido 0.3879627976680973
+
+Testando a feature 22
+A média das acurácias no KFold é 0.38873552629411967
+A melhor acurácia até agora tinha sido 0.3879627976680973
+Nova melhor feature identificada!
+Melhor feature: 22. Melhor acurácia: 0.38873552629411967
+
+Terminou o while. A melhor feature foi a 22. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 15 16 17 18 20]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.31281719124519775
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.31281719124519775
+
+Testando a feature 2
+A média das acurácias no KFold é 0.3183094867026304
+A melhor acurácia até agora tinha sido 0.31281719124519775
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.3183094867026304
+
+Testando a feature 3
+A média das acurácias no KFold é 0.2921355597437203
+A melhor acurácia até agora tinha sido 0.3183094867026304
+
+Testando a feature 4
+A média das acurácias no KFold é 0.3689957776407119
+A melhor acurácia até agora tinha sido 0.3183094867026304
+Nova melhor feature identificada!
+Melhor feature: 4. Melhor acurácia: 0.3689957776407119
+
+Testando a feature 5
+A média das acurácias no KFold é 0.29610549345345294
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 6
+A média das acurácias no KFold é 0.33106141853991417
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 7
+A média das acurácias no KFold é 0.31343731579309153
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 8
+A média das acurácias no KFold é 0.3123865826317891
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 9
+A média das acurácias no KFold é 0.3063303737694874
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 10
+A média das acurácias no KFold é 0.3185499322362254
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 11
+A média das acurácias no KFold é 0.2912534690372276
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 12
+A média das acurácias no KFold é 0.2975885702587624
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 13
+A média das acurácias no KFold é 0.3106286991926135
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 15
+A média das acurácias no KFold é 0.2855600358314764
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 16
+A média das acurácias no KFold é 0.2579612891461771
+A melhor acurácia até agora tinha sido 0.3689957776407119
+
+Testando a feature 17
+A média das acurácias no KFold é 0.38857626143044555
+A melhor acurácia até agora tinha sido 0.3689957776407119
+Nova melhor feature identificada!
+Melhor feature: 17. Melhor acurácia: 0.38857626143044555
+
+Testando a feature 18
+A média das acurácias no KFold é 0.23887183552427976
+A melhor acurácia até agora tinha sido 0.38857626143044555
+
+Testando a feature 20
+A média das acurácias no KFold é 0.3804556971811247
+A melhor acurácia até agora tinha sido 0.38857626143044555
+
+Terminou o while. A melhor feature foi a 17. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 15 16 18 20]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.31281719124519775
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.31281719124519775
+
+Testando a feature 2
+A média das acurácias no KFold é 0.3183094867026304
+A melhor acurácia até agora tinha sido 0.31281719124519775
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.3183094867026304
+
+Testando a feature 3
+A média das acurácias no KFold é 0.29246230108005605
+A melhor acurácia até agora tinha sido 0.3183094867026304
+
+Testando a feature 4
+A média das acurácias no KFold é 0.36953310201956613
+A melhor acurácia até agora tinha sido 0.3183094867026304
+Nova melhor feature identificada!
+Melhor feature: 4. Melhor acurácia: 0.36953310201956613
+
+Testando a feature 5
+A média das acurácias no KFold é 0.2965543505603774
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 6
+A média das acurácias no KFold é 0.3315293726237615
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 7
+A média das acurácias no KFold é 0.3144709806872473
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 8
+A média das acurácias no KFold é 0.3126633312796927
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 9
+A média das acurácias no KFold é 0.306632239494796
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 10
+A média das acurácias no KFold é 0.31872038769044203
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 11
+A média das acurácias no KFold é 0.2922948763622685
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 12
+A média das acurácias no KFold é 0.29707255738452
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 13
+A média das acurácias no KFold é 0.3112394921261523
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 15
+A média das acurácias no KFold é 0.2855600358314764
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 16
+A média das acurácias no KFold é 0.2579612891461771
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 18
+A média das acurácias no KFold é 0.23887183552427976
+A melhor acurácia até agora tinha sido 0.36953310201956613
+
+Testando a feature 20
+A média das acurácias no KFold é 0.38153240003643807
+A melhor acurácia até agora tinha sido 0.36953310201956613
+Nova melhor feature identificada!
+Melhor feature: 20. Melhor acurácia: 0.38153240003643807
+
+Terminou o while. A melhor feature foi a 20. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  4  5  6  7  8  9 10 11 12 13 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.3120324441598473
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.3120324441598473
+
+Testando a feature 2
+A média das acurácias no KFold é 0.3159377057387067
+A melhor acurácia até agora tinha sido 0.3120324441598473
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.3159377057387067
+
+Testando a feature 3
+A média das acurácias no KFold é 0.2971503657676393
+A melhor acurácia até agora tinha sido 0.3159377057387067
+
+Testando a feature 4
+A média das acurácias no KFold é 0.3699185777251329
+A melhor acurácia até agora tinha sido 0.3159377057387067
+Nova melhor feature identificada!
+Melhor feature: 4. Melhor acurácia: 0.3699185777251329
+
+Testando a feature 5
+A média das acurácias no KFold é 0.2955190835396433
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 6
+A média das acurácias no KFold é 0.3322950169190951
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 7
+A média das acurácias no KFold é 0.3167493787684007
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 8
+A média das acurácias no KFold é 0.3144968024402294
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 9
+A média das acurácias no KFold é 0.30954813120023794
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 10
+A média das acurácias no KFold é 0.3224937790926756
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 11
+A média das acurácias no KFold é 0.30243851798378374
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 12
+A média das acurácias no KFold é 0.3007566181240296
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 13
+A média das acurácias no KFold é 0.3172728567360309
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 15
+A média das acurácias no KFold é 0.28541732361487837
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 16
+A média das acurácias no KFold é 0.2582673976864055
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Testando a feature 18
+A média das acurácias no KFold é 0.23872648668707047
+A melhor acurácia até agora tinha sido 0.3699185777251329
+
+Terminou o while. A melhor feature foi a 4. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  5  6  7  8  9 10 11 12 13 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.3531093897746348
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.3531093897746348
+
+Testando a feature 2
+A média das acurácias no KFold é 0.37330074735500224
+A melhor acurácia até agora tinha sido 0.3531093897746348
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.37330074735500224
+
+Testando a feature 3
+A média das acurácias no KFold é 0.36636722286368595
+A melhor acurácia até agora tinha sido 0.37330074735500224
+
+Testando a feature 5
+A média das acurácias no KFold é 0.37051211663494454
+A melhor acurácia até agora tinha sido 0.37330074735500224
+
+Testando a feature 6
+A média das acurácias no KFold é 0.3613849195945626
+A melhor acurácia até agora tinha sido 0.37330074735500224
+
+Testando a feature 7
+A média das acurácias no KFold é 0.37430636722944965
+A melhor acurácia até agora tinha sido 0.37330074735500224
+Nova melhor feature identificada!
+Melhor feature: 7. Melhor acurácia: 0.37430636722944965
+
+Testando a feature 8
+A média das acurácias no KFold é 0.3922433663763594
+A melhor acurácia até agora tinha sido 0.37430636722944965
+Nova melhor feature identificada!
+Melhor feature: 8. Melhor acurácia: 0.3922433663763594
+
+Testando a feature 9
+A média das acurácias no KFold é 0.3808014264222381
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Testando a feature 10
+A média das acurácias no KFold é 0.3898835621084805
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Testando a feature 11
+A média das acurácias no KFold é 0.36904559546182514
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Testando a feature 12
+A média das acurácias no KFold é 0.3682068347248642
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Testando a feature 13
+A média das acurácias no KFold é 0.37359433826019295
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Testando a feature 15
+A média das acurácias no KFold é 0.3456152451873457
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Testando a feature 16
+A média das acurácias no KFold é 0.32003132717881194
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Testando a feature 18
+A média das acurácias no KFold é 0.2998706197195429
+A melhor acurácia até agora tinha sido 0.3922433663763594
+
+Terminou o while. A melhor feature foi a 8. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  5  6  7  9 10 11 12 13 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.39654358187593514
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.39654358187593514
+
+Testando a feature 2
+A média das acurácias no KFold é 0.4155171725250173
+A melhor acurácia até agora tinha sido 0.39654358187593514
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.4155171725250173
+
+Testando a feature 3
+A média das acurácias no KFold é 0.4285792663141108
+A melhor acurácia até agora tinha sido 0.4155171725250173
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.4285792663141108
+
+Testando a feature 5
+A média das acurácias no KFold é 0.4473047137546973
+A melhor acurácia até agora tinha sido 0.4285792663141108
+Nova melhor feature identificada!
+Melhor feature: 5. Melhor acurácia: 0.4473047137546973
+
+Testando a feature 6
+A média das acurácias no KFold é 0.40421962676322637
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 7
+A média das acurácias no KFold é 0.43485457430920194
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 9
+A média das acurácias no KFold é 0.43350445356985834
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 10
+A média das acurácias no KFold é 0.4230857195950599
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 11
+A média das acurácias no KFold é 0.4218821505494518
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 12
+A média das acurácias no KFold é 0.38397061093198476
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 13
+A média das acurácias no KFold é 0.41360504999838915
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 15
+A média das acurácias no KFold é 0.3811337995430866
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 16
+A média das acurácias no KFold é 0.3579217617142739
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Testando a feature 18
+A média das acurácias no KFold é 0.3347914630095771
+A melhor acurácia até agora tinha sido 0.4473047137546973
+
+Terminou o while. A melhor feature foi a 5. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  6  7  9 10 11 12 13 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.4133960669872246
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.4133960669872246
+
+Testando a feature 2
+A média das acurácias no KFold é 0.44263577043236485
+A melhor acurácia até agora tinha sido 0.4133960669872246
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.44263577043236485
+
+Testando a feature 3
+A média das acurácias no KFold é 0.4606105428151174
+A melhor acurácia até agora tinha sido 0.44263577043236485
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.4606105428151174
+
+Testando a feature 6
+A média das acurácias no KFold é 0.4261313592199946
+A melhor acurácia até agora tinha sido 0.4606105428151174
+
+Testando a feature 7
+A média das acurácias no KFold é 0.45580277937174934
+A melhor acurácia até agora tinha sido 0.4606105428151174
+
+Testando a feature 9
+A média das acurácias no KFold é 0.4579416404883318
+A melhor acurácia até agora tinha sido 0.4606105428151174
+
+Testando a feature 10
+A média das acurácias no KFold é 0.46426853371562765
+A melhor acurácia até agora tinha sido 0.4606105428151174
+Nova melhor feature identificada!
+Melhor feature: 10. Melhor acurácia: 0.46426853371562765
+
+Testando a feature 11
+A média das acurácias no KFold é 0.4590643936397284
+A melhor acurácia até agora tinha sido 0.46426853371562765
+
+Testando a feature 12
+A média das acurácias no KFold é 0.42966727356156487
+A melhor acurácia até agora tinha sido 0.46426853371562765
+
+Testando a feature 13
+A média das acurácias no KFold é 0.4519411268603615
+A melhor acurácia até agora tinha sido 0.46426853371562765
+
+Testando a feature 15
+A média das acurácias no KFold é 0.38405325162720066
+A melhor acurácia até agora tinha sido 0.46426853371562765
+
+Testando a feature 16
+A média das acurácias no KFold é 0.3927735912058551
+A melhor acurácia até agora tinha sido 0.46426853371562765
+
+Testando a feature 18
+A média das acurácias no KFold é 0.3366780207980233
+A melhor acurácia até agora tinha sido 0.46426853371562765
+
+Terminou o while. A melhor feature foi a 10. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  6  7  9 11 12 13 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.44749363435650114
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.44749363435650114
+
+Testando a feature 2
+A média das acurácias no KFold é 0.46425308951847166
+A melhor acurácia até agora tinha sido 0.44749363435650114
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.46425308951847166
+
+Testando a feature 3
+A média das acurácias no KFold é 0.47884448491914766
+A melhor acurácia até agora tinha sido 0.46425308951847166
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.47884448491914766
+
+Testando a feature 6
+A média das acurácias no KFold é 0.45921927200244983
+A melhor acurácia até agora tinha sido 0.47884448491914766
+
+Testando a feature 7
+A média das acurácias no KFold é 0.48490294545315715
+A melhor acurácia até agora tinha sido 0.47884448491914766
+Nova melhor feature identificada!
+Melhor feature: 7. Melhor acurácia: 0.48490294545315715
+
+Testando a feature 9
+A média das acurácias no KFold é 0.4908398808576374
+A melhor acurácia até agora tinha sido 0.48490294545315715
+Nova melhor feature identificada!
+Melhor feature: 9. Melhor acurácia: 0.4908398808576374
+
+Testando a feature 11
+A média das acurácias no KFold é 0.4839880523736091
+A melhor acurácia até agora tinha sido 0.4908398808576374
+
+Testando a feature 12
+A média das acurácias no KFold é 0.4636232582567227
+A melhor acurácia até agora tinha sido 0.4908398808576374
+
+Testando a feature 13
+A média das acurácias no KFold é 0.4914014901346514
+A melhor acurácia até agora tinha sido 0.4908398808576374
+Nova melhor feature identificada!
+Melhor feature: 13. Melhor acurácia: 0.4914014901346514
+
+Testando a feature 15
+A média das acurácias no KFold é 0.3969506974201714
+A melhor acurácia até agora tinha sido 0.4914014901346514
+
+Testando a feature 16
+A média das acurácias no KFold é 0.4006824652343758
+A melhor acurácia até agora tinha sido 0.4914014901346514
+
+Testando a feature 18
+A média das acurácias no KFold é 0.35030248588097757
+A melhor acurácia até agora tinha sido 0.4914014901346514
+
+Terminou o while. A melhor feature foi a 13. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  6  7  9 11 12 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.44672049035784206
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.44672049035784206
+
+Testando a feature 2
+A média das acurácias no KFold é 0.4819177442303507
+A melhor acurácia até agora tinha sido 0.44672049035784206
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.4819177442303507
+
+Testando a feature 3
+A média das acurácias no KFold é 0.49886057779242143
+A melhor acurácia até agora tinha sido 0.4819177442303507
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.49886057779242143
+
+Testando a feature 6
+A média das acurácias no KFold é 0.492283717191569
+A melhor acurácia até agora tinha sido 0.49886057779242143
+
+Testando a feature 7
+A média das acurácias no KFold é 0.5056017633061056
+A melhor acurácia até agora tinha sido 0.49886057779242143
+Nova melhor feature identificada!
+Melhor feature: 7. Melhor acurácia: 0.5056017633061056
+
+Testando a feature 9
+A média das acurácias no KFold é 0.506262055920552
+A melhor acurácia até agora tinha sido 0.5056017633061056
+Nova melhor feature identificada!
+Melhor feature: 9. Melhor acurácia: 0.506262055920552
+
+Testando a feature 11
+A média das acurácias no KFold é 0.4920413877121444
+A melhor acurácia até agora tinha sido 0.506262055920552
+
+Testando a feature 12
+A média das acurácias no KFold é 0.4892499267376665
+A melhor acurácia até agora tinha sido 0.506262055920552
+
+Testando a feature 15
+A média das acurácias no KFold é 0.39484775945827605
+A melhor acurácia até agora tinha sido 0.506262055920552
+
+Testando a feature 16
+A média das acurácias no KFold é 0.4085384228355481
+A melhor acurácia até agora tinha sido 0.506262055920552
+
+Testando a feature 18
+A média das acurácias no KFold é 0.3537250267326205
+A melhor acurácia até agora tinha sido 0.506262055920552
+
+Terminou o while. A melhor feature foi a 9. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  6  7 11 12 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.4721403770584377
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.4721403770584377
+
+Testando a feature 2
+A média das acurácias no KFold é 0.5016880333388738
+A melhor acurácia até agora tinha sido 0.4721403770584377
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.5016880333388738
+
+Testando a feature 3
+A média das acurácias no KFold é 0.5070324147910442
+A melhor acurácia até agora tinha sido 0.5016880333388738
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.5070324147910442
+
+Testando a feature 6
+A média das acurácias no KFold é 0.49318308314861925
+A melhor acurácia até agora tinha sido 0.5070324147910442
+
+Testando a feature 7
+A média das acurácias no KFold é 0.5102474606374328
+A melhor acurácia até agora tinha sido 0.5070324147910442
+Nova melhor feature identificada!
+Melhor feature: 7. Melhor acurácia: 0.5102474606374328
+
+Testando a feature 11
+A média das acurácias no KFold é 0.5038331523043469
+A melhor acurácia até agora tinha sido 0.5102474606374328
+
+Testando a feature 12
+A média das acurácias no KFold é 0.5106135851904053
+A melhor acurácia até agora tinha sido 0.5102474606374328
+Nova melhor feature identificada!
+Melhor feature: 12. Melhor acurácia: 0.5106135851904053
+
+Testando a feature 15
+A média das acurácias no KFold é 0.4230016594409271
+A melhor acurácia até agora tinha sido 0.5106135851904053
+
+Testando a feature 16
+A média das acurácias no KFold é 0.4212475096867359
+A melhor acurácia até agora tinha sido 0.5106135851904053
+
+Testando a feature 18
+A média das acurácias no KFold é 0.36879042117389815
+A melhor acurácia até agora tinha sido 0.5106135851904053
+
+Terminou o while. A melhor feature foi a 12. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  6  7 11 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.48129091735024687
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.48129091735024687
+
+Testando a feature 2
+A média das acurácias no KFold é 0.509248822687485
+A melhor acurácia até agora tinha sido 0.48129091735024687
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.509248822687485
+
+Testando a feature 3
+A média das acurácias no KFold é 0.5180403034540947
+A melhor acurácia até agora tinha sido 0.509248822687485
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.5180403034540947
+
+Testando a feature 6
+A média das acurácias no KFold é 0.5044872999114769
+A melhor acurácia até agora tinha sido 0.5180403034540947
+
+Testando a feature 7
+A média das acurácias no KFold é 0.519332649251261
+A melhor acurácia até agora tinha sido 0.5180403034540947
+Nova melhor feature identificada!
+Melhor feature: 7. Melhor acurácia: 0.519332649251261
+
+Testando a feature 11
+A média das acurácias no KFold é 0.5106418715581003
+A melhor acurácia até agora tinha sido 0.519332649251261
+
+Testando a feature 15
+A média das acurácias no KFold é 0.4199954575360965
+A melhor acurácia até agora tinha sido 0.519332649251261
+
+Testando a feature 16
+A média das acurácias no KFold é 0.4198475143667923
+A melhor acurácia até agora tinha sido 0.519332649251261
+
+Testando a feature 18
+A média das acurácias no KFold é 0.3733445208626982
+A melhor acurácia até agora tinha sido 0.519332649251261
+
+Terminou o while. A melhor feature foi a 7. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  3  6 11 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.48437658088987423
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.48437658088987423
+
+Testando a feature 2
+A média das acurácias no KFold é 0.5192941250410243
+A melhor acurácia até agora tinha sido 0.48437658088987423
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.5192941250410243
+
+Testando a feature 3
+A média das acurácias no KFold é 0.5379309813251127
+A melhor acurácia até agora tinha sido 0.5192941250410243
+Nova melhor feature identificada!
+Melhor feature: 3. Melhor acurácia: 0.5379309813251127
+
+Testando a feature 6
+A média das acurácias no KFold é 0.5255273343369726
+A melhor acurácia até agora tinha sido 0.5379309813251127
+
+Testando a feature 11
+A média das acurácias no KFold é 0.527725279415614
+A melhor acurácia até agora tinha sido 0.5379309813251127
+
+Testando a feature 15
+A média das acurácias no KFold é 0.42981168202479125
+A melhor acurácia até agora tinha sido 0.5379309813251127
+
+Testando a feature 16
+A média das acurácias no KFold é 0.4255949877233447
+A melhor acurácia até agora tinha sido 0.5379309813251127
+
+Testando a feature 18
+A média das acurácias no KFold é 0.3707439271465227
+A melhor acurácia até agora tinha sido 0.5379309813251127
+
+Terminou o while. A melhor feature foi a 3. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  6 11 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.4902750818784412
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.4902750818784412
+
+Testando a feature 2
+A média das acurácias no KFold é 0.5312536883219501
+A melhor acurácia até agora tinha sido 0.4902750818784412
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.5312536883219501
+
+Testando a feature 6
+A média das acurácias no KFold é 0.5371085929253877
+A melhor acurácia até agora tinha sido 0.5312536883219501
+Nova melhor feature identificada!
+Melhor feature: 6. Melhor acurácia: 0.5371085929253877
+
+Testando a feature 11
+A média das acurácias no KFold é 0.5380441344593703
+A melhor acurácia até agora tinha sido 0.5371085929253877
+Nova melhor feature identificada!
+Melhor feature: 11. Melhor acurácia: 0.5380441344593703
+
+Testando a feature 15
+A média das acurácias no KFold é 0.44624091860186627
+A melhor acurácia até agora tinha sido 0.5380441344593703
+
+Testando a feature 16
+A média das acurácias no KFold é 0.4347719382619747
+A melhor acurácia até agora tinha sido 0.5380441344593703
+
+Testando a feature 18
+A média das acurácias no KFold é 0.39260639587488366
+A melhor acurácia até agora tinha sido 0.5380441344593703
+
+Terminou o while. A melhor feature foi a 11. Colocando-a fixa no dataset.
+
+
+NOVA ITERAÇÃO DO WHILE
+
+Features restantes: [ 1  2  6 15 16 18]
+
+Testando a feature 1
+A média das acurácias no KFold é 0.5014957290988139
+A melhor acurácia até agora tinha sido 0
+Nova melhor feature identificada!
+Melhor feature: 1. Melhor acurácia: 0.5014957290988139
+
+Testando a feature 2
+A média das acurácias no KFold é 0.5388237103500491
+A melhor acurácia até agora tinha sido 0.5014957290988139
+Nova melhor feature identificada!
+Melhor feature: 2. Melhor acurácia: 0.5388237103500491
+
+Testando a feature 6
+A média das acurácias no KFold é 0.5435905965703431
