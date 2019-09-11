@@ -1,3 +1,23 @@
+for file in audio/fold1/*.wav; do 
+	sox $file -c 1 -r 48000 -b 8 conversoes/8bits/48k/fold1/$(basename $file);
+	sox $file -c 1 -r 48000 -b 16 conversoes/16bits/48k/fold1/$(basename $file);
+
+	sox $file -c 1 -r 40000 -b 8 conversoes/8bits/40k/fold1/$(basename $file);
+	sox $file -c 1 -r 40000 -b 16 conversoes/16bits/40k/fold1/$(basename $file);
+
+	sox $file -c 1 -r 32000 -b 8 conversoes/8bits/32k/fold1/$(basename $file);
+	sox $file -c 1 -r 32000 -b 16 conversoes/16bits/32k/fold1/$(basename $file);
+
+	sox $file -c 1 -r 24000 -b 8 conversoes/8bits/24k/fold1/$(basename $file);
+	sox $file -c 1 -r 24000 -b 16 conversoes/16bits/24k/fold1/$(basename $file);
+
+	sox $file -c 1 -r 16000 -b 8 conversoes/8bits/16k/fold1$(basename $file);
+	sox $file -c 1 -r 16000 -b 16 conversoes/16bits/16k/fold1/$(basename $file);
+
+	sox $file -c 1 -r 8000 -b 8 conversoes/8bits/8k/fold1/$(basename $file);
+	sox $file -c 1 -r 8000 -b 16 conversoes/16bits/8k/fold1/$(basename $file);
+done
+
 for file in audio/fold2/*.wav; do 
 	sox $file -c 1 -r 48000 -b 8 conversoes/8bits/48k/fold2/$(basename $file);
 	sox $file -c 1 -r 48000 -b 16 conversoes/16bits/48k/fold2/$(basename $file);

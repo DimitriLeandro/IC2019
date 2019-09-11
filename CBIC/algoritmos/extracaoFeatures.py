@@ -1,5 +1,6 @@
 import csv
 import os
+import sys
 import librosa
 import numpy
 from scipy.stats import skew, kurtosis
@@ -13,25 +14,19 @@ metadataOriginal = "metadata/UrbanSound8K.csv"
 
 # ESSAS VARIAVEIS SERAO USADAS PARA COMPOR O PATH DE ALGUMAS COISAS
 # A FREQ DE AMOSTRAGEM TEM QUE ESTAR DIVIDIDA POR MIL
-profundidadeBits = "16bits"
-freqAmostragem = 48
+profundidadeBits = sys.argv[1] + "bits"
+freqAmostragem = sys.argv[2]
 
-FRAME_TIME = 200 	# milissegundos
-OVERLAP_TIME = 100 	# milissegundos
+FRAME_TIME = int(sys.argv[3]) 	# milissegundos
+OVERLAP_TIME = int(sys.argv[4]) 	# milissegundos
 
-FRAME_LENGTH = freqAmostragem * FRAME_TIME		# samples
-OVERLAP_LENGTH = freqAmostragem * OVERLAP_TIME	# samples
+FRAME_LENGTH = int(freqAmostragem) * FRAME_TIME		# samples
+OVERLAP_LENGTH = int(freqAmostragem) * OVERLAP_TIME	# samples
+
+print(FRAME_LENGTH, OVERLAP_LENGTH)
 
 # O CAMINHO PRO CSV COM AS FEATURES SERA ESCRITO NESSA VARIAVEL
-caminhoCSV = "conversoes/"
-caminhoCSV += profundidadeBits
-caminhoCSV += "/"
-caminhoCSV += str(freqAmostragem) + "k"
-caminhoCSV += "/features_"
-caminhoCSV += profundidadeBits
-caminhoCSV += "_"
-caminhoCSV += str(freqAmostragem) + "k"
-caminhoCSV += ".csv"
+caminhoCSV = "features_" + profundidadeBits + "_" + freqAmostragem + "kHz" + ".csv"
 
 #-----------------------------------------------------------------------------------
 # DEFINICAO DE FUNCOES
@@ -258,7 +253,7 @@ def main():
 				arquivo = "conversoes/"
 				arquivo += profundidadeBits
 				arquivo += "/"
-				arquivo += str(freqAmostragem) + "k"
+				arquivo += freqAmostragem + "k"
 				arquivo += "/"
 				arquivo += "fold"
 				arquivo += audio[5]
@@ -268,7 +263,7 @@ def main():
 				classe = audio[6]				
 				
 				# ABRINDO O AUDIO ATUAL
-				y, sr = librosa.load(arquivo, sr=freqAmostragem*1000)
+				y, sr = librosa.load(arquivo, sr=int(freqAmostragem)*1000)
 
 				# EXTRAINDO AS FEATURES
 				arrayFeatures = []

@@ -1,43 +1,45 @@
 import numpy
+import time
+import csv
+import sys
 from sklearn.preprocessing import normalize, scale
 from datetime import datetime
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
 from sklearn.svm import SVC
-from sklearn.neural_network import MLPClassifier
 from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
 from sklearn.metrics import accuracy_score
 
 # ------------------------------ DEFINICAO DE FUNCOES --------------------
 def kFold(dataset):
 
-    # ESSA FUNCAO RETORNARA UMA MATRIZ COM AS SEGUINTES DIMENSOES
-    # matriz[iteracaoKFold][colunaDeTreinoOuTeste][dadoPuro][feature]
-    # iteracaoKFold -> vai de 0 a 9 e representa as 10 iteracoes do KFold
-    # colunaDeTreinoOuTeste -> vai pegar os dados de treinamento (0) ou os de teste (1)
-    # dadoPuro -> dado com varias features, a pasta e a classificacao correta
-    # feature -> seleciona uma das 24 features do dado
-    
-    matriz = []
-    
-    for pastaTeste in range(1,11):
+	# ESSA FUNCAO RETORNARA UMA MATRIZ COM AS SEGUINTES DIMENSOES
+	# matriz[iteracaoKFold][colunaDeTreinoOuTeste][dadoPuro][feature]
+	# iteracaoKFold -> vai de 0 a 9 e representa as 10 iteracoes do KFold
+	# colunaDeTreinoOuTeste -> vai pegar os dados de treinamento (0) ou os de teste (1)
+	# dadoPuro -> dado com varias features, a pasta e a classificacao correta
+	# feature -> seleciona uma das 24 features do dado
+	
+	matriz = []
+	
+	for pastaTeste in range(1,11):
 
-        rodada = []
-        xTrain = []
-        xTest  = []
+		rodada = []
+		xTrain = []
+		xTest  = []
 
-        for dado in dataset:
-            if int(dado[0]) == pastaTeste:
-                xTest.append(dado)
-            else:
-                xTrain.append(dado)
-        
-        rodada.append(xTrain)
-        rodada.append(xTest)
-        
-        matriz.append(rodada)
-    
-    return matriz
+		for dado in dataset:
+			if int(dado[0]) == pastaTeste:
+				xTest.append(dado)
+			else:
+				xTrain.append(dado)
+		
+		rodada.append(xTrain)
+		rodada.append(xTest)
+		
+		matriz.append(rodada)
+	
+	return matriz
 
 def rearranjarDataset(dataset, datasetOriginal, featureAtual, i):
 	
@@ -82,167 +84,183 @@ def novaMelhorFeature(dataset, datasetOriginal, melhorFeature, featuresRestantes
 		
 	return dataset, featuresRestantes
 
-def main(pastaLog, caminhoCSV, datasetOriginal):
-	now = datetime.now()
-	arquivoLog = pastaLog + "/log_" + now.strftime("%d%m%Y%H%M%S") + ".txt"
+def escreverCabecalho(writerKNN, writerTree, writerSVM):
+	cabecalho = ['qtd', 'ftx', 'acc', 'time_train', 'time_test']
+	writerKNN.writerow(cabecalho)
+	writerTree.writerow(cabecalho)
+	writerSVM.writerow(cabecalho)
 
-	with open(arquivoLog, 'w') as file:
-	  
-		file.write("TESTANDO A MELHOR COMBINAÇÃO DE FEATURES PARA O DATASET " + caminhoCSV)
+def separarXeY(iteracaoKFold):
+	# SEPARANDO OS DADOS DE TREINAMENTO E TESTE E JÁ EXCLUINDO A COLUNA 0 (pasta)
+	dadosTreino = numpy.delete(iteracaoKFold[0], 0, axis=1)  
+	dadosTeste  = numpy.delete(iteracaoKFold[1], 0, axis=1)
 
-		# O DATASET COMECA SO COM A COLUNA 0 (PASTA) E A 23 (CLASSIFICACAO)
-		dataset = numpy.delete(datasetOriginal, numpy.s_[1:-1], axis=1)
+	# SEPARANDO O QUE E X E Y
+	xTrain = numpy.delete(dadosTreino, dadosTreino.shape[1] - 1, axis=1) # exclui a coluna do target
+	xTest  = numpy.delete(dadosTeste, dadosTeste.shape[1] - 1, axis=1) # exclui a coluna do target
+	yTrain = numpy.delete(dadosTreino, numpy.s_[0:dadosTreino.shape[1] - 1], axis=1).ravel() # exclui as colunas menos a ultima
+	yTest  = numpy.delete(dadosTeste, numpy.s_[0:dadosTeste.shape[1] - 1], axis=1).ravel() # exclui as colunas menos a ultima
 
-		# ARRAY DE FEATURES QUE FALTAM, 0 E A PASTA E 23 E A CLASSIFICACAO, POR ISSO NAO ENTRAM
-		featuresRestantes = numpy.arange(1, datasetOriginal.shape[1] - 1)
-		featuresSelecionadas = []
+	return xTrain, xTest, yTrain, yTest
 
-		# ISSO AQUI E PRA PEGAR TODAS AS ACURACIAS DE TODAS AS ITERACOES DO WHILE
-		# ESSES ARRAYS TEM A MELHOR ACURÁCIA GERADA POR UMA NOVA COMBINAÇÃO DE FEATURES DO WHILE
-		# PORTANTO, TERÃO O MESMO TAMANHO DO NÚMERO DE FEATURES
-		acuraciasGeral = []
-		acuraciaAnterior = 0.001
+def main(datasetOriginal, bitsProfundidade, freqAmostragem):
 
-		contWhile = 0
-	  
-		# ENQUANTO HOUVEREM FEATURES A SEREM TESTADAS
-		while(len(featuresRestantes) != 0):
-		
-			contWhile += 1
-			print("NOVA ITERAÇÃO DO WHILE", contWhile)
-  
-			file.write("\n\n\nNOVA ITERAÇÃO DO WHILE " + str(contWhile))
-			file.write("\nFeatures restantes: " + str(featuresRestantes))
-  
-			melhorAcuracia = 0
-			melhorFeature = 1
-  
-			# PARA CADA FEATURE RESTANTE EU A ADICIONO NAS QUE JA ESTAO SENDO UTILIZADAS
-			for i, featureAtual in enumerate(featuresRestantes):
-			
-				print("Testando feature", featureAtual)
-  
-				file.write("\n---------------------------------------")
-				file.write("\nTestando a feature " + str(featureAtual))
-				file.write("\nCombinação de features sendo utilizada: " + str(featuresSelecionadas) + " e " + str(featureAtual))
-  
-				# REARRANJO O DATASET COM A FEATURE ATUAL
-				dataset = rearranjarDataset(dataset, datasetOriginal, featureAtual, i)
-  
-				# AGORA QUE JA TENHO UM DATASET COM AS FEATURES DA VEZ, TENHO QUE CRIAR OS CLASSIFICADORES
-				knn = KNeighborsClassifier(3)
-				tree = DecisionTreeClassifier()
-				svm = SVC(gamma='scale', decision_function_shape='ovo')
-				mlp = MLPClassifier(hidden_layer_sizes=(15), activation="logistic", max_iter=250)
-				#lda = LinearDiscriminantAnalysis()
+	# DECLARACAO DE VARIAVEIS
+	dataset = numpy.delete(datasetOriginal, numpy.s_[1:-1], axis=1)
+	featuresRestantes = numpy.arange(1, datasetOriginal.shape[1] - 1)
+	featuresSelecionadas = []
+	acuraciasGeral = []
+	acuraciaAnterior = 0.001
+	contWhile = 0
+	arquivoCSVKNN = "KNN_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
+	arquivoCSVTree = "Tree_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
+	arquivoCSVSVM = "SVM_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
+
+	# ABRINDO OS CSVS DOS RESULTADOS DOS CLASSIFICADORES
+	with open(arquivoCSVKNN, 'a') as csvFileKNN:
+		with open(arquivoCSVTree, 'a') as csvFileTree:
+			with open(arquivoCSVSVM, 'a') as csvFileSVM:
+
+				# CRIANDO OS OBJETOS RESPONSAVEIS POR ESCREVER LINHAS NO CSV
+				writerKNN = csv.writer(csvFileKNN)
+				writerTree = csv.writer(csvFileTree)
+				writerSVM = csv.writer(csvFileSVM)
+
+				#ESCREVENDO O CABECALHO DOS CSVS DOS CLASSIFICADORES
+				escreverCabecalho(writerKNN, writerTree, writerSVM)				
+			  
+				# ENQUANTO HOUVEREM FEATURES A SEREM TESTADAS
+				while(len(featuresRestantes) != 0):
 				
-				# ESSES ARRAYS VAO GUARDAR AS ACURACIAS DE CADA ITERACAO DO KFOLD, MAS SERAO RESETADOS QUANDO UMA NOVA FEATURE FOR TESTADA
-				arrayAcuraciasCadaKFoldKNN = []
-				arrayAcuraciasCadaKFoldTree = []
-				arrayAcuraciasCadaKFoldSVM = []
-				arrayAcuraciasCadaKFoldMLP = []
-				#arrayAcuraciasCadaKFoldLDA = []
-  
-				# PARA CADA ITERACAO DO KFOLD
-				matrizKFold = kFold(dataset)
-  				
-				for iteracaoKFold in matrizKFold:
-  
-					# SEPARANDO OS DADOS DE TREINAMENTO E TESTE E JÁ EXCLUINDO A COLUNA 0 (pasta)
-					dadosTreino = numpy.delete(iteracaoKFold[0], 0, axis=1)  
-					dadosTeste  = numpy.delete(iteracaoKFold[1], 0, axis=1)
-  
-					# SEPARANDO O QUE E X E Y
-					xTrain = numpy.delete(dadosTreino, dadosTreino.shape[1] - 1, axis=1) # exclui a coluna do target
-					xTest  = numpy.delete(dadosTeste, dadosTeste.shape[1] - 1, axis=1) # exclui a coluna do target
-					yTrain = numpy.delete(dadosTreino, numpy.s_[0:dadosTreino.shape[1] - 1], axis=1).ravel() # exclui as colunas menos a ultima
-					yTest  = numpy.delete(dadosTeste, numpy.s_[0:dadosTeste.shape[1] - 1], axis=1).ravel() # exclui as colunas menos a ultima
-  
-					# TREINANDO OS CLASSIFICADORES
-					knn  = knn.fit(xTrain, yTrain)
-					tree = tree.fit(xTrain, yTrain)
-					svm  = svm.fit(xTrain, yTrain) 
-					mlp = mlp.fit(xTrain, yTrain) 
-					#lda = lda.fit(xTrain, yTrain) 
-  
-					# PREDIZENDO
-					yKNN  = knn.predict(xTest)
-					yTree = tree.predict(xTest)
-					ySVM  = svm.predict(xTest)
-					yMLP = mlp.predict(xTest)
-					#yLDA = lda.predict(xTest)
-				  
-					# COLOCANDO AS ACURACIAS NOAS ARRAYS
-					arrayAcuraciasCadaKFoldKNN.append(accuracy_score(yTest, yKNN))
-					arrayAcuraciasCadaKFoldTree.append(accuracy_score(yTest, yTree))
-					arrayAcuraciasCadaKFoldSVM.append(accuracy_score(yTest, ySVM))
-					arrayAcuraciasCadaKFoldMLP.append(accuracy_score(yTest, yMLP))
-					#arrayAcuraciasCadaKFoldLDA.append(accuracy_score(yTest, yLDA))
-				  
-				# MEDIA DAS ACURACIAS DE CADA CLASSIFICADOR PARA ESSA FEATURE
-				mediaKNN  = numpy.mean(arrayAcuraciasCadaKFoldKNN)
-				mediaTree = numpy.mean(arrayAcuraciasCadaKFoldTree)
-				mediaSVM  = numpy.mean(arrayAcuraciasCadaKFoldSVM)
-				mediaMLP  = numpy.mean(arrayAcuraciasCadaKFoldMLP)
-				#mediaLDA  = numpy.mean(arrayAcuraciasCadaKFoldLDA)
-  
-				file.write("\n")
-				file.write("\nA média das acurácias do KNN no KFold foi " + str(mediaKNN))
-				file.write("\nA média das acurácias do Tree no KFold foi " + str(mediaTree))
-				ile.write("\nA média das acurácias do SVM no KFold foi " + str(mediaSVM))
-				file.write("\nA média das acurácias do MLP no KFold foi " + str(mediaMLP))
-				#file.write("\nA média das acurácias do LDA no KFold foi " + str(mediaLDA))
-				
-				# MEDIA ENTRE TODOS OS CLASSIFICADORESS
-				#mediaAcuracias = mediaKNN
-				mediaAcuracias = (mediaKNN + mediaTree + mediaSVM + mediaMLP)/4
-				#mediaAcuracias = (mediaKNN + mediaTree + mediaSVM + mediaMLP + mediaLDA)/5
-				
-				file.write("\nA média das médias das acurácias dos classificadores foi " + str(mediaAcuracias))
-  
-				# AGORA JA TENHO A MEDIA DE TODAS AS ACURACIAS DO KFOLD, VOU VER SE COM ESSA FEATURE O RESULTADO FOI MELHOR
-				if mediaAcuracias > melhorAcuracia:
-					file.write("\nNova melhor feature identificada para essa iteração do while(" + str(featureAtual) + ").")
-					melhorAcuracia = mediaAcuracias
-					melhorFeature = featureAtual
-				  
-				#if mediaAcuracias > melhorAcuraciaGeralzona:
-					#file.write("\nNOVA MELHOR COMBINAÇÃO GERAL DE FEATURES ENCONTRADA (DE TODAS AS ITERAÇÕES DO WHILE)!!!")
-					#file.write("\nCombinação de features sendo utilizada: " + str(featuresSelecionadas) + " e " + str(featureAtual))
-					#melhorAcuraciaGeralzona = mediaAcuracias
-					#melhorCombinacaoGeralzona = featuresSelecionadas + melhorFeature            
+					contWhile += 1
+					print("INICIO:", contWhile)
 
-			# VERIFICANDO SE POSSO PARAR O WHILE COM A CONDICAO DE PARADA
-			if(melhorAcuracia/acuraciaAnterior < 1.01):
-				file.write("\n\nO ALGORITMO FOI PARADO DEVIDO À CONDIÇÃO DE PARADA")
-				file.write("\nAcurácia anterior: " + str(acuraciaAnterior))
-				file.write("\nAcurácia atual: " + str(melhorAcuracia))
-				break
-			else:
-				# ATUALIZACAO DE VARIAVEIS FORA DO WHILE
-				acuraciaAnterior = melhorAcuracia
-				melhorAcuraciaGeralzona = melhorAcuracia
+					melhorAcuracia = 0
+					melhorFeature = 1
 
-				# DEPOIS QUE ACABAR, EU REMOVO A MELHOR FEATURE DAS FEATURES RESTANTES E COLOCO ELA FIXA NO DATASET
-				file.write("\n\nFim o while. A melhor feature foi a " + str(melhorFeature) + " com acurácia de " + str(melhorAcuracia))
-				featuresSelecionadas.append(melhorFeature)
-				dataset, featuresRestantes = novaMelhorFeature(dataset, datasetOriginal, melhorFeature, featuresRestantes)
-				
-				# TAMBEM TENHO QUE COLOCAR A ACURACIA NO ARRAY DE ACURACIAS GERAIS
-				acuraciasGeral.append(melhorAcuracia)
+					# PARA CADA FEATURE RESTANTE EU A ADICIONO NAS QUE JA ESTAO SENDO UTILIZADAS
+					for i, featureAtual in enumerate(featuresRestantes):
 
-		# ACABOU O WHILEEEEE
-		file.write("\n\nFIM DO WHILE")
-		file.write("\nMelhor combinação de features encontrada: " + str(featuresSelecionadas))
-		file.write("\nEssa combinação gerou uma acurácia média entre os classificadores de " + str(acuraciaAnterior))
+						# REARRANJO O DATASET COM A FEATURE ATUAL
+						dataset = rearranjarDataset(dataset, datasetOriginal, featureAtual, i)
+
+						# AGORA QUE JA TENHO UM DATASET COM AS FEATURES DA VEZ, TENHO QUE CRIAR OS CLASSIFICADORES
+						knn = KNeighborsClassifier(3)
+						tree = DecisionTreeClassifier()
+						svm = SVC(gamma='scale', decision_function_shape='ovo')
+						
+						# ESSES ARRAYS VAO GUARDAR AS ACURACIAS DE CADA ITERACAO DO KFOLD, MAS SERAO RESETADOS QUANDO UMA NOVA FEATURE FOR TESTADA
+						arrayAcuraciasCadaKFoldKNN = []
+						arrayAcuraciasCadaKFoldTree = []
+						arrayAcuraciasCadaKFoldSVM = []						
+
+						# TEMPO DE TREINAMENTO DAS 10 ITERACOES DO KFOLD
+						tempoTotalTreinoKNN = 0
+						tempoTotalTreinoTree = 0
+						tempoTotalTreinoSVM = 0	
+						tempoTotalTesteKNN = 0
+						tempoTotalTesteTree = 0
+						tempoTotalTesteSVM = 0
+
+						# PARA CADA ITERACAO DO KFOLD
+						matrizKFold = kFold(dataset)
+						for iteracaoKFold in matrizKFold:
+
+							# SEPARANDO O QUE E X E O QUE E Y
+							xTrain, xTest, yTrain, yTest = separarXeY(iteracaoKFold)
+
+							# TREINANDO OS CLASSIFICADORES
+							inicioTreinoKNN = time.time()
+							knn  = knn.fit(xTrain, yTrain)
+							fimTreinoKNN = time.time()
+
+							inicioTreinoTree = time.time()
+							tree = tree.fit(xTrain, yTrain)
+							fimTreinoTree = time.time()
+
+							inicioTreinoSVM = time.time()
+							svm  = svm.fit(xTrain, yTrain)
+							fimTreinoSVM = time.time()
+
+							# PREDIZENDO
+							inicioTesteKNN = time.time()
+							yKNN  = knn.predict(xTest)
+							fimTesteKNN = time.time()
+
+							inicioTesteTree = time.time()
+							yTree = tree.predict(xTest)
+							fimTesteTree = time.time()
+
+							inicioTesteSVM = time.time()
+							ySVM  = svm.predict(xTest)
+							fimTesteSVM = time.time()
+						  
+							# COLOCANDO AS ACURACIAS NOAS ARRAYS
+							arrayAcuraciasCadaKFoldKNN.append(accuracy_score(yTest, yKNN))
+							arrayAcuraciasCadaKFoldTree.append(accuracy_score(yTest, yTree))
+							arrayAcuraciasCadaKFoldSVM.append(accuracy_score(yTest, ySVM))
+
+							# SOMANDO NO TEMPO TOTAL DE TREINAMENTO E TESTE
+							tempoTotalTreinoKNN += fimTreinoKNN - inicioTreinoKNN
+							tempoTotalTreinoTree += fimTreinoTree - inicioTreinoTree
+							tempoTotalTreinoSVM += fimTreinoSVM - inicioTreinoSVM
+							tempoTotalTesteKNN += fimTesteKNN - inicioTesteKNN
+							tempoTotalTesteTree += fimTesteTree - inicioTesteTree
+							tempoTotalTesteSVM += fimTesteSVM - inicioTesteSVM
+						  
+						# MEDIA DAS ACURACIAS DE CADA CLASSIFICADOR PARA ESSA FEATURE
+						mediaKNN  = numpy.mean(arrayAcuraciasCadaKFoldKNN)
+						mediaTree = numpy.mean(arrayAcuraciasCadaKFoldTree)
+						mediaSVM  = numpy.mean(arrayAcuraciasCadaKFoldSVM)
+						
+						# MEDIA ENTRE TODOS OS CLASSIFICADORESS
+						mediaAcuracias = (mediaKNN + mediaTree + mediaSVM)/3
+
+						# COLOCANDO AS INFORMACOES NOS CSVS
+						# "qtd"  |  "combinacao_ftx" |  "acc"  |  "time_train"  |  "time_test"
+						linhaCSVKNN  = [len(featuresSelecionadas) + 1, featuresSelecionadas + [featureAtual], mediaKNN, tempoTotalTreinoKNN, tempoTotalTesteKNN]
+						linhaCSVTree = [len(featuresSelecionadas) + 1, featuresSelecionadas + [featureAtual], mediaTree, tempoTotalTreinoTree, tempoTotalTesteTree]
+						linhaCSVSVM  = [len(featuresSelecionadas) + 1, featuresSelecionadas + [featureAtual], mediaSVM, tempoTotalTreinoSVM, tempoTotalTesteSVM]
+
+						writerKNN.writerow(linhaCSVKNN)
+						writerTree.writerow(linhaCSVTree)
+						writerSVM.writerow(linhaCSVSVM)
+
+						# PRINTANDO AS INFORMAÇÕES NO TERMINAL
+						# são as mesmas informações, mas só com a feature atual
+						print("KNN:\t", len(featuresSelecionadas) + 1, featureAtual, "%.3f" % mediaKNN, "%.3f" % tempoTotalTreinoKNN, "%.3f" % tempoTotalTesteKNN)
+						print("Tree:\t", len(featuresSelecionadas) + 1, featureAtual, "%.3f" % mediaTree, "%.3f" % tempoTotalTreinoTree, "%.3f" % tempoTotalTesteTree)
+						print("SVM:\t", len(featuresSelecionadas) + 1, featureAtual, "%.3f" % mediaSVM, "%.3f" % tempoTotalTreinoSVM, "%.3f" % tempoTotalTesteSVM)
+
+						# AGORA JA TENHO A MEDIA DE TODAS AS ACURACIAS DO KFOLD, VOU VER SE COM ESSA FEATURE O RESULTADO FOI MELHOR
+						if mediaAcuracias > melhorAcuracia:
+							melhorAcuracia = mediaAcuracias
+							melhorFeature = featureAtual          
+
+					# VERIFICANDO SE POSSO PARAR O WHILE COM A CONDICAO DE PARADA
+					if(melhorAcuracia/acuraciaAnterior < 1.01):
+						break
+					else:
+						# ATUALIZACAO DE VARIAVEIS FORA DO WHILE
+						acuraciaAnterior = melhorAcuracia
+						melhorAcuraciaGeralzona = melhorAcuracia
+
+						# DEPOIS QUE ACABAR, EU REMOVO A MELHOR FEATURE DAS FEATURES RESTANTES E COLOCO ELA FIXA NO DATASET
+						featuresSelecionadas.append(melhorFeature)
+						dataset, featuresRestantes = novaMelhorFeature(dataset, datasetOriginal, melhorFeature, featuresRestantes)
+						
+						# TAMBEM TENHO QUE COLOCAR A ACURACIA NO ARRAY DE ACURACIAS GERAIS
+						acuraciasGeral.append(melhorAcuracia)
+
+					# NO FIM DO WHILE EU PRINTO A COMBINAÇÃO DE FEATURES QUE FOI MELHOR
+					print("Melhor combinação de features:", featuresSelecionadas, "\n")
 
 # ------------------------DEFININDO OS PARAMETROS INICIAIS------------------------
 
-# CAMINHO PARA O CSV
-caminhoCSV = "conversoes/8bits/16k/features_8bits_16k.csv"
-
-# PASTA ONDE SERÁ SALVO O LOG
-pastaLog = "logs"
+# CAMINHO PARA O CSV DE FEATURES
+bitsProfundidade = sys.argv[1]
+freqAmostragem = sys.argv[2]
+caminhoCSV = "features_"  + bitsProfundidade+"bits_" + freqAmostragem + "kHz.csv"
 
 # ABRINDO O CSV COMO UM NUMPY ARRAY E DELETANDO A PRIMEIRA LINHA (CABECALHO)
 datasetOriginal = numpy.genfromtxt(caminhoCSV, delimiter=",")
@@ -265,4 +283,4 @@ datasetOriginal = numpy.column_stack((colunaPasta, datasetOriginal))
 datasetOriginal = numpy.column_stack((datasetOriginal, colunaClassificacao))
 
 # RODANDO O CODIGO
-main(pastaLog, caminhoCSV, datasetOriginal)
+main(datasetOriginal, bitsProfundidade, freqAmostragem)
