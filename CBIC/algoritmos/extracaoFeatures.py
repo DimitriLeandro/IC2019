@@ -13,8 +13,14 @@ metadataOriginal = "metadata/UrbanSound8K.csv"
 
 # ESSAS VARIAVEIS SERAO USADAS PARA COMPOR O PATH DE ALGUMAS COISAS
 # A FREQ DE AMOSTRAGEM TEM QUE ESTAR DIVIDIDA POR MIL
-profundidadeBits = "8bits"
-freqAmostragem = 8
+profundidadeBits = "16bits"
+freqAmostragem = 48
+
+FRAME_TIME = 200 	# milissegundos
+OVERLAP_TIME = 100 	# milissegundos
+
+FRAME_LENGTH = freqAmostragem * FRAME_TIME		# samples
+OVERLAP_LENGTH = freqAmostragem * OVERLAP_TIME	# samples
 
 # O CAMINHO PRO CSV COM AS FEATURES SERA ESCRITO NESSA VARIAVEL
 caminhoCSV = "conversoes/"
@@ -37,6 +43,14 @@ def melGibson(paixaoDeCristo):
 
 	return mfcc
 
+def melGibsonStd(paixaoDeCristo):
+	mfcc_std = []
+
+	for linha in paixaoDeCristo:
+		mfcc_std.append(numpy.std(linha))
+
+	return mfcc_std
+
 def delta1(coracaoValente):
 	delta1 = librosa.feature.delta(coracaoValente, mode='nearest')
 
@@ -46,6 +60,16 @@ def delta1(coracaoValente):
 		arrayDelta1.append(numpy.mean(linha))
 
 	return arrayDelta1
+
+def delta1Std(coracaoValente):
+	delta1 = librosa.feature.delta(coracaoValente, mode='nearest')
+
+	arrayDelta1_std = []
+
+	for linha in delta1:
+		arrayDelta1_std.append(numpy.std(linha))
+
+	return arrayDelta1_std
 
 def delta2(maquinaMortifera):
 	delta2 = librosa.feature.delta(maquinaMortifera, order=2, mode='nearest')
@@ -57,21 +81,31 @@ def delta2(maquinaMortifera):
 
 	return arrayDelta2
 
+def delta2Std(maquinaMortifera):
+	delta2 = librosa.feature.delta(maquinaMortifera, order=2, mode='nearest')
+
+	arrayDelta2_std = []
+
+	for linha in delta2:
+		arrayDelta2_std.append(numpy.mean(linha))
+
+	return arrayDelta2_std
+
 def mediaRMS(y):
-	return numpy.mean(librosa.feature.rms(y=y))
+	return numpy.mean(librosa.feature.rms(y=y, frame_length=FRAME_LENGTH, hop_length=OVERLAP_LENGTH))
 
 def centroideEspectral(y, sr):
-	return numpy.mean(librosa.feature.spectral_centroid(y=y, sr=sr))
+	return numpy.mean(librosa.feature.spectral_centroid(y=y, sr=sr, n_fft=FRAME_LENGTH, hop_length=OVERLAP_LENGTH))
 
 def larguraEspectral(y, sr):
-	return numpy.mean(librosa.feature.spectral_bandwidth(y=y, sr=sr))
+	return numpy.mean(librosa.feature.spectral_bandwidth(y=y, sr=sr, n_fft=FRAME_LENGTH, hop_length=OVERLAP_LENGTH))
 
 def contrasteEspectral(y, sr):
 	array_contrastes = []
 	fmin = 0.5 * sr * 2**(-6)
 	
 	S = numpy.abs(librosa.stft(y))
-	spectral_contrast = librosa.feature.spectral_contrast(S=S, sr=sr, fmin=fmin)
+	spectral_contrast = librosa.feature.spectral_contrast(S=S, sr=sr, fmin=fmin, n_fft=FRAME_LENGTH, hop_length=OVERLAP_LENGTH)
 	
 	for linha in spectral_contrast:
 		array_contrastes.append(numpy.mean(linha))
@@ -79,13 +113,13 @@ def contrasteEspectral(y, sr):
 	return array_contrastes
 
 def planicidadeEspectral(y): 
-	return numpy.mean(librosa.feature.spectral_flatness(y=y))
+	return numpy.mean(librosa.feature.spectral_flatness(y=y, n_fft=FRAME_LENGTH, hop_length=OVERLAP_LENGTH))
 
 def rolloff(y, sr):
-	return numpy.mean( librosa.feature.spectral_rolloff(y=y, sr=sr))
+	return numpy.mean( librosa.feature.spectral_rolloff(y=y, sr=sr, n_fft=FRAME_LENGTH, hop_length=OVERLAP_LENGTH))
 
 def cruzamentosZero(y):
-	return numpy.mean(librosa.feature.zero_crossing_rate(y))
+	return numpy.mean(librosa.feature.zero_crossing_rate(y, frame_length=FRAME_LENGTH, hop_length=OVERLAP_LENGTH))
 
 def assimetria(y):
 	return skew(y)
@@ -128,6 +162,71 @@ def main():
 			cabecalho.append("mfcc10")
 			cabecalho.append("mfcc11")
 			cabecalho.append("mfcc12")
+			cabecalho.append("mfcc0_std")
+			cabecalho.append("mfcc1_std")
+			cabecalho.append("mfcc2_std")
+			cabecalho.append("mfcc3_std")
+			cabecalho.append("mfcc4_std")
+			cabecalho.append("mfcc5_std")
+			cabecalho.append("mfcc6_std")
+			cabecalho.append("mfcc7_std")
+			cabecalho.append("mfcc8_std")
+			cabecalho.append("mfcc9_std")
+			cabecalho.append("mfcc10_std")
+			cabecalho.append("mfcc11_std")
+			cabecalho.append("mfcc12_std")
+			cabecalho.append("Delta 0")
+			cabecalho.append("Delta 1")
+			cabecalho.append("Delta 2")
+			cabecalho.append("Delta 3")
+			cabecalho.append("Delta 4")
+			cabecalho.append("Delta 5")
+			cabecalho.append("Delta 6")
+			cabecalho.append("Delta 7")
+			cabecalho.append("Delta 8")
+			cabecalho.append("Delta 9")
+			cabecalho.append("Delta 10")
+			cabecalho.append("Delta 11")
+			cabecalho.append("Delta 12")
+			cabecalho.append("Delta 0_std")
+			cabecalho.append("Delta 1_std")
+			cabecalho.append("Delta 2_std")
+			cabecalho.append("Delta 3_std")
+			cabecalho.append("Delta 4_std")
+			cabecalho.append("Delta 5_std")
+			cabecalho.append("Delta 6_std")
+			cabecalho.append("Delta 7_std")
+			cabecalho.append("Delta 8_std")
+			cabecalho.append("Delta 9_std")
+			cabecalho.append("Delta 10_std")
+			cabecalho.append("Delta 11_std")
+			cabecalho.append("Delta 12_std")
+			cabecalho.append("Delta Delta 0")
+			cabecalho.append("Delta Delta 1")
+			cabecalho.append("Delta Delta 2")
+			cabecalho.append("Delta Delta 3")
+			cabecalho.append("Delta Delta 4")
+			cabecalho.append("Delta Delta 5")
+			cabecalho.append("Delta Delta 6")
+			cabecalho.append("Delta Delta 7")
+			cabecalho.append("Delta Delta 8")
+			cabecalho.append("Delta Delta 9")
+			cabecalho.append("Delta Delta 10")
+			cabecalho.append("Delta Delta 11")
+			cabecalho.append("Delta Delta 12")
+			cabecalho.append("Delta Delta 0_std")
+			cabecalho.append("Delta Delta 1_std")
+			cabecalho.append("Delta Delta 2_std")
+			cabecalho.append("Delta Delta 3_std")
+			cabecalho.append("Delta Delta 4_std")
+			cabecalho.append("Delta Delta 5_std")
+			cabecalho.append("Delta Delta 6_std")
+			cabecalho.append("Delta Delta 7_std")
+			cabecalho.append("Delta Delta 8_std")
+			cabecalho.append("Delta Delta 9_std")
+			cabecalho.append("Delta Delta 10_std")
+			cabecalho.append("Delta Delta 11_std")
+			cabecalho.append("Delta Delta 12_std")
 			cabecalho.append("rms")
 			cabecalho.append("centroide")
 			cabecalho.append("largura")
@@ -144,32 +243,6 @@ def main():
 			cabecalho.append("assimetria")
 			cabecalho.append("curtose")
 			cabecalho.append("variancia")
-			cabecalho.append("Delta 0")
-			cabecalho.append("Delta 1")
-			cabecalho.append("Delta 2")
-			cabecalho.append("Delta 3")
-			cabecalho.append("Delta 4")
-			cabecalho.append("Delta 5")
-			cabecalho.append("Delta 6")
-			cabecalho.append("Delta 7")
-			cabecalho.append("Delta 8")
-			cabecalho.append("Delta 9")
-			cabecalho.append("Delta 10")
-			cabecalho.append("Delta 11")
-			cabecalho.append("Delta 12")
-			cabecalho.append("Delta Delta 0")
-			cabecalho.append("Delta Delta 1")
-			cabecalho.append("Delta Delta 2")
-			cabecalho.append("Delta Delta 3")
-			cabecalho.append("Delta Delta 4")
-			cabecalho.append("Delta Delta 5")
-			cabecalho.append("Delta Delta 6")
-			cabecalho.append("Delta Delta 7")
-			cabecalho.append("Delta Delta 8")
-			cabecalho.append("Delta Delta 9")
-			cabecalho.append("Delta Delta 10")
-			cabecalho.append("Delta Delta 11")
-			cabecalho.append("Delta Delta 12")
 			cabecalho.append("classe")
 			
 			objWriteCSV.writerow(cabecalho)
@@ -201,11 +274,16 @@ def main():
 				arrayFeatures = []
 
 				# PRA TIRAR O DELTA E O DELTA DELTA, VOU PRECISAR O MFCC EM FORMA DE MATRIZ
-				mfccMatriz = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13)
+				mfccMatriz = librosa.feature.mfcc(y=y, sr=sr, n_mfcc=13, n_fft=FRAME_LENGTH, hop_length=OVERLAP_LENGTH)
 				
 				arrayFeatures.append(audio[5])
 				arrayFeatures.append(audio[0])
 				arrayFeatures += melGibson(mfccMatriz)
+				arrayFeatures += melGibsonStd(mfccMatriz)
+				arrayFeatures += delta1(mfccMatriz)
+				arrayFeatures += delta1Std(mfccMatriz)
+				arrayFeatures += delta2(mfccMatriz)
+				arrayFeatures += delta2Std(mfccMatriz)
 				arrayFeatures.append(mediaRMS(y))
 				arrayFeatures.append(centroideEspectral(y, sr))
 				arrayFeatures.append(larguraEspectral(y, sr))
@@ -216,8 +294,6 @@ def main():
 				arrayFeatures.append(assimetria(y))
 				arrayFeatures.append(curtose(y))
 				arrayFeatures.append(variancia(y))
-				arrayFeatures += delta1(mfccMatriz)
-				arrayFeatures += delta2(mfccMatriz)
 				arrayFeatures.append(classe)
 				
 				arrayFeatures = numpy.array(arrayFeatures)
