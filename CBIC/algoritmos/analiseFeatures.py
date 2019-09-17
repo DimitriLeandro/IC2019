@@ -1,8 +1,19 @@
+'''
+	PARA RODAR ESSE CÓDIGO:
+	python3 analiseFeatures.py [bitsProfundidade] [freqAmostragem] [normalizador] [classificador]
+
+	ONDE:
+	bitsProfundidade -> 08 ou 16
+	freqAmostragem -> 08, 16, 24, 32, 40 ou 48 
+	normalizador -> l1, l2, scale, standardScaler, robustScaler ou 0
+	classificador -> KNN, Tree ou SVM
+'''
+
 import numpy
 import time
 import csv
 import sys
-from sklearn.preprocessing import normalize, scale
+from sklearn.preprocessing import normalize, scale, StandardScaler, RobustScaler
 from datetime import datetime
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.tree import DecisionTreeClassifier
@@ -84,11 +95,10 @@ def novaMelhorFeature(dataset, datasetOriginal, melhorFeature, featuresRestantes
 		
 	return dataset, featuresRestantes
 
-def escreverCabecalho(writerKNN, writerTree, writerSVM):
+def escreverCabecalho(writerCSVClassificador, writerCSVReduzido):
 	cabecalho = ['qtd', 'ftx', 'acc', 'time_train', 'time_test']
-	writerKNN.writerow(cabecalho)
-	writerTree.writerow(cabecalho)
-	writerSVM.writerow(cabecalho)
+	writerCSVClassificador.writerow(cabecalho)
+	writerCSVReduzido.writerow(cabecalho)
 
 def separarXeY(iteracaoKFold):
 	# SEPARANDO OS DADOS DE TREINAMENTO E TESTE E JÁ EXCLUINDO A COLUNA 0 (pasta)
@@ -103,157 +113,122 @@ def separarXeY(iteracaoKFold):
 
 	return xTrain, xTest, yTrain, yTest
 
-def main(datasetOriginal, bitsProfundidade, freqAmostragem):
+def main(datasetOriginal, bitsProfundidade, freqAmostragem, classificador, normalizador):
 
 	# DECLARACAO DE VARIAVEIS
 	dataset = numpy.delete(datasetOriginal, numpy.s_[1:-1], axis=1)
 	featuresRestantes = numpy.arange(1, datasetOriginal.shape[1] - 1)
 	featuresSelecionadas = []
-	acuraciasGeral = []
 	acuraciaAnterior = 0.001
 	contWhile = 0
-	arquivoCSVKNN = "KNN_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
-	arquivoCSVTree = "Tree_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
-	arquivoCSVSVM = "SVM_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
+	arquivoCSV = classificador + "_" + normalizador + "_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
+	arquivoCSVReduzido = classificador + "_" + normalizador + "_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz_REDUZIDO.csv"
 
 	# ABRINDO OS CSVS DOS RESULTADOS DOS CLASSIFICADORES
-	with open(arquivoCSVKNN, 'a') as csvFileKNN:
-		with open(arquivoCSVTree, 'a') as csvFileTree:
-			with open(arquivoCSVSVM, 'a') as csvFileSVM:
+	with open(arquivoCSV, 'a') as csvFile:
+		with open(arquivoCSVReduzido, 'a') as csvFileReduzido:
 
-				# CRIANDO OS OBJETOS RESPONSAVEIS POR ESCREVER LINHAS NO CSV
-				writerKNN = csv.writer(csvFileKNN)
-				writerTree = csv.writer(csvFileTree)
-				writerSVM = csv.writer(csvFileSVM)
+			# CRIANDO O OBJETO RESPONSAVEL POR ESCREVER LINHAS NO CSV
+			writerCSVClassificador = csv.writer(csvFile)
+			writerCSVReduzido = csv.writer(csvFileReduzido)
 
-				#ESCREVENDO O CABECALHO DOS CSVS DOS CLASSIFICADORES
-				escreverCabecalho(writerKNN, writerTree, writerSVM)				
-			  
-				# ENQUANTO HOUVEREM FEATURES A SEREM TESTADAS
-				while(len(featuresRestantes) != 0):
-				
-					contWhile += 1
-					print("INICIO:", contWhile)
+			#ESCREVENDO O CABECALHO DO CSV DO CLASSIFICADOR
+			escreverCabecalho(writerCSVClassificador, writerCSVReduzido)				
+		  
+			# ENQUANTO HOUVEREM FEATURES A SEREM TESTADAS
+			while(len(featuresRestantes) != 0):
+			
+				contWhile += 1
+				print("INICIO:", contWhile)
 
-					melhorAcuracia = 0
-					melhorFeature = 1
+				# VARIAVEIS QUE VAO GUARDAR AS INFORMACOES DA MELHOR FEATURE DESTA ITERACAO DO WHILE
+				melhorAcuracia = 0
+				melhorFeature = 1
+				tempoTotalTreinoMelhorFeature = 0
+				tempoTotalTesteMelhorFeature = 0
 
-					# PARA CADA FEATURE RESTANTE EU A ADICIONO NAS QUE JA ESTAO SENDO UTILIZADAS
-					for i, featureAtual in enumerate(featuresRestantes):
+				# PARA CADA FEATURE RESTANTE EU A ADICIONO NAS QUE JA ESTAO SENDO UTILIZADAS
+				for i, featureAtual in enumerate(featuresRestantes):
 
-						# REARRANJO O DATASET COM A FEATURE ATUAL
-						dataset = rearranjarDataset(dataset, datasetOriginal, featureAtual, i)
+					# REARRANJO O DATASET COM A FEATURE ATUAL
+					dataset = rearranjarDataset(dataset, datasetOriginal, featureAtual, i)
 
-						# AGORA QUE JA TENHO UM DATASET COM AS FEATURES DA VEZ, TENHO QUE CRIAR OS CLASSIFICADORES
-						knn = KNeighborsClassifier(3)
-						tree = DecisionTreeClassifier()
-						svm = SVC(gamma='scale', decision_function_shape='ovo')
-						
-						# ESSES ARRAYS VAO GUARDAR AS ACURACIAS DE CADA ITERACAO DO KFOLD, MAS SERAO RESETADOS QUANDO UMA NOVA FEATURE FOR TESTADA
-						arrayAcuraciasCadaKFoldKNN = []
-						arrayAcuraciasCadaKFoldTree = []
-						arrayAcuraciasCadaKFoldSVM = []						
-
-						# TEMPO DE TREINAMENTO DAS 10 ITERACOES DO KFOLD
-						tempoTotalTreinoKNN = 0
-						tempoTotalTreinoTree = 0
-						tempoTotalTreinoSVM = 0	
-						tempoTotalTesteKNN = 0
-						tempoTotalTesteTree = 0
-						tempoTotalTesteSVM = 0
-
-						# PARA CADA ITERACAO DO KFOLD
-						matrizKFold = kFold(dataset)
-						for iteracaoKFold in matrizKFold:
-
-							# SEPARANDO O QUE E X E O QUE E Y
-							xTrain, xTest, yTrain, yTest = separarXeY(iteracaoKFold)
-
-							# TREINANDO OS CLASSIFICADORES
-							inicioTreinoKNN = time.time()
-							knn  = knn.fit(xTrain, yTrain)
-							fimTreinoKNN = time.time()
-
-							inicioTreinoTree = time.time()
-							tree = tree.fit(xTrain, yTrain)
-							fimTreinoTree = time.time()
-
-							inicioTreinoSVM = time.time()
-							svm  = svm.fit(xTrain, yTrain)
-							fimTreinoSVM = time.time()
-
-							# PREDIZENDO
-							inicioTesteKNN = time.time()
-							yKNN  = knn.predict(xTest)
-							fimTesteKNN = time.time()
-
-							inicioTesteTree = time.time()
-							yTree = tree.predict(xTest)
-							fimTesteTree = time.time()
-
-							inicioTesteSVM = time.time()
-							ySVM  = svm.predict(xTest)
-							fimTesteSVM = time.time()
-						  
-							# COLOCANDO AS ACURACIAS NOAS ARRAYS
-							arrayAcuraciasCadaKFoldKNN.append(accuracy_score(yTest, yKNN))
-							arrayAcuraciasCadaKFoldTree.append(accuracy_score(yTest, yTree))
-							arrayAcuraciasCadaKFoldSVM.append(accuracy_score(yTest, ySVM))
-
-							# SOMANDO NO TEMPO TOTAL DE TREINAMENTO E TESTE
-							tempoTotalTreinoKNN += fimTreinoKNN - inicioTreinoKNN
-							tempoTotalTreinoTree += fimTreinoTree - inicioTreinoTree
-							tempoTotalTreinoSVM += fimTreinoSVM - inicioTreinoSVM
-							tempoTotalTesteKNN += fimTesteKNN - inicioTesteKNN
-							tempoTotalTesteTree += fimTesteTree - inicioTesteTree
-							tempoTotalTesteSVM += fimTesteSVM - inicioTesteSVM
-						  
-						# MEDIA DAS ACURACIAS DE CADA CLASSIFICADOR PARA ESSA FEATURE
-						mediaKNN  = numpy.mean(arrayAcuraciasCadaKFoldKNN)
-						mediaTree = numpy.mean(arrayAcuraciasCadaKFoldTree)
-						mediaSVM  = numpy.mean(arrayAcuraciasCadaKFoldSVM)
-						
-						# MEDIA ENTRE TODOS OS CLASSIFICADORESS
-						mediaAcuracias = (mediaKNN + mediaTree + mediaSVM)/3
-
-						# COLOCANDO AS INFORMACOES NOS CSVS
-						# "qtd"  |  "combinacao_ftx" |  "acc"  |  "time_train"  |  "time_test"
-						linhaCSVKNN  = [len(featuresSelecionadas) + 1, featuresSelecionadas + [featureAtual], mediaKNN, tempoTotalTreinoKNN, tempoTotalTesteKNN]
-						linhaCSVTree = [len(featuresSelecionadas) + 1, featuresSelecionadas + [featureAtual], mediaTree, tempoTotalTreinoTree, tempoTotalTesteTree]
-						linhaCSVSVM  = [len(featuresSelecionadas) + 1, featuresSelecionadas + [featureAtual], mediaSVM, tempoTotalTreinoSVM, tempoTotalTesteSVM]
-
-						writerKNN.writerow(linhaCSVKNN)
-						writerTree.writerow(linhaCSVTree)
-						writerSVM.writerow(linhaCSVSVM)
-
-						# PRINTANDO AS INFORMAÇÕES NO TERMINAL
-						# são as mesmas informações, mas só com a feature atual
-						print("KNN:\t", len(featuresSelecionadas) + 1, featureAtual, "%.3f" % mediaKNN, "%.3f" % tempoTotalTreinoKNN, "%.3f" % tempoTotalTesteKNN)
-						print("Tree:\t", len(featuresSelecionadas) + 1, featureAtual, "%.3f" % mediaTree, "%.3f" % tempoTotalTreinoTree, "%.3f" % tempoTotalTesteTree)
-						print("SVM:\t", len(featuresSelecionadas) + 1, featureAtual, "%.3f" % mediaSVM, "%.3f" % tempoTotalTreinoSVM, "%.3f" % tempoTotalTesteSVM)
-
-						# AGORA JA TENHO A MEDIA DE TODAS AS ACURACIAS DO KFOLD, VOU VER SE COM ESSA FEATURE O RESULTADO FOI MELHOR
-						if mediaAcuracias > melhorAcuracia:
-							melhorAcuracia = mediaAcuracias
-							melhorFeature = featureAtual          
-
-					# VERIFICANDO SE POSSO PARAR O WHILE COM A CONDICAO DE PARADA
-					if(melhorAcuracia/acuraciaAnterior < 1.01):
-						break
+					# AGORA QUE JA TENHO UM DATASET COM AS FEATURES DA VEZ, TENHO QUE CRIAR OS CLASSIFICADORES
+					if classificador == 'KNN':
+						objClassificador = KNeighborsClassifier(3)
+					elif classificador == 'Tree':
+						objClassificador = DecisionTreeClassifier()
 					else:
-						# ATUALIZACAO DE VARIAVEIS FORA DO WHILE
-						acuraciaAnterior = melhorAcuracia
-						melhorAcuraciaGeralzona = melhorAcuracia
+						objClassificador = SVC(gamma='scale', decision_function_shape='ovo')
+					
+					# ESSES ARRAYS VAO GUARDAR AS ACURACIAS DE CADA ITERACAO DO KFOLD, MAS SERAO RESETADOS QUANDO UMA NOVA FEATURE FOR TESTADA
+					arrayAcuraciasCadaKFold = []				
 
-						# DEPOIS QUE ACABAR, EU REMOVO A MELHOR FEATURE DAS FEATURES RESTANTES E COLOCO ELA FIXA NO DATASET
-						featuresSelecionadas.append(melhorFeature)
-						dataset, featuresRestantes = novaMelhorFeature(dataset, datasetOriginal, melhorFeature, featuresRestantes)
+					# TEMPO DE TREINAMENTO DAS 10 ITERACOES DO KFOLD
+					tempoTotalTreino = 0
+					tempoTotalTeste = 0
+
+					# PARA CADA ITERACAO DO KFOLD
+					matrizKFold = kFold(dataset)
+					for iteracaoKFold in matrizKFold:
+
+						# SEPARANDO O QUE E X E O QUE E Y
+						xTrain, xTest, yTrain, yTest = separarXeY(iteracaoKFold)
+
+						# TREINANDO O CLASSIFICADOR
+						inicioTreino = time.time()
+						objClassificador  = objClassificador.fit(xTrain, yTrain)
+						fimTreino = time.time()
+
+						# PREDIZENDO
+						inicioTeste = time.time()
+						yPredict  = objClassificador.predict(xTest)
+						fimTeste = time.time()
+
+						# COLOCANDO AS ACURACIAS NOAS ARRAYS
+						arrayAcuraciasCadaKFold.append(accuracy_score(yTest, yPredict))
 						
-						# TAMBEM TENHO QUE COLOCAR A ACURACIA NO ARRAY DE ACURACIAS GERAIS
-						acuraciasGeral.append(melhorAcuracia)
+						# SOMANDO NO TEMPO TOTAL DE TREINAMENTO E TESTE
+						tempoTotalTreino += fimTreino - inicioTreino
+						tempoTotalTeste += fimTeste - inicioTeste
+					  
+					# MEDIA DAS ACURACIAS DE CADA CLASSIFICADOR PARA ESSA FEATURE
+					mediaAcc  = numpy.mean(arrayAcuraciasCadaKFold)
+					
+					# COLOCANDO AS INFORMACOES NOS CSVS
+					# "qtd"  |  "combinacao_ftx" |  "acc"  |  "time_train"  |  "time_test"
+					linhaCSV  = [len(featuresSelecionadas) + 1, featuresSelecionadas + [featureAtual], mediaAcc, tempoTotalTreino, tempoTotalTeste]
 
-					# NO FIM DO WHILE EU PRINTO A COMBINAÇÃO DE FEATURES QUE FOI MELHOR
+					writerCSVClassificador.writerow(linhaCSV)
+
+					# PRINTANDO AS INFORMAÇÕES NO TERMINAL
+					# são as mesmas informações, mas só com a feature atual
+					print(len(featuresSelecionadas) + 1, featureAtual, "%.3f" % mediaAcc, "%.3f" % tempoTotalTreino, "%.3f" % tempoTotalTeste)
+
+					# AGORA JA TENHO A MEDIA DE TODAS AS ACURACIAS DO KFOLD, VOU VER SE COM ESSA FEATURE O RESULTADO FOI MELHOR
+					if mediaAcc > melhorAcuracia:
+						melhorAcuracia = mediaAcc
+						melhorFeature = featureAtual
+						tempoTotalTreinoMelhorFeature = tempoTotalTreino
+						tempoTotalTesteMelhorFeature = tempoTotalTeste
+
+				# VERIFICANDO SE POSSO PARAR O WHILE COM A CONDICAO DE PARADA
+				if(melhorAcuracia/acuraciaAnterior < 1.01):
+					print("Critério de parada atingido")
 					print("Melhor combinação de features:", featuresSelecionadas, "\n")
+					break
+				else:
+					# ATUALIZACAO DE VARIAVEIS FORA DO WHILE
+					acuraciaAnterior = melhorAcuracia
+
+					# DEPOIS QUE ACABAR, EU REMOVO A MELHOR FEATURE DAS FEATURES RESTANTES E COLOCO ELA FIXA NO DATASET
+					featuresSelecionadas.append(melhorFeature)
+					dataset, featuresRestantes = novaMelhorFeature(dataset, datasetOriginal, melhorFeature, featuresRestantes)
+
+				# NO FIM DO WHILE EU PRINTO A COMBINAÇÃO DE FEATURES QUE FOI MELHOR E ESCREVO NO CSV REDUZIDO
+				linhaCSV  = [len(featuresSelecionadas), featuresSelecionadas, melhorAcuracia, tempoTotalTreinoMelhorFeature, tempoTotalTesteMelhorFeature]
+				writerCSVReduzido.writerow(linhaCSV)
+				print("Melhor combinação de features:", featuresSelecionadas, "\n")
 
 # ------------------------DEFININDO OS PARAMETROS INICIAIS------------------------
 
@@ -262,7 +237,7 @@ bitsProfundidade = sys.argv[1]
 freqAmostragem = sys.argv[2]
 caminhoCSV = "features_"  + bitsProfundidade+"bits_" + freqAmostragem + "kHz.csv"
 
-# ABRINDO O CSV COMO UM NUMPY ARRAY E DELETANDO A PRIMEIRA LINHA (CABECALHO)
+# ABRINDO O CSV DE FEATURES COMO UM NUMPY ARRAY E DELETANDO A PRIMEIRA LINHA (CABECALHO)
 datasetOriginal = numpy.genfromtxt(caminhoCSV, delimiter=",")
 datasetOriginal = numpy.delete(datasetOriginal, 0, 0)
 
@@ -274,13 +249,25 @@ colunaClassificacao = datasetOriginal[:,datasetOriginal.shape[1] - 1]
 datasetOriginal = datasetOriginal[:,2:-1]
 
 # NORMALIZANDO O DATASET
-datasetOriginal = normalize(datasetOriginal, norm='l1')
-#datasetOriginal = normalize(datasetOriginal, norm='l2')
-#datasetOriginal = scale(datasetOriginal)
+if sys.argv[3] == 'l1':
+	datasetOriginal = normalize(datasetOriginal, norm='l1')
+elif sys.argv[3] == 'l2':
+	datasetOriginal = normalize(datasetOriginal, norm='l2')
+elif sys.argv[3] == 'scale':
+	datasetOriginal = scale(datasetOriginal)
+elif sys.argv[3] == 'standardScaler':
+	datasetOriginal = StandardScaler().fit_transform(datasetOriginal)
+elif sys.argv[3] == 'robustScaler':
+	datasetOriginal = RobustScaler().fit_transform(datasetOriginal)
+else:
+	pass
 
 # COLOCANDO AS COLUNAS DE CLASSIFICACAO E PASTA
 datasetOriginal = numpy.column_stack((colunaPasta, datasetOriginal))
 datasetOriginal = numpy.column_stack((datasetOriginal, colunaClassificacao))
 
+# CLASSIFICADOR DESEJADO
+classificador = sys.argv[4]
+
 # RODANDO O CODIGO
-main(datasetOriginal, bitsProfundidade, freqAmostragem)
+main(datasetOriginal, bitsProfundidade, freqAmostragem, classificador, sys.argv[3])
