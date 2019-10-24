@@ -122,7 +122,11 @@ def acuraciaPelaModa(nomesArquivosCadaJanela, yTestCadaJanela, yPredCadaJanela):
 		# COLOCANDO NOS ARRAYS FINAIS
 		yPredFinal.append(int(mode(predicoesArquivoAtual)[0]))
 		yTestFinal.append(matrizDadosTeste['classe'][0])
-		
+
+		# APAGANDO AS LINHAS DO DATASET QUE SEJAM DO ARQUIVO ATUAL, JA QUE ELE JA FOI USADO
+		matrizDadosTeste = matrizDadosTeste.loc[matrizDadosTeste['arquivo'] != arquivoAtual]
+		matrizDadosTeste.reset_index(drop=True, inplace=True)
+
 	# AGORA QUE OS ARRAYS JA ESTAO PRONTOS, POSSO APLICAR A ACURACIA
 	return accuracy_score(yTestFinal, yPredFinal)
 
@@ -137,6 +141,12 @@ def main(datasetOriginal, bitsProfundidade, freqAmostragem, classificador, norma
 	contWhile = 0
 	arquivoCSV = classificador + "_" + normalizador + "_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz.csv"
 	arquivoCSVReduzido = classificador + "_" + normalizador + "_" + bitsProfundidade + "bits_" + freqAmostragem + "kHz_REDUZIDO.csv"
+
+	# ESSA PARTE E PRA ADICIONAR FEATURES ANTES DO ALGORTIMO COMECAR, PQ JA TINHA RODADO EM OUTRO PC
+	# SE FOR RODAR ESSE ALGORITMO DO ZERO, ESSA PARTE DEVE SER EXCLUIDA
+	#featuresPrevias = [3, 33, 0, 38, 30, 45, 7, 35, 9, 24, 20]
+	#for	melhorFeature in featuresPrevias:
+	#	featuresRestantes, featuresSelecionadas = atualizarFeaturesSelecionadas(melhorFeature, featuresRestantes, featuresSelecionadas)
 
 	# ABRINDO OS CSVS DOS RESULTADOS DOS CLASSIFICADORES
 	with open(arquivoCSV, 'a') as csvFile:
@@ -207,7 +217,10 @@ def main(datasetOriginal, bitsProfundidade, freqAmostragem, classificador, norma
 						# AQUI EU JA TENHO OS RESULTADOS DA ITERACAO DO KFOLD ATUAL, JA POSSO CALCULAR A ACURACIA DESSA ITERACAO DO KFOLD
 						# COLOCANDO AS ACURACIAS NOAS ARRAYS
 
-						arrayAcuraciasCadaKFold.append(acuraciaPelaModa(nomesArquivosCadaJanela, yTestCadaJanela, yPredCadaJanela))						
+						inicioTeste = time.time()
+						arrayAcuraciasCadaKFold.append(acuraciaPelaModa(nomesArquivosCadaJanela, yTestCadaJanela, yPredCadaJanela))
+						fimTeste = time.time()
+						tempoTotalTeste += fimTeste - inicioTeste				
 					  
 					# AQUI EU JA ACABEI TODAS AS ITERACOES DO KFOLD COM A COMBINACAO DE FEATURES ATUAL, POSSO TIRAR A MEDIA E SALVAR O RESULTADO
 					# MEDIA DAS ACURACIAS DE CADA CLASSIFICADOR PARA ESSA FEATURE
@@ -231,7 +244,8 @@ def main(datasetOriginal, bitsProfundidade, freqAmostragem, classificador, norma
 						tempoTotalTesteMelhorFeature = tempoTotalTeste
 
 				# VERIFICANDO SE POSSO PARAR O WHILE COM A CONDICAO DE PARADA
-				if(melhorAcuracia/acuraciaAnterior < 1.01):
+				# if(melhorAcuracia/acuraciaAnterior < 1.01):
+				if(1==0):
 					print("Critério de parada atingido")
 					print("Melhor combinação de features:", featuresSelecionadas, "\n")
 					break
