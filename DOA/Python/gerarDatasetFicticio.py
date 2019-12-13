@@ -37,7 +37,7 @@ def escreverCabecalho(qtdMics):
 # AGORA SIM VAMOS COMECAR O ALGORITMO--------------------------------------------
 
 # DEFININDO O CABECALHO DO CSV
-cabecalhoCSV = escreverCabecalho(8)
+cabecalhoCSV = escreverCabecalho(8) #qtd de mics
 
 # COORDENADAS ORIGINAIS DO DREGON DATASET
 coordenadasMics = np.array([
@@ -60,12 +60,12 @@ freqAmostragem = 44100
 # VOU CALCULAR OS DELAYS COMO SE O SOM TIVESSE VINDO DAS SEGUINTES COMBINACOES
 # DE AZIMUTAIS E ELEVACOES
 
-azimutaisDesejados = [45,60,75,90]
-elevacoesDesejadas = [-30,-15,0]
-for azimutalAtual in azimutaisDesejados:
-    for elevacaoAtual in elevacoesDesejadas:
-#for azimutalAtual in np.arange(0, 91, 10):
-#    for elevacaoAtual in np.arange(-90, 1, 10):
+# azimutaisDesejados = [45,60,75,90]
+# elevacoesDesejadas = [-30,-15,0]
+# for azimutalAtual in azimutaisDesejados:
+#     for elevacaoAtual in elevacoesDesejadas:
+for azimutalAtual in np.arange(0, 91, 15):
+   for elevacaoAtual in np.arange(-90, 1, 15):
         
         # TENHO QUE PASSAR PRA RADIANOS PRA FAZER AS CONTAS
         azimutalAtualRad = grauParaRad(azimutalAtual)
