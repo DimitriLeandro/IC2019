@@ -1,0 +1,1 @@
+Esta pasta tem esse nome pois as gravações foram feitas somente com um microfone. Posteriormente, simula-se um array de microfones copiando e colando o mesmo sinal e dando uma defasagem arbitrária entre eles. Ainda pode-se adicionar ruído.
