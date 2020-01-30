@@ -17,19 +17,28 @@
 # O COMANDO ABAIXO INSTANCIA A CLASSE. O CONSTRUTOR DEVOLVE UM DATAFRAME PANDAS AO MESMO TEMPO QUE CRIA O CSV
 # dataframeGeral = extrairFeatures(diretorio, freqAmostragem, frameLength, overlapLength, nDimensoes)
 
-class extrairFeatures:
+import os
+import librosa
+import numpy as np
+import pandas as pd
+import time
+from sklearn.preprocessing import StandardScaler
+from sklearn.decomposition import PCA
+
+class ExtrairFeatures:
 
 	# CONSTRUTOR---------------------------------------------------------------------------------------------
-	def __init__(self, diretorio, freqAmostragem, frameLength, overlapLength, nDimensoes=None):    
+	def __init__(self, diretorio, freqAmostragem, frameLength, overlapLength, escalonamento=True, nDimensoes=None):    
 		# PRIMEIRO EU CRIO O DATAFRAME DE TODOS OS AUDIOS DA PASTA
-		dataframeGeral = montarDataframeTodosOsAudios(diretorio, freqAmostragem, frameLength, overlapLength)
+		dataframeGeral = self.montarDataframeTodosOsAudios(diretorio, freqAmostragem, frameLength, overlapLength)
 		
 		# DEPOIS EU ESCALONO AS FEATURES
-		dataframeGeral = escalonarFeatures(dataframeGeral)
+		if escalonamento == True:
+			dataframeGeral = self.escalonarFeatures(dataframeGeral)
 		
 		# E AGORA EU REDUZO A DIMENSIONALIDADE
 		if nDimensoes != None:
-			dataframeGeral = reduzirDimensionalidade(dataframeGeral, nDimensoes)
+			dataframeGeral = self.reduzirDimensionalidade(dataframeGeral, nDimensoes)
 			
 		# PARA FINALIZAR, VOU ESCREVER O DATAFRAME NUM CSV
 		nomeCSV = diretorio + str(time.time()) + ".csv"
@@ -38,7 +47,8 @@ class extrairFeatures:
 		
 		# TAMBEM VOU RETORNAR O DATAFRAME, PQ VAI QUE EU PRECISO NE
 		print("Operação finalizada")
-		return dataframeGeral
+		
+		# return dataframeGeral
 
 	# DEFINICAO DE FUNCOES INTERMEDIARIAS--------------------------------------------------------------------	
 	def fazerJanelamento(self, sinal, frameLength, overlapLength):
@@ -69,25 +79,25 @@ class extrairFeatures:
 		arrayFeaturesFrame = []
 		
 		#PRIMEIRO, VOU EXTRAIR AS FEATURES UNITARIAS
-		arrayFeaturesFrame.append(float(extrairRMS(sinal, frameLength, overlapLength)))
-		arrayFeaturesFrame.append(float(extrairCentroideEspectral(sinal, freqAmostragem, frameLength, overlapLength)))
-		arrayFeaturesFrame.append(float(extrairLarguraBanda(sinal, freqAmostragem, frameLength, overlapLength)))
-		arrayFeaturesFrame.append(float(extrairPlanicidade(sinal, frameLength, overlapLength)))
-		arrayFeaturesFrame.append(float(extrairRolloff(sinal, freqAmostragem, frameLength, overlapLength)))
-		arrayFeaturesFrame.append(float(extrairZCR(sinal, frameLength, overlapLength)))
+		arrayFeaturesFrame.append(float(self.extrairRMS(sinal, frameLength, overlapLength)))
+		arrayFeaturesFrame.append(float(self.extrairCentroideEspectral(sinal, freqAmostragem, frameLength, overlapLength)))
+		arrayFeaturesFrame.append(float(self.extrairLarguraBanda(sinal, freqAmostragem, frameLength, overlapLength)))
+		arrayFeaturesFrame.append(float(self.extrairPlanicidade(sinal, frameLength, overlapLength)))
+		arrayFeaturesFrame.append(float(self.extrairRolloff(sinal, freqAmostragem, frameLength, overlapLength)))
+		arrayFeaturesFrame.append(float(self.extrairZCR(sinal, frameLength, overlapLength)))
 		
 		# AGORA VAMOS PASSAR PARA AS NAO UNITARIAS, PRIMEIRO, E PRECISO CRIAR A MATRIZ DOS MFCCS
-		matrizMFCC          = extrairMatrizMFCC(sinal, freqAmostragem)
+		matrizMFCC          = self.extrairMatrizMFCC(sinal, freqAmostragem)
 		
 		# AGORA SIM EU SAIO EXTRAINDO AS FEATURES 
-		arrayFeaturesFrame += extrairMFCCs(matrizMFCC)
-		arrayFeaturesFrame += extrairDeltas(matrizMFCC)
-		arrayFeaturesFrame += extrairDeltaDeltas(matrizMFCC)
-		arrayFeaturesFrame += extrairMelEspectrograma(sinal, freqAmostragem, frameLength, overlapLength)
-		arrayFeaturesFrame += extrairCromagramas(sinal, freqAmostragem, frameLength, overlapLength)
-		arrayFeaturesFrame += extrairCromagramasQ(sinal, freqAmostragem)
-		arrayFeaturesFrame += extrairCromaCENSs(sinal, freqAmostragem)
-		arrayFeaturesFrame += extrairContrastes(sinal, freqAmostragem, frameLength, overlapLength)
+		arrayFeaturesFrame += self.extrairMFCCs(matrizMFCC)
+		arrayFeaturesFrame += self.extrairDeltas(matrizMFCC)
+		arrayFeaturesFrame += self.extrairDeltaDeltas(matrizMFCC)
+		arrayFeaturesFrame += self.extrairMelEspectrograma(sinal, freqAmostragem, frameLength, overlapLength)
+		arrayFeaturesFrame += self.extrairCromagramas(sinal, freqAmostragem, frameLength, overlapLength)
+		arrayFeaturesFrame += self.extrairCromagramasQ(sinal, freqAmostragem)
+		arrayFeaturesFrame += self.extrairCromaCENSs(sinal, freqAmostragem)
+		arrayFeaturesFrame += self.extrairContrastes(sinal, freqAmostragem, frameLength, overlapLength)
 		
 		# POR FIM, RETORNO O ARRAY DE FEATURES DO AUDIO QUE FOI ENVIADO PARA ESSA FUNCAO
 		return arrayFeaturesFrame
@@ -104,11 +114,11 @@ class extrairFeatures:
 		matrizFeaturesAudio = []
 		
 		# DEPOIS, VOU FAZER O JANELAMENTO
-		matrizFramesAudio = fazerJanelamento(sinal, frameLength, overlapLength)
+		matrizFramesAudio = self.fazerJanelamento(sinal, frameLength, overlapLength)
 		
 		# AGORA, PARA CADA JANELA, VOU EXTRAIR AS FEATURES E COLOCAR COMO UMA LINHA NOVA NA MATRIZ
 		for frameAtual in matrizFramesAudio:
-			matrizFeaturesAudio.append(extrairFeaturesUnicoFrame(frameAtual, freqAmostragem, frameLength))
+			matrizFeaturesAudio.append(self.extrairFeaturesUnicoFrame(frameAtual, freqAmostragem, frameLength))
 		
 		# RETORNO A MATRIZ DE FEATURES DESSE AUDIO
 		return matrizFeaturesAudio
@@ -166,18 +176,18 @@ class extrairFeatures:
 			print("Extraindo features do arquivo", i+1, "de", totalArquivosNaPasta, "-> " + str(100*((i+1)/totalArquivosNaPasta)) + "%")
 			
 			# ABRO O AUDIO ATUAL COM O LIBROSA
-			audioAtual, freqAmostragem = librosa.load(audioTesteDir, sr=freqAmostragem, mono=True) 
+			audioAtual, freqAmostragem = librosa.load(diretorio+nomeArquivo, sr=freqAmostragem, mono=True) 
 			
 			# VERIFICAO QUAL E A CLASSIFICACAO CORRETA
-			classeAudioAtual = verificarClassificacaoCorreta(nomeArquivo)
+			classeAudioAtual = self.verificarClassificacaoCorreta(nomeArquivo)
 			
 			# MONTO A MATRIZ DE FEATUREA DE CADA FRAME DO AUDIO ATUAL (a funcao abaixo
 			# devolve uma matriz normal e faz o janelamento em outra funcao tb)
-			matrizFeaturesAudioAtual = extrairFeaturesUnicoAudio(audioAtual, freqAmostragem, frameLength, overlapLength)
+			matrizFeaturesAudioAtual = self.extrairFeaturesUnicoAudio(audioAtual, freqAmostragem, frameLength, overlapLength)
 			
 			# AGORA E HORA DE COLOCAR O NOME E A CLASSIFICACAO CORRETA NA MATRIZ
 			# MAAAS, NA FUNCAO ABAIXO, O BICHO VIRA UM DATAFRAME PANDAS
-			dataframeAudioAtual      = adicionarNomeArquivoEClasse(matrizFeaturesAudioAtual, nomeArquivo, classeAudioAtual)
+			dataframeAudioAtual      = self.adicionarNomeArquivoEClasse(matrizFeaturesAudioAtual, nomeArquivo, classeAudioAtual)
 			
 			# CONCATENANDO O DATAFRAME DO AUDIO ATUAL AO DATAFRAME GERAL
 			dataframeGeral = pd.concat([dataframeGeral, dataframeAudioAtual])
