@@ -219,7 +219,7 @@ class GeneralizedSidelobeCanceller:
 		print("Iniciando a filtragem adaptativa com LMS")
 		
 		# RODANDO O LMS. ELE RETORNA UM OBJETO CHEIO DE ATRIBUTOS
-		objRespostaLMS = least_squares(fun=self.calcularEnergiaSinalFinal, x0=chuteInicial, bounds=[limitesInferiores, limitesSuperiores])
+		objRespostaLMS = least_squares(fun=self.calcularEnergiaSinalFinal, x0=chuteInicial, bounds=[limitesInferiores, limitesSuperiores], verbose=0)
 		
 		# O UNICO ATRIBUTO QUE ME INTERESSA E ESSE "X", QUE E A RESPOSTA ENCONTRADA DE FATO
 		return objRespostaLMS.x
