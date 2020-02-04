@@ -72,8 +72,8 @@ class ExtrairFeatures:
 		# ela vai retornar uma matriz com as features de cada frame de um único áudio.
 		# 
 		# PARA IMPEDIR QUE O LIBROSA CONTINUE FAZENDO O JANELAMENTO DO ÁUDIO MESMO QUE frameLength 
-		# SEJA DO TAMANHO DO ÁUDIO, O PARÂMETRO DE OVERLAP DEVE SER MAIOR OU IGUAL A frameLength.s
-		overlapLength = frameLength
+		# SEJA DO TAMANHO DO ÁUDIO, O PARÂMETRO DE OVERLAP DEVE SER MAIOR QUE frameLength
+		overlapLength = frameLength + 1
 		
 		# CRIANDO O ARRAY DE FEATURES DO FRAME EM QUESTAO
 		arrayFeaturesFrame = []
@@ -261,6 +261,13 @@ class ExtrairFeatures:
 	# DEFINICAO DAS FUNCOES QUE REALMENTE EXTRAEM AS FEATURES -----------------------------------------------
 
 	def extrairRMS(self, sinal, frameLength, overlapLength):
+		# overlapLength += 1
+		# print("Tamanho da janela recebida:", len(sinal))
+		# print("Frame length:", frameLength)
+		# print("Overlap length:", overlapLength)
+		# aaa = librosa.feature.rms(y=sinal, frame_length=frameLength, hop_length=overlapLength)
+		# print("Retorno:", aaa)
+		# return aaa
 		return librosa.feature.rms(y=sinal, frame_length=frameLength, hop_length=overlapLength)
 
 	def extrairCentroideEspectral(self, sinal, freqAmostragem, frameLength, overlapLength):
@@ -364,15 +371,3 @@ class ExtrairFeatures:
 			arrayConstrastes.append(np.mean(linha))
 		
 		return arrayConstrastes
-
-
-
-
-
-
-
-
-
-
-
-
