@@ -12,10 +12,10 @@
 # # DEFININDO OS PARAMETROS INICIAIS
 # caminhoArquivo = '/home/dimi/Programming/IC2019/DOA/Gravacoes/Simulacoes/Gravacao3/sinalPuroMono2Segundos.wav'
 # qtdMics        = 4
-# amplitudeRuido = 0.01
+# energiaRuido   = 0.01
 
 # # INSTANCIANDO UM OBJETO DA CLASSE 
-# objSimularArrayMics = SimularArrayMicrofones(caminhoArquivo, qtdMics, amplitudeRuido)
+# objSimularArrayMics = SimularArrayMicrofones(caminhoArquivo, qtdMics, energiaRuido)
 
 # # OBTENDO O ARRAY DE SINAIS E DE DELAYS E A FREQ DE AMOSTRAGEM
 # arraySinaisSimulados, arrayDelays, freqAmostragem = objSimularArrayMics.obterResultado()
@@ -31,7 +31,7 @@ class SimularArrayMicrofones:
 	arrayDelays          = []
 	freqAmostragem       = 0
 
-	def __init__(self, caminhoArquivo, qtdMics, amplitudeRuido=None):
+	def __init__(self, caminhoArquivo, qtdMics, energiaRuido=None):
 		# Função construtora para unir tudo
 		# Abaixo, vou criar a função construtora que apenas recebe o caminho para um arquivo WAV, a quantidade de microfones desejada e se deve adicionar ruido branco nos microfones.
 		# ABRINDO O ARQUIVO MONO PURO
@@ -41,20 +41,18 @@ class SimularArrayMicrofones:
 		self.arraySinaisSimulados, self.arrayDelays = self.simularArrayMicrofones(sinalPuroMono, qtdMics)
 		
 		# ADICIONANDO RUIDO
-		if amplitudeRuido != None:
-			self.arraySinaisSimulados = self.adicionarRuido(self.arraySinaisSimulados, amplitudeRuido)
+		if energiaRuido != None:
+			self.arraySinaisSimulados = self.adicionarRuido(self.arraySinaisSimulados, energiaRuido)
 
 	def obterResultado(self):
 		return self.arraySinaisSimulados, self.arrayDelays, self.freqAmostragem
 
-	def gerarRuidoBranco(self, qtdAmostras, amplitude):
-		
-		# ESSA AMPLITUDE QUE A CLASSE RECEBE NAO E UMA AMPLITUDE "CERTINHA" EM DECIBEIS NEM NADA, E SIMPLESMENTE UM FATOR MULTIPLICATIVO PRA AUMENTAR OU DIMINUIR O VOLUME
+	def gerarRuidoBranco(self, qtdAmostras, energiaRuido):
 
 		media        = 0
 		desvioPadrao = 1
 		
-		return amplitude * np.random.normal(media, desvioPadrao, size=qtdAmostras)
+		return np.random.normal(media, desvioPadrao, size=qtdAmostras) * energiaRuido**(1/2)
 
 	def simularArrayMicrofones(self, sinalPuroMono, qtdMics):
 		# Função para gerar um array de microfones e o delay entre eles
@@ -88,10 +86,10 @@ class SimularArrayMicrofones:
 		
 		return arraySinaisSimulados, arrayDelays
 	
-	def adicionarRuido(self, arraySinaisSimulados, amplitudeRuido):
+	def adicionarRuido(self, arraySinaisSimulados, energiaRuido):
 		# Função para adicionar ruido a cada um dos microfones
 		# O ruído não poderá ser defasado, pois ele vem de todas as direções. Essa função vai utilizar a função que gera o ruído.
-		ruido = self.gerarRuidoBranco(len(arraySinaisSimulados[0]), amplitudeRuido)
+		ruido = self.gerarRuidoBranco(len(arraySinaisSimulados[0]), energiaRuido)
 		
 		for i, sinalAtual in enumerate(arraySinaisSimulados):
 			arraySinaisSimulados[i] = sinalAtual + ruido
