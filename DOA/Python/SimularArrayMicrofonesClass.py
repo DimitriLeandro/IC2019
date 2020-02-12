@@ -10,12 +10,12 @@
 # from SimularArrayMicrofonesClass import SimularArrayMicrofones
 
 # # DEFININDO OS PARAMETROS INICIAIS
-# caminhoArquivo = '/home/dimi/Programming/IC2019/DOA/Gravacoes/Simulacoes/Gravacao3/sinalPuroMono2Segundos.wav'
-# qtdMics        = 4
-# energiaRuido   = 0.01
+# caminhoArquivo   = '/home/dimi/Programming/IC2019/DOA/Gravacoes/Simulacoes/Gravacao3/sinalPuroMono2Segundos.wav'
+# cooredenadasMics = Null para coordenadas padrão ou uma matriz onde as linhas são os microfones
+# energiaRuido     = 0.01
 
 # # INSTANCIANDO UM OBJETO DA CLASSE 
-# objSimularArrayMics = SimularArrayMicrofones(caminhoArquivo, qtdMics, energiaRuido)
+# objSimularArrayMics = SimularArrayMicrofones(caminhoArquivo, energiaRuido, coordenadas)
 
 # # OBTENDO O ARRAY DE SINAIS E DE DELAYS E A FREQ DE AMOSTRAGEM
 # arraySinaisSimulados, arrayDelays, freqAmostragem = objSimularArrayMics.obterResultado()
@@ -23,6 +23,7 @@
 
 import librosa
 import numpy as np
+import math
 from random import randint
 
 class SimularArrayMicrofones:
@@ -31,14 +32,15 @@ class SimularArrayMicrofones:
 	arrayDelays          = []
 	freqAmostragem       = 0
 
-	def __init__(self, caminhoArquivo, qtdMics, energiaRuido=None):
-		# Função construtora para unir tudo
-		# Abaixo, vou criar a função construtora que apenas recebe o caminho para um arquivo WAV, a quantidade de microfones desejada e se deve adicionar ruido branco nos microfones.
+	def __init__(self, caminhoArquivo, energiaRuido=None, coordenadasMics=[[0,0,0],[0,0.04137,0.04137],[0.0585,0.04137,0.04137],[0.0585,0,0]]):    
 		# ABRINDO O ARQUIVO MONO PURO
 		sinalPuroMono, self.freqAmostragem = librosa.load(caminhoArquivo, sr=None, mono=True)
 		
-		# COLOCANDO A DEFASAGEM ENTRE OS MICROFONES
-		self.arraySinaisSimulados, self.arrayDelays = self.simularArrayMicrofones(sinalPuroMono, qtdMics)
+		# GERANDO UM DELAY ENTRE OS MICROFONES
+		self.arrayDelays = self.obterArrayDelays(coordenadasMics, self.freqAmostragem)
+		
+		# GERANDO OS SINAIS DE CADA MICROFONE DE ACORDO COM OS DELAYS GERADOS
+		self.arraySinaisSimulados = self.simularArrayMicrofones(sinalPuroMono, self.arrayDelays)
 		
 		# ADICIONANDO RUIDO
 		if energiaRuido != None:
@@ -54,37 +56,73 @@ class SimularArrayMicrofones:
 		
 		return np.random.normal(media, desvioPadrao, size=qtdAmostras) * energiaRuido**(1/2)
 
-	def simularArrayMicrofones(self, sinalPuroMono, qtdMics):
+	def calcularProdutoInterno(self, vetorA, vetorB):
+		soma = 0	    
+		for i in range(len(vetorA)):
+			soma += vetorA[i] * vetorB[i]      
+		return soma
+
+	def grausParaRad(self, angRad):
+		return (angRad * math.pi)/180
+
+	def segundosParaAmostras(self, segundos, freqAmostragem):
+		return freqAmostragem * segundos
+
+	def obterArrayDelays(self, coordenadasMics, freqAmostragem, velocidadeSom=340.29, azimutalRad=None, elevacaoRad=None):
+		# Função para gerar um array de delays entre os microfones
+		# Essa função precisará receber as coordenadas dos microfones para gerar os delays entre eles de acordo com os angulos azimutal e de elevação, que serão aleatórios.
+		# Para achar os delays entre os microfones basta fazer o algoritmo do produto interno.
+		
+		arrayDelays = []
+		
+		# GERANDO AZIMUTAL E ELEVACAO ALEATORIOS (EM RAD)
+		if azimutalRad == None:
+			azimutalRad = self.grausParaRad(randint(0, 359))
+		if elevacaoRad == None:
+			elevacaoRad = self.grausParaRad(randint(-90, 90))
+		
+		# CONVERTENDO PARA UM VETOR UNITARIO
+		vetorWavefront = [
+			math.cos(elevacaoRad) * math.cos(azimutalRad),
+			math.cos(elevacaoRad) * math.sin(azimutalRad),
+			math.sin(elevacaoRad)
+		]
+		
+		# PARA CADA MICROFONE
+		for coordenadasOriginaisMicAtual in coordenadasMics:
+			
+			# EU FACO A DIFERENCA DAS COORDENADAS ATUAIS PRAS COORDENADAS DO MICROFONE DA ORIGEM
+			coordenadasModificadasMicAtual = np.array(coordenadasOriginaisMicAtual) - np.array(coordenadasMics[0])
+			
+			# CALCULO DELAY USANDO O PRODUTO INTERNO DAS COORDENADAS DO MIC ATUAL COM O VETOR WAVEFRONT
+			delayAtual = self.calcularProdutoInterno(vetorWavefront, coordenadasModificadasMicAtual)/velocidadeSom
+			delayAtual = self.segundosParaAmostras(delayAtual, freqAmostragem)
+			delayAtual = int(round(delayAtual))
+			arrayDelays.append(delayAtual)
+			
+		return arrayDelays
+
+	def simularArrayMicrofones(self, sinalPuroMono, arrayDelays):
 		# Função para gerar um array de microfones e o delay entre eles
 		# A função abaixo vai receber um sinal mono e vai gerar um array de sinais. Basta copiar e colar o sinal mono e defasar aleatoriamente. Essa função vai devolver o array de sinais e o delay entre eles.
 		# ARRAY DE SINAIS
 		arraySinaisSimulados = []
-		arrayDelays          = [0]
 		
-		# VOU CRIAR qtdMics SINAIS QUE SAO O PROPRIO SINAL PURO, MAS DEFASADOS ALEATORIAMENTE
-		for i in range(qtdMics):
-			
-			# O PRIMEIRO MICROFONE NAO VAI TER DEFASAGEM EM RELACAO AO SINAL PURO
-			if i == 0:
-				arraySinaisSimulados.append(sinalPuroMono)
-				continue
-			
-			# GERANDO UM DELAY (em amostras, nao em segundos) ALEATORIO PARA O MIC DA VEZ
-			delayAleatorio = randint(-30,30)
-			arrayDelays.append(delayAleatorio)
+		# PARA CADA DELAY ENTRE OS MICROFONES
+		for delayAtual in arrayDelays:
 			
 			# SE FOR POSITIVO, EU COMO UMA PARTE DO SINAL NO COMECO E PREENCHO COM ZEROS NO FINAL
-			if delayAleatorio >= 0:
-				sinalMicAtual = np.concatenate((sinalPuroMono[delayAleatorio:], np.zeros(delayAleatorio)))
+			if delayAtual >= 0:
+				sinalMicAtual = np.concatenate((sinalPuroMono[delayAtual:], np.zeros(delayAtual)))
 				
 			# SE FOR NEGATIVO, EU COLOCO ZEROS NO COMECO E CORTO DO FINAL
 			else:
-				sinalMicAtual = np.concatenate((np.zeros(-delayAleatorio), sinalPuroMono[:delayAleatorio]))
+				sinalMicAtual = np.concatenate((np.zeros(-delayAtual), sinalPuroMono[:delayAtual]))
 				
 			# COLOCO O SINAL COPIADO E DEFASADO NO ARRAY DE MICROFONES
 			arraySinaisSimulados.append(sinalMicAtual)
 		
-		return arraySinaisSimulados, arrayDelays
+		return arraySinaisSimulados
 	
 	def adicionarRuido(self, arraySinaisSimulados, energiaRuido):
 		# Função para adicionar ruido a cada um dos microfones
