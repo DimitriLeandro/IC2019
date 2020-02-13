@@ -23,6 +23,11 @@ import json
 
 class TreinarEClassificar:
 
+	arrayAcuracias = []
+
+	def __init__(self):
+		self.arrayAcuracias = []
+
 	def separarDataframeXeY(self, dataframe):
 		# Função para separar o dataframe em X e Y
 		# Preciso de uma função que pegue o dataframe devolva dois arrays: xTrain e yTrain. Ai depois é só usar esses arrays para treinar os classificadores.
@@ -218,10 +223,9 @@ class TreinarEClassificar:
 		with open(diretorioOndeSalvar + nomeJSON, 'w') as json_file:
 			json.dump(dictRelatorio, json_file)
 
-	def classificarDataframe(self, dataframeTeste, arrayObjClassificadores, diretorioOndeSalvar, nomeDatasetTreino, verbose=False):
+	def classificarDataframe(self, dataframeTeste, arrayObjClassificadores, diretorioOndeSalvar=None, nomeDatasetTreino=None, verbose=False):
 		# Função para classificar um dataset com todos os classificadores e gerar os relatorios
 		# Essa é a função principal da parte de treinamento de dataset, pois ela vai receber um dataset e o array de classificadores já treinados e, para cada classificador, ela vai garar um relátorio de classificação.
-		print("Começando a classificar o dataset", nomeDatasetTreino)
 		
 		# PARA CADA CLASSIFICADOR
 		for classificadorAtual in arrayObjClassificadores:
@@ -229,9 +233,14 @@ class TreinarEClassificar:
 			# EU GERO O RELATORIO DE CLASSIFICACAO COMO UM DICIONARIO
 			dictRelatorioAtual = self.classificarDataframeCompleto(dataframeTeste, classificadorAtual, verbose)
 
-			print("Acurácia:", dictRelatorioAtual["accuracy"])
+			# GUARRDO A ACURACIA ATUAL NO ARARY DE ACURACIAS
+			self.arrayAcuracias.append(dictRelatorioAtual["accuracy"])
+
+			if verbose == True:
+				print("Acurácia:", dictRelatorioAtual["accuracy"])
 			
 			# E SALVO AS INFORMACOES COMO JSON
-			self.salvarRelatorioClassificacao(dictRelatorioAtual, diretorioOndeSalvar, nomeDatasetTreino)
+			if diretorioOndeSalvar != None and nomeDatasetTreino != None:
+				self.salvarRelatorioClassificacao(dictRelatorioAtual, diretorioOndeSalvar, nomeDatasetTreino)
 
 		print("O teste com todos os classificadores foi finalizado")
