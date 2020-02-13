@@ -59,7 +59,7 @@ class GeneralizedSidelobeCanceller:
 	def obterSinaisResultantes(self):
 		return self.sinalSemBeamforming, self.sinalBeamformado, self.sinalFinalGSC
 
-	def verificarDelay(self, sinalA, sinalB, maxDelay=30):
+	def verificarDelay(self, sinalA, sinalB, maxDelay=15):
 		#Para fazer o beamforming eu vou precisar saber qual é a defasagem entre os microfones. Pois bem, essa função recebe dois sinais e retorna a defasagem entre eles de acordo com a correlação.
 		# Verificando se os dois sinais tem o mesmo tamanho e se maxDelay é compatível
 		if len(sinalA) != len(sinalB) or maxDelay >= len(sinalA)-1 :

@@ -14,7 +14,8 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.ensemble import BaggingClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from scipy.stats import mode 
-from sklearn.metrics import classification_report
+from random import randint
+from sklearn.metrics import accuracy_score, classification_report
 import pandas as pd
 import numpy as np
 import time
@@ -40,42 +41,92 @@ class TreinarEClassificar:
 		
 		return x, y
 
-	def instanciarClassificadores(self, arrayStringsClassesClassificadores):
+	def instanciarClassificadores(self, arrayStringsClassesClassificadores, kCrossValidation=10, verbose=False):
 		# Função para instanciar classificadores
 		# Como eu não sei se vou usar mais classificadores depois, então vou criar um array de classificadores, assim na hora de treinar eu faço um for loop e vou treinando tudo o que tiver dentro.
 
 		# Essa função recebe apenas o nome das classes a serem instanciadas. Por exemplo, envie ["SGDClassifier(params)", "BaggingClassifier(params)"] para receber um array de objetos dessas classes.
+		
+		#Além disso, para fazer a validação cruzada, vou instânciar kCrossValidation vezes o mesmo classificador. Cada um vai ser treinado com dados diferentes, logo, o resultado será diferente.
+
 		arrayObjClassificadores = []
 		
 		for classe in arrayStringsClassesClassificadores:
-			print("Instanciando um objeto da classe", classe)
-			arrayObjClassificadores.append(eval(classe))
+			for k in range(kCrossValidation):
+				
+				if verbose == True:
+					print("Instanciando o " + str(k+1) + "º objeto da classe", classe)
+				
+				arrayObjClassificadores.append(eval(classe))
 			
 		return arrayObjClassificadores
 
-	def treinarClassificadores(self, xTrain, yTrain, arrayObjClassificadores):
+	def obterNomesArquivos(self, dataframe):
+		# Função para criar um array apenas com os nomes dos arquivos
+		# Vou precisar de um array que contenha o nome de cada arquivo de um CSV de teste, sem repetições. Isso será necessário para criar um dataframe contendo apenas linhas que digam respeito às janelas de um único áudio.
+		return dataframe[dataframe.columns[0]].unique().tolist()
+
+	def segmentarDataframeTreino(self, dataframeTreino, percentual=0.75):
+		#Função para segmentar o dataframe de treino
+		#Cada classificador será treinado só com x% de dados do dataframe de treino. Assim, será possível fazer o bootstrap na validação cruzada. Essa função vai receber um dataframe, remover as linhas referentes à alguns arquivos e devolver o novo dataframe segmentado.
+
+		# PEGO O NOME DOS AUDIOS NO DATAFRAME
+		nomesAudios = self.obterNomesArquivos(dataframeTreino)
+		
+		# VEJO QUANTOS ARQUIVOS EU VOU TER QUE TIRAR DO DATAFRAME
+		qtdArquivosParaRemover = int(round((1 - percentual) * len(nomesAudios)))
+		
+		# SELECIONANDO OS ARQUIVOS QUE EU VOU REMOVER
+		arquivosParaRemover = []
+		for i in range(qtdArquivosParaRemover):
+			indexSorteado = randint(0, len(nomesAudios) - 1)
+			arquivosParaRemover.append(nomesAudios[indexSorteado])
+			del nomesAudios[indexSorteado]
+			
+		# REMOVENDO 
+		for arquivoAtualRemover in arquivosParaRemover:
+			dataframeTreino = dataframeTreino[dataframeTreino["nomeArquivo"] != arquivoAtualRemover]
+		
+		# RETORNANDO
+		return dataframeTreino
+
+	def treinarClassificadores(self, dataframeTreino, arrayObjClassificadores, percentual=0.75, verbose=False):
 		# Função para treinar os classificadores
-		# Essa função vai receber xTrain, yTrain e o array de classificadores e devolver o array com os classificadores já treinados.
+		#Para fazer a validação cruzada, essa função vai receber um dataframe de treino e, para cada classificador, ela deverá excluir um percentual de arquivos do dataframe e só depois treinar o classificador.
+		
+		# PARA CADA CLASSIFICADOR
 		for i, objClassificador in enumerate(arrayObjClassificadores):
-			print("Treinando o", objClassificador.__class__.__name__)
+			
+			# EU REMOVO ALGUNS ARQIVOS DO DATAFRAME ALEATORIAMENTE ATE O PERCENTUAL DEFINIDO
+			dataframeTreinoSegmentado = self.segmentarDataframeTreino(dataframeTreino, percentual)
+			
+			# SEPARO O NOVO DATAFRAME EM X E Y
+			xTrain, yTrain = self.separarDataframeXeY(dataframeTreinoSegmentado)
+			
+			# FAÇO UM FIT NO CLASSIFICADOR
 			tempoInicio = time.time()
 			arrayObjClassificadores[i].fit(xTrain, yTrain)
 			tempoFim = time.time()
-			print("Tempo de treinamento do", objClassificador.__class__.__name__, "(segundos):", tempoFim-tempoInicio)
+			
+			if verbose == True:
+				print("Tempo de treinamento do", objClassificador.__class__.__name__, "(segundos):", tempoFim-tempoInicio)
 			
 		return arrayObjClassificadores
 
-	def criarETreinarClassificadores(self, dataframeTreino, arrayStringsClassesClassificadores):
+	def criarETreinarClassificadores(self, dataframeTreino, arrayStringsClassesClassificadores, kCrossValidation=10, percentual=0.75, verbose=False):
 		# Função para unir as três funções anteriores
 		# Essa função vai unir as três funções que foram criadas. Ela vai receber o dataframe de treino e um array de strings contendo os classificadores desejados.
 		# Em primeiro lugar, ela vai usar a função separarDataframeXeY para gerar xTrain e yTrain. Depois, vai usar instanciarClassificadores para gerar um array com os classificadores desejados. Por fim, vai treiná-los usando treinarClassificadores().
 		# Ela retorna o array de classificadores com todos eles já treinados e prontos para serem usados para predizer dados.
-
-		print("Começando o treinamento dos classificadores")
-		xTrain, yTrain          = self.separarDataframeXeY(dataframeTreino)
-		arrayObjClassificadores = self.instanciarClassificadores(arrayStringsClassesClassificadores)
-		arrayObjClassificadores = self.treinarClassificadores(xTrain, yTrain, arrayObjClassificadores)
-		print("Classificadores treinados")
+		
+		if verbose == True:
+			print("Começando o treinamento dos classificadores")
+		
+		arrayObjClassificadores = self.instanciarClassificadores(arrayStringsClassesClassificadores, kCrossValidation, verbose)
+		arrayObjClassificadores = self.treinarClassificadores(dataframeTreino, arrayObjClassificadores, percentual, verbose)
+		
+		if verbose == True:
+			print("Classificadores treinados")
 		
 		return arrayObjClassificadores
 
@@ -90,11 +141,6 @@ class TreinarEClassificar:
 		# A matriz já vai ter que vir arrumada para essa função. As funções que lidam com o pandas para deixar tudo bonitinho vão vir depois.
 		yPredCadaJanela = classificador.predict(xTest).tolist()
 		return self.calcularModa(yPredCadaJanela)
-
-	def obterNomesArquivos(self, dataframe):
-		# Função para criar um array apenas com os nomes dos arquivos
-		# Vou precisar de um array que contenha o nome de cada arquivo de um CSV de teste, sem repetições. Isso será necessário para criar um dataframe contendo apenas linhas que digam respeito às janelas de um único áudio.
-		return dataframe[dataframe.columns[0]].unique().tolist()
 
 	def obterDataframeUnicoAudio(self, dataframe, arquivo):
 		# Função para criar um dataframe contendo apenas as linhas referentes a um único áudio
