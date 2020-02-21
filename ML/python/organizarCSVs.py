@@ -6,8 +6,8 @@ import os
 from shutil import copyfile
 
 # DEFININDO A PASTA ONDE ESTAO OS CSVS E PARA ONDE ELES DEVERAO SER COPIADOS
-diretorioOrigem  = "/home/dimi/Downloads/Datasets/SESA/SESA_Normalizado/outros/"
-diretorioDestino = "/home/dimi/Programming/IC2019/ML/datasets/SESA/SESA_Normalizado/outros/" 
+diretorioOrigem  = "/home/dimi/Downloads/Datasets/SESA/SESA_Normalizado/outros/RBRANCO/"
+diretorioDestino = "/home/dimi/Programming/IC2019/ML/datasets/SESA/SESA_Normalizado/outros/RBRANCO/" 
 
 # LISTANDO O QUE TEM DENTRO DO DIRETORIO DE ORIGEM (QUERO AS PASTAS "SNR_AdB")
 diretoriosSNRsOrigem = os.listdir(diretorioOrigem)
