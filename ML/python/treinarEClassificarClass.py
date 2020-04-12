@@ -184,8 +184,9 @@ class TreinarEClassificar:
 		print("Classificando com o ", classificador.__class__.__name__)
 		
 		# CRIANDO OS ARRAYS GERAIS
-		yRealCadaAudio = []
-		yPredCadaAudio = []
+		yRealCadaAudio              = []
+		yPredCadaAudio              = []
+		tempoClassificacaoCadaAudio = []
 		
 		# PEGANDO O NOME DOS ARQUIVOS QUE ESTAO NO DATAFRAME
 		arrayNomesArquivos = self.obterNomesArquivos(dataframeTeste)
@@ -197,15 +198,22 @@ class TreinarEClassificar:
 			if verbose == True:
 				print("Classificando " + arquivo + ". Arquivo", i+1, "de", totalArquivos, "->", str(100*((i+1)/totalArquivos))+"%")
 			
+			# COMECANDO A MEDIR O TEMPO PARA CLASSIFICAR ESSE UNICO AUDIO
+			tempoInicio = time.time()
+
 			# EU CRIO UM DATAFRAME CONTENDO APENAS AS LINHAS DO AUDIO ATUAL
 			dataframeAudioAtual = self.obterDataframeUnicoAudio(dataframeTeste, arquivo)
 			
 			# E OBTENHO, PARA ESSE AUDIO, A CLASSIFICACAO REAL E A PREDITA
 			yRealAtual, yPredAtual = self.obterYRealYPredUnicoAudio(dataframeAudioAtual, classificador)
+
+			# PARO DE MEDIR O TEMPO
+			tempoFim = time.time()
 			
 			# COLOCO O RESULTADO NOS ARRAYS GERAIS
 			yRealCadaAudio.append(yRealAtual)
 			yPredCadaAudio.append(yPredAtual)
+			tempoClassificacaoCadaAudio.append(tempoFim-tempoInicio)
 			
 		# CRIANDO O CLASSIFICATION REPORT. PARA FAZER ELE PARECER UM JSON, TEM QUE COLOCAR output_dict=True
 		# ASSIM ELE RETORNA UM DICT QUE DEPOIS VAI SER CONVERTIDO PRA JSON E SER SALVO EM ALGUM LUGAR
@@ -213,6 +221,12 @@ class TreinarEClassificar:
 		
 		# COLOCANDO O NOME DO CLASSIFICADOR NO DICIONARIO
 		dictRelatorio['classificador'] = classificador.__class__.__name__
+
+		# COLOCANDO O TEMPO PARA CLASSIFICAR CADA AMOSTRA NO DICIONARIO
+		mediaTempo   = np.mean(tempoClassificacaoCadaAudio)
+		desvPadTempo = np.std(tempoClassificacaoCadaAudio)
+		dictRelatorio['mediaTempoClassificacaoCadaAudio'] = mediaTempo
+		dictRelatorio['desvioTempoClassificacaoCadaAudio'] = desvPadTempo
 		
 		return dictRelatorio
 

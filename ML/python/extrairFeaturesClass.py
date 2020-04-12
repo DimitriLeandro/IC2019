@@ -98,7 +98,6 @@ class ExtrairFeatures:
 		arrayFeaturesFrame += self.extrairCromagramasQ(sinal, freqAmostragem)
 		arrayFeaturesFrame += self.extrairCromaCENSs(sinal, freqAmostragem)
 		arrayFeaturesFrame += self.extrairContrastes(sinal, freqAmostragem, frameLength, overlapLength)
-		
 		# POR FIM, RETORNO O ARRAY DE FEATURES DO AUDIO QUE FOI ENVIADO PARA ESSA FUNCAO
 		return arrayFeaturesFrame
 
