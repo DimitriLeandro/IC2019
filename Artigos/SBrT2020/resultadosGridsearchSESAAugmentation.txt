@@ -1,0 +1,44 @@
+KNeighborsClassifier(algorithm='auto', leaf_size=30, metric='manhattan',
+                     metric_params=None, n_jobs=None, n_neighbors=5, p=2,
+                     weights='distance')
+Acurácia Média: 0.8491197700623836 +- 0.0482713755700093
+Time: 664.0284180402756 +- 149.70311735613862
+
+SGDClassifier(alpha=0.001, average=False, class_weight=None,
+              early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True,
+              l1_ratio=0.15, learning_rate='optimal', loss='hinge',
+              max_iter=1000, n_iter_no_change=5, n_jobs=None,
+              penalty='elasticnet', power_t=0.5, random_state=None,
+              shuffle=True, tol=0.001, validation_fraction=0.1, verbose=0,
+              warm_start=False)
+Acurácia Média: 0.7431655616160956 +- 0.001242537356632
+Time: 0.053537952899932864 +- 0.01618069056734965
+
+DecisionTreeClassifier(class_weight=None, criterion='entropy', max_depth=None,
+                       max_features=None, max_leaf_nodes=None,
+                       min_impurity_decrease=0.0, min_impurity_split=1e-08,
+                       min_samples_leaf=1, min_samples_split=2,
+                       min_weight_fraction_leaf=0.0, presort=False,
+                       random_state=None, splitter='best')
+Acurácia Média: 0.8042590717575203 +- 0.003410395435843564
+Time: 0.02983313649892807 +- 0.006236430319515586
+
+SVC(C=1, cache_size=200, class_weight=None, coef0=0.0,
+    decision_function_shape='ovo', degree=3, gamma='auto_deprecated',
+    kernel='rbf', max_iter=-1, probability=False, random_state=None,
+    shrinking=True, tol=0.001, verbose=False)
+Acurácia Média: 0.8597021262697194 +- 0.12505282248445984
+Time: 200.83355978830357 +- 64.98283691136588
+
+Perceptron(alpha=1e-05, class_weight=None, early_stopping=False, eta0=1.0,
+           fit_intercept=True, max_iter=1000, n_iter_no_change=5, n_jobs=None,
+           penalty='l1', random_state=0, shuffle=True, tol=0.01,
+           validation_fraction=0.1, verbose=0, warm_start=False)
+Acurácia Média: 0.7224091191168305 +- 0.04986855845859998
+Time: 0.07487501479961253 +- 0.028658504177869436
+
+LinearDiscriminantAnalysis(n_components=None, priors=None, shrinkage=None,
+                           solver='svd', store_covariance=True, tol=1e-05)
+Acurácia Média: 0.7823431426985008 +- 0.03336989435323899
+Time: 0.0383923124383997 +- 0.007287723825608822
+

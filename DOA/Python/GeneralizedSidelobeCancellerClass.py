@@ -22,38 +22,41 @@ class GeneralizedSidelobeCanceller:
 	arraySinaisRuidosos    = []
 	tempoProcessamentoGSC  = 0
 
-	def __init__(self, arraySinaisOriginais, arrayDelays=None):
+	def __init__(self, arraySinaisOriginais=None, arrayDelays=None):
 	
-		# GERANDO O SINAL SEM BEAMFORMING
-		self.sinalSemBeamforming = self.gerarSinalSemBeamforming(arraySinaisOriginais)
+		# DEVO CONTINUAR O ALGORITMO E FAZER TUDO AUTOMATICAMENTE?
+		if arraySinaisOriginais != None:
 
-		# COMECANDO A CALCULAR O TEMPO DE PROCESSAMENTO DO ALGORITMO
-		tempoInicio = time.time()
-		
-		# GERANDO O ARRAY DE DELAYS CASO AINDA NAO TENHA SIDO ENVIADO NO 
-		# MEMENTO EM QUE SE INSTANCIOU A CLASSE 
-		if arrayDelays == None:
-			arrayDelays = self.obterArrayDelays(arraySinaisOriginais)
+			# GERANDO O SINAL SEM BEAMFORMING
+			self.sinalSemBeamforming = self.gerarSinalSemBeamforming(arraySinaisOriginais)
+
+			# COMECANDO A CALCULAR O TEMPO DE PROCESSAMENTO DO ALGORITMO
+			tempoInicio = time.time()
 			
-		# GERANDO O SINAL BEAMFORMADO E O ARRAY DE SINAIS DEFASADOS
-		self.sinalBeamformado, arraySinaisDefasados = self.gerarSinalBeamformado(arraySinaisOriginais, arrayDelays)
+			# GERANDO O ARRAY DE DELAYS CASO AINDA NAO TENHA SIDO ENVIADO NO 
+			# MEMENTO EM QUE SE INSTANCIOU A CLASSE 
+			if arrayDelays == None:
+				arrayDelays = self.obterArrayDelays(arraySinaisOriginais)
+				
+			# GERANDO O SINAL BEAMFORMADO E O ARRAY DE SINAIS DEFASADOS
+			self.sinalBeamformado, arraySinaisDefasados = self.gerarSinalBeamformado(arraySinaisOriginais, arrayDelays)
 		
-		# GERANDO A BLOCKING MATRIX
-		blockingMatrix = self.gerarBlockingMatrix(len(arraySinaisDefasados))
+			# GERANDO A BLOCKING MATRIX
+			blockingMatrix = self.gerarBlockingMatrix(len(arraySinaisDefasados))
 
-		# GERANDO OS SINAIS RUIDOSOS
-		self.arraySinaisRuidosos = self.obterSinaisRuidosos(blockingMatrix, arraySinaisDefasados)
+			# GERANDO OS SINAIS RUIDOSOS
+			self.arraySinaisRuidosos = self.obterSinaisRuidosos(blockingMatrix, arraySinaisDefasados)
 
-		# OBTENDO OS PESOS IDEAIS
-		arrayPesos = self.obterArrayPesos(len(self.arraySinaisRuidosos))
+			# OBTENDO OS PESOS IDEAIS
+			arrayPesos = self.obterArrayPesos(len(self.arraySinaisRuidosos))
 
-		# GERANDO O SINAL FINAL GSC
-		self.sinalFinalGSC = self.gerarSinalFinalGSC(self.sinalBeamformado, arrayPesos, self.arraySinaisRuidosos)
+			# GERANDO O SINAL FINAL GSC
+			self.sinalFinalGSC = self.gerarSinalFinalGSC(self.sinalBeamformado, arrayPesos, self.arraySinaisRuidosos)
 
-		# TERMINANDO DE CONTAR O TEMPO DE PROCESSAMENTO
-		tempoFim = time.time()
-		self.tempoProcessamentoGSC = tempoFim - tempoInicio
-		print("Tempo total gasto para processar o GSC completo (segundos):", self.tempoProcessamentoGSC)
+			# TERMINANDO DE CONTAR O TEMPO DE PROCESSAMENTO
+			tempoFim = time.time()
+			self.tempoProcessamentoGSC = tempoFim - tempoInicio
+			print("Tempo total gasto para processar o GSC completo (segundos):", self.tempoProcessamentoGSC)
 
 
 	def obterSinaisResultantes(self):

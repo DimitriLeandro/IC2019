@@ -32,12 +32,17 @@ class SimularArrayMicrofones:
 	arrayDelays          = []
 	freqAmostragem       = 0
 
-	def __init__(self, caminhoArquivo, energiaRuido=None, coordenadasMics=[[0,0,0],[0,0.04137,0.04137],[0.0585,0.04137,0.04137],[0.0585,0,0]]):    
+	def __init__(self, caminhoArquivo, energiaRuido=None, normalizarEnergia=False, azimutalRad=None, elevacaoRad=None, coordenadasMics=[[0,0,0],[0,0.04137,0.04137],[0.0585,0.04137,0.04137],[0.0585,0,0]]):    
 		# ABRINDO O ARQUIVO MONO PURO
 		sinalPuroMono, self.freqAmostragem = librosa.load(caminhoArquivo, sr=None, mono=True)
+
+		# NORMALIZO PELA ENERGIA CASO SE QUEIRA
+		if normalizarEnergia == True:
+			sinalPuroMono = (sinalPuroMono-np.mean(sinalPuroMono))/np.std(sinalPuroMono)
 		
 		# GERANDO UM DELAY ENTRE OS MICROFONES
-		self.arrayDelays = self.obterArrayDelays(coordenadasMics, self.freqAmostragem)
+		self.arrayDelays = self.obterArrayDelays(coordenadasMics, self.freqAmostragem, azimutalRad, elevacaoRad)
+
 		
 		# GERANDO OS SINAIS DE CADA MICROFONE DE ACORDO COM OS DELAYS GERADOS
 		self.arraySinaisSimulados = self.simularArrayMicrofones(sinalPuroMono, self.arrayDelays)
@@ -65,10 +70,13 @@ class SimularArrayMicrofones:
 	def grausParaRad(self, angRad):
 		return (angRad * math.pi)/180
 
+	def radParaGraus(self, angGraus):
+		return (angGraus * 180)/math.pi
+
 	def segundosParaAmostras(self, segundos, freqAmostragem):
 		return freqAmostragem * segundos
 
-	def obterArrayDelays(self, coordenadasMics, freqAmostragem, velocidadeSom=340.29, azimutalRad=None, elevacaoRad=None):
+	def obterArrayDelays(self, coordenadasMics, freqAmostragem, azimutalRad=None, elevacaoRad=None, velocidadeSom=340.29):
 		# Função para gerar um array de delays entre os microfones
 		# Essa função precisará receber as coordenadas dos microfones para gerar os delays entre eles de acordo com os angulos azimutal e de elevação, que serão aleatórios.
 		# Para achar os delays entre os microfones basta fazer o algoritmo do produto interno.

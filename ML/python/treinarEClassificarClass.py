@@ -14,8 +14,9 @@ from sklearn.linear_model import SGDClassifier
 from sklearn.ensemble import BaggingClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.svm import LinearSVC, SVC
+from sklearn.tree import DecisionTreeClassifier
 from sklearn.linear_model import Perceptron
-from sklearn.discriminant_analysis import LinearDiscriminantAnalysis
+from sklearn.discriminant_analysis import LinearDiscriminantAnalysis, QuadraticDiscriminantAnalysis
 from scipy.stats import mode 
 from random import randint
 from sklearn.metrics import accuracy_score, classification_report
