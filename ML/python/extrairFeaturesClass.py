@@ -97,6 +97,7 @@ class ExtrairFeatures:
 		arrayFeaturesFrame += self.extrairCromagramas(sinal, freqAmostragem, frameLength, overlapLength)
 		arrayFeaturesFrame += self.extrairCromagramasQ(sinal, freqAmostragem)
 		arrayFeaturesFrame += self.extrairCromaCENSs(sinal, freqAmostragem)
+		arrayFeaturesFrame += self.extrairTonnetz(sinal, freqAmostragem)
 		arrayFeaturesFrame += self.extrairContrastes(sinal, freqAmostragem, frameLength, overlapLength)
 		# POR FIM, RETORNO O ARRAY DE FEATURES DO AUDIO QUE FOI ENVIADO PARA ESSA FUNCAO
 		return arrayFeaturesFrame
@@ -370,3 +371,14 @@ class ExtrairFeatures:
 			arrayConstrastes.append(np.mean(linha))
 		
 		return arrayConstrastes
+
+	def extrairTonnetz(self, sinal, freqAmostragem):
+	
+		matrizTonnetz = librosa.feature.tonnetz(y=sinal, sr=freqAmostragem)
+
+		arrayTonnetz = []
+
+		for linha in matrizTonnetz:
+			arrayTonnetz.append(np.mean(linha))
+
+		return arrayTonnetz

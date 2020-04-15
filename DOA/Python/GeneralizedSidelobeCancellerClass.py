@@ -62,7 +62,7 @@ class GeneralizedSidelobeCanceller:
 	def obterSinaisResultantes(self):
 		return self.sinalSemBeamforming, self.sinalBeamformado, self.sinalFinalGSC
 
-	def verificarDelay(self, sinalA, sinalB, maxDelay=15):
+	def verificarDelay(self, sinalA, sinalB, maxDelay=20):
 		#Para fazer o beamforming eu vou precisar saber qual é a defasagem entre os microfones. Pois bem, essa função recebe dois sinais e retorna a defasagem entre eles de acordo com a correlação.
 		# Verificando se os dois sinais tem o mesmo tamanho e se maxDelay é compatível
 		if len(sinalA) != len(sinalB) or maxDelay >= len(sinalA)-1 :
@@ -115,7 +115,7 @@ class GeneralizedSidelobeCanceller:
 		# 
 		# Além disso, é necessário - para as próximas funções - que o array de delays contenha o delay entre a referência e a própria referência. Ou seja, no começo do array de delays tem que ter um 0, já que a defasagem entre um sinal e ele mesmo é 0.
 
-		print("Calculando os delays entre os microfones")
+		# print("Calculando os delays entre os microfones")
 
 		arrayDelays = [0] # comeca com o delay entre o mic0 e o proprio mic0
 		
@@ -130,7 +130,7 @@ class GeneralizedSidelobeCanceller:
 
 		return arrayDelays
 
-	def gerarSinalBeamformado(self, arraySinaisOriginais, arrayDelays):
+	def gerarSinalBeamformado(self, arraySinaisOriginais, arrayDelays, fazerMedia=True):
 		# Função para fazer um beamforming simples
 		# A função abaixo vai pegar o array de sinais e o array de delays para realizar a defasagem necessária em cada sinal a fim de produzir um sinal final resultante da soma dos sinais originais devidamente defasados. Ao final, o sinal beamformado será dividido pela quantidade de microfones para que não fique muito alto.
 		# 
@@ -163,7 +163,8 @@ class GeneralizedSidelobeCanceller:
 			arraySinaisDefasados.append(sinalAtualDefasado)
 				
 		# NO FINAL EU AINDA DIVIDO O SINAL BEAMFORMADO PELO NUMERO DE MICS PRA NAO FICAR MTO ALTO
-		sinalBeamformado /= len(arraySinaisOriginais)
+		if fazerMedia == True:
+			sinalBeamformado /= len(arraySinaisOriginais)
 		
 		return sinalBeamformado, arraySinaisDefasados
 

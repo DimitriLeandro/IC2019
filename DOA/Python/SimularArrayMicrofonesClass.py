@@ -42,7 +42,6 @@ class SimularArrayMicrofones:
 		
 		# GERANDO UM DELAY ENTRE OS MICROFONES
 		self.arrayDelays = self.obterArrayDelays(coordenadasMics, self.freqAmostragem, azimutalRad, elevacaoRad)
-
 		
 		# GERANDO OS SINAIS DE CADA MICROFONE DE ACORDO COM OS DELAYS GERADOS
 		self.arraySinaisSimulados = self.simularArrayMicrofones(sinalPuroMono, self.arrayDelays)
@@ -135,10 +134,13 @@ class SimularArrayMicrofones:
 	def adicionarRuido(self, arraySinaisSimulados, energiaRuido):
 		# Função para adicionar ruido a cada um dos microfones
 		# O ruído não poderá ser defasado, pois ele vem de todas as direções. Essa função vai utilizar a função que gera o ruído.
-		ruido = self.gerarRuidoBranco(len(arraySinaisSimulados[0]), energiaRuido)
+		#ruido = self.gerarRuidoBranco(len(arraySinaisSimulados[0]), energiaRuido)
 		
-		for i, sinalAtual in enumerate(arraySinaisSimulados):
-			arraySinaisSimulados[i] = sinalAtual + ruido
+		arraySinaisSimuladosComRuido = []
+
+		for sinalAtual in arraySinaisSimulados:
+			ruido = self.gerarRuidoBranco(len(arraySinaisSimulados[0]), energiaRuido) ###
+			arraySinaisSimuladosComRuido.append(sinalAtual + ruido)
 		
-		return arraySinaisSimulados
+		return arraySinaisSimuladosComRuido
 	
