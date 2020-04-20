@@ -24,6 +24,7 @@ import pandas as pd
 import time
 from sklearn.preprocessing import StandardScaler
 from sklearn.decomposition import PCA
+from joblib import Parallel, delayed
 
 class ExtrairFeatures:
 
@@ -171,29 +172,34 @@ class ExtrairFeatures:
 		dataframeGeral = pd.DataFrame()
 
 		# VOU PASSAR POR TODOS OS AUDIOS DO DIRETORIO
-		for i, nomeArquivo in enumerate(arrayNomeArquivos):
-			# PRINTANDO O PROGRESSO
-			print("Extraindo features do arquivo", i+1, "de", totalArquivosNaPasta, "-> " + str(100*((i+1)/totalArquivosNaPasta)) + "%")
-			
-			# ABRO O AUDIO ATUAL COM O LIBROSA
-			audioAtual, freqAmostragem = librosa.load(diretorio+nomeArquivo, sr=freqAmostragem, mono=True) 
-			
-			# VERIFICAO QUAL E A CLASSIFICACAO CORRETA
-			classeAudioAtual = self.verificarClassificacaoCorreta(nomeArquivo)
-			
-			# MONTO A MATRIZ DE FEATUREA DE CADA FRAME DO AUDIO ATUAL (a funcao abaixo
-			# devolve uma matriz normal e faz o janelamento em outra funcao tb)
-			matrizFeaturesAudioAtual = self.extrairFeaturesUnicoAudio(audioAtual, freqAmostragem, frameLength, overlapLength)
-			
-			# AGORA E HORA DE COLOCAR O NOME E A CLASSIFICACAO CORRETA NA MATRIZ
-			# MAAAS, NA FUNCAO ABAIXO, O BICHO VIRA UM DATAFRAME PANDAS
-			dataframeAudioAtual      = self.adicionarNomeArquivoEClasse(matrizFeaturesAudioAtual, nomeArquivo, classeAudioAtual)
-			
+		arrayDataframesUnicoAudio = Parallel(n_jobs=-1, verbose=100)(delayed(self.montarDataframeUnicoAudio)(nomeArquivo, diretorio, freqAmostragem, frameLength, overlapLength, i, totalArquivosNaPasta) for i, nomeArquivo in enumerate(arrayNomeArquivos))
+
+		for dataframeAudioAtual in arrayDataframesUnicoAudio:
 			# CONCATENANDO O DATAFRAME DO AUDIO ATUAL AO DATAFRAME GERAL
 			dataframeGeral = pd.concat([dataframeGeral, dataframeAudioAtual])
 			
 		# POR ULTIMO, RETORNO O DATAFRAME GERAL
 		return dataframeGeral
+
+	def montarDataframeUnicoAudio(self, nomeArquivo, diretorio, freqAmostragem, frameLength, overlapLength, i, totalArquivosNaPasta):
+
+		# PRINTANDO O PROGRESSO
+		#print("Extraindo features do arquivo", i+1, "de", totalArquivosNaPasta, "-> " + str(100*((i+1)/totalArquivosNaPasta)) + "%")
+
+		# ABRO O AUDIO ATUAL COM O LIBROSA
+		audioAtual, freqAmostragem = librosa.load(diretorio+nomeArquivo, sr=freqAmostragem, mono=True) 
+		
+		# VERIFICAO QUAL E A CLASSIFICACAO CORRETA
+		classeAudioAtual = self.verificarClassificacaoCorreta(nomeArquivo)
+		
+		# MONTO A MATRIZ DE FEATUREA DE CADA FRAME DO AUDIO ATUAL (a funcao abaixo
+		# devolve uma matriz normal e faz o janelamento em outra funcao tb)
+		matrizFeaturesAudioAtual = self.extrairFeaturesUnicoAudio(audioAtual, freqAmostragem, frameLength, overlapLength)
+		
+		# AGORA E HORA DE COLOCAR O NOME E A CLASSIFICACAO CORRETA NA MATRIZ
+		# MAAAS, NA FUNCAO ABAIXO, O BICHO VIRA UM DATAFRAME PANDAS
+		dataframeAudioAtual      = self.adicionarNomeArquivoEClasse(matrizFeaturesAudioAtual, nomeArquivo, classeAudioAtual)
+		return dataframeAudioAtual
 
 	def escalonarFeatures(self, dataframeGeral):
 		
