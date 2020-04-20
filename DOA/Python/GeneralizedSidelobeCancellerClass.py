@@ -16,11 +16,13 @@ from scipy.optimize import least_squares
 
 class GeneralizedSidelobeCanceller:
 
-	sinalSemBeamforming    = []
-	sinalBeamformado       = []
-	sinalFinalGSC          = []
-	arraySinaisRuidosos    = []
-	tempoProcessamentoGSC  = 0
+	sinalSemBeamforming              = []
+	sinalBeamformado                 = []
+	sinalFinalGSC                    = []
+	arraySinaisRuidosos              = []
+	tempoProcessamentoSemBeamforming = 0
+	tempoProcessamentoDelaySum       = 0
+	tempoProcessamentoGSC            = 0
 
 	def __init__(self, arraySinaisOriginais=None, arrayDelays=None):
 	
@@ -28,20 +30,24 @@ class GeneralizedSidelobeCanceller:
 		if arraySinaisOriginais != None:
 
 			# GERANDO O SINAL SEM BEAMFORMING
-			self.sinalSemBeamforming = self.gerarSinalSemBeamforming(arraySinaisOriginais)
-
-			# COMECANDO A CALCULAR O TEMPO DE PROCESSAMENTO DO ALGORITMO
 			tempoInicio = time.time()
+			self.sinalSemBeamforming = self.gerarSinalSemBeamforming(arraySinaisOriginais)
+			tempoFim = time.time()
+			self.tempoProcessamentoSemBeamforming = tempoFim - tempoInicio
 			
 			# GERANDO O ARRAY DE DELAYS CASO AINDA NAO TENHA SIDO ENVIADO NO 
-			# MEMENTO EM QUE SE INSTANCIOU A CLASSE 
+			# MEMENTO EM QUE SE INSTANCIOU A CLASSE
+			tempoInicio = time.time()
 			if arrayDelays == None:
 				arrayDelays = self.obterArrayDelays(arraySinaisOriginais)
 				
 			# GERANDO O SINAL BEAMFORMADO E O ARRAY DE SINAIS DEFASADOS
 			self.sinalBeamformado, arraySinaisDefasados = self.gerarSinalBeamformado(arraySinaisOriginais, arrayDelays)
-		
+			tempoFim = time.time()
+			self.tempoProcessamentoDelaySum = tempoFim - tempoInicio
+
 			# GERANDO A BLOCKING MATRIX
+			tempoInicio = time.time()
 			blockingMatrix = self.gerarBlockingMatrix(len(arraySinaisDefasados))
 
 			# GERANDO OS SINAIS RUIDOSOS
@@ -52,12 +58,8 @@ class GeneralizedSidelobeCanceller:
 
 			# GERANDO O SINAL FINAL GSC
 			self.sinalFinalGSC = self.gerarSinalFinalGSC(self.sinalBeamformado, arrayPesos, self.arraySinaisRuidosos)
-
-			# TERMINANDO DE CONTAR O TEMPO DE PROCESSAMENTO
 			tempoFim = time.time()
-			self.tempoProcessamentoGSC = tempoFim - tempoInicio
-			print("Tempo total gasto para processar o GSC completo (segundos):", self.tempoProcessamentoGSC)
-
+			self.tempoProcessamentoGSC = self.tempoProcessamentoDelaySum + tempoFim - tempoInicio
 
 	def obterSinaisResultantes(self):
 		return self.sinalSemBeamforming, self.sinalBeamformado, self.sinalFinalGSC
@@ -220,7 +222,7 @@ class GeneralizedSidelobeCanceller:
 		limitesInferiores = np.full(qtdSinaisRuidosos, -1000).tolist()
 		limitesSuperiores = np.full(qtdSinaisRuidosos, 1000).tolist()
 
-		print("Iniciando a filtragem adaptativa com LMS")
+		#print("Iniciando a filtragem adaptativa com LMS")
 		
 		# RODANDO O LMS. ELE RETORNA UM OBJETO CHEIO DE ATRIBUTOS
 		objRespostaLMS = least_squares(fun=self.calcularEnergiaSinalFinal, x0=chuteInicial, bounds=[limitesInferiores, limitesSuperiores], verbose=0)
