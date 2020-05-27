@@ -51,7 +51,7 @@ class SimularArrayMicrofones:
 			self.arraySinaisSimulados = self.adicionarRuido(self.arraySinaisSimulados, energiaRuido)
 
 	def obterResultado(self):
-		return self.arraySinaisSimulados, self.arrayDelays, self.freqAmostragem
+		return np.array(self.arraySinaisSimulados), self.arrayDelays, self.freqAmostragem
 
 	def gerarRuidoBranco(self, qtdAmostras, energiaRuido):
 

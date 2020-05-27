@@ -1,4 +1,5 @@
 from joblib import Parallel, delayed
+import time
 import numpy as np
 
 class DaSParallel:
@@ -8,17 +9,27 @@ class DaSParallel:
 	arraySinaisMics      = [] # SINAIS ORIGINAIS DOS MICROFONES
 	arraySinaisAjustados = [] # SINAIS COM AS DEFASAGENS CORRIGIDAS
 	sinalDaS             = [] # SINAL APOS O DELAY AND SUM
+	qtdNucleos           = 0  # N_JOBS -> -1 USA TODOS OS PROCESSADORES
+	tempoProcessamento   = 0  # TEMPO DE PROCESSAMENTO EM SEGUNDOS
 
-	def __init__(self, arraySinaisMics, delayMax=25, fazerMedia=True):
+	def __init__(self, arraySinaisMics, delayMax=25, qtdNucleos=1, fazerMedia=True):
 		# COLOCANDO OS PARAMETROS GLOBAIS DA CLASSE
 		self.delayMax        = 25
 		self.arraySinaisMics = arraySinaisMics
+		self.qtdNucleos      = qtdNucleos
+
+		# INICIANDO A MEDICAO DE TEMPO DE PROCESSAMENTO
+		tempoInicio = time.time()
 
 		# CALCULANDO O ARRAY DE DELAYS
 		self.calcularArrayDelays()
 
 		# CONSTRUINDO O SINAL BEAMFORMADO
 		self.executarDaS(fazerMedia)
+
+		# FINALIZANDO A MEDICAO DE TEMPO DE PROCESSAMENTO
+		tempoFim = time.time()
+		self.tempoProcessamento = tempoFim - tempoInicio
 
 	def calcularCorrelacao(self, a, b):
 		return np.corrcoef(a, b)[0][1]
@@ -84,14 +95,14 @@ class DaSParallel:
 	def calcularArrayDelays(self):
 		# Essa função vai usar a função anterior para calcular o delay entre cada microfofe e o microfone de origem. Ela deverá ser paralelizada, assim, cada núcleo fica responsável por uma combinação.
 		# PARA CADA MIC QUE NAO SEJA O REFERENCIAL
-		arrayDelaysParcial = Parallel(n_jobs=-1)(delayed(self.calcularDefasagemEntreDoisSinais)(self.arraySinaisMics[0], sinalAtual) for sinalAtual in self.arraySinaisMics[1:])
+		arrayDelaysParcial = Parallel(n_jobs=self.qtdNucleos)(delayed(self.calcularDefasagemEntreDoisSinais)(np.copy(self.arraySinaisMics[0]), sinalAtual) for sinalAtual in self.arraySinaisMics[1:])
 		
 		# TEM QUE TER O 0 NO COMECO PQ EH O DELAY ENTRE O REFERENCIAL E ELE MESMO
 		self.arrayDelays = np.array([0] + arrayDelaysParcial)
 
 	def executarDaS(self, fazerMedia=True):
 		# AJUSTANDO OS SINAIS PARA QUE POSSAM SER SOMADOS DEPOIS
-		resposta = Parallel(n_jobs=-1)(delayed(self.ajustarSinaisDadoDelay)(self.arraySinaisMics[0], sinalAtual, delayAtual) for sinalAtual, delayAtual in zip(self.arraySinaisMics, self.arrayDelays))
+		resposta = Parallel(n_jobs=self.qtdNucleos)(delayed(self.ajustarSinaisDadoDelay)(self.arraySinaisMics[0], sinalAtual, delayAtual) for sinalAtual, delayAtual in zip(self.arraySinaisMics, self.arrayDelays))
 		__, self.arraySinaisAjustados = zip(*resposta)
 		
 		# SOMANDO OS SINAIS AJUSTADOS
