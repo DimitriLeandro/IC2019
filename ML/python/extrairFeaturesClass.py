@@ -96,14 +96,14 @@ class ExtrairFeatures:
 		
 		# AGORA SIM EU SAIO EXTRAINDO AS FEATURES 
 		arrayFeaturesFrame += self.extrairMFCCs(matrizMFCC)
-		arrayFeaturesFrame += self.extrairDeltas(matrizMFCC)
-		arrayFeaturesFrame += self.extrairDeltaDeltas(matrizMFCC)
+		#arrayFeaturesFrame += self.extrairDeltas(matrizMFCC)
+		#arrayFeaturesFrame += self.extrairDeltaDeltas(matrizMFCC)
 		arrayFeaturesFrame += self.extrairMelEspectrograma(sinal, freqAmostragem)
 		arrayFeaturesFrame += self.extrairCromagramas(sinal, freqAmostragem, frameLength, overlapLength)
-		arrayFeaturesFrame += self.extrairCromagramasQ(sinal, freqAmostragem)
-		arrayFeaturesFrame += self.extrairCromaCENSs(sinal, freqAmostragem)
-		arrayFeaturesFrame += self.extrairTonnetz(sinal, freqAmostragem)
-		arrayFeaturesFrame += self.extrairContrastes(sinal, freqAmostragem, frameLength, overlapLength)
+		#arrayFeaturesFrame += self.extrairCromagramasQ(sinal, freqAmostragem)
+		#arrayFeaturesFrame += self.extrairCromaCENSs(sinal, freqAmostragem)
+		#arrayFeaturesFrame += self.extrairTonnetz(sinal, freqAmostragem)
+		#arrayFeaturesFrame += self.extrairContrastes(sinal, freqAmostragem, frameLength, overlapLength)
 		# POR FIM, RETORNO O ARRAY DE FEATURES DO AUDIO QUE FOI ENVIADO PARA ESSA FUNCAO
 		return arrayFeaturesFrame
 
@@ -178,7 +178,7 @@ class ExtrairFeatures:
 		
 		# CRIANDO O ARQUIVO CSV SO COM O CABECALHO
 		aaa = []
-		for l in np.arange(0,135):
+		for l in np.arange(0,58):
 		    aaa.append(str(l))
 		colunasTop = ['nomeArquivo'] + aaa + ['classificacaoCorreta']
 		
@@ -221,13 +221,20 @@ class ExtrairFeatures:
 		# faz o escalonamento e depois coloca as colunas de nome e classificação de volta.
 	
 		dataframeGeral = pd.read_csv(self.caminhoCSV)
+
+		#print("dataframeGeral.head(5):", dataframeGeral.head(5))
 		
 		# COPIANDO AS COLUNAS DE NOME E CLASSIFICACAO
 		colunaArquivo       = dataframeGeral["nomeArquivo"]
 		colunaClassificacao = dataframeGeral["classificacaoCorreta"]
+
+		#print("colunaArquivo[:5]:", colunaArquivo[:5])
+		#print("colunaClassificacao[:5]:", colunaClassificacao[:5])
 		
 		# DELETANDO AS COLUNAS ARQUIVO E CLASSIFICACAO
 		dataframeGeral = dataframeGeral.drop(['nomeArquivo', 'classificacaoCorreta'], axis=1).to_numpy()
+
+		#print("dataframeGeral[:5,:]:", dataframeGeral[:5,:])
 		
 		# ESCALONANDO
 		dataframeGeral = pd.DataFrame(StandardScaler().fit_transform(dataframeGeral))
