@@ -25,21 +25,21 @@ def ajustarDatasetTreinamento(caminhoCSV, verbose=False):
 
     return data, target
 
-def normalizarDados(data, verbose=False):
-    if verbose:
+def iniciarObjNormalizador(data, verbose=False):
+    if verbose == True:
         print("Iniciando objeto normalizador")
     objNormalizador = StandardScaler()
-    if verbose:
+    if verbose == True:
         print("Treinando objeto normalizador")
     objNormalizador.fit(data)
-    if verbose:
+    if verbose == True:
         print("Normalizando os dados de treinamento")
     data = objNormalizador.transform(data)
     return data, objNormalizador
 
 def iniciarObjClassificador(data, target, classificador=None, verbose=False):
     
-    if classificador = None:
+    if classificador == None:
         classificador = "SGDClassifier(alpha=0.0001, average=False, class_weight=None, early_stopping=False, epsilon=0.1, eta0=0.0, fit_intercept=True, l1_ratio=0.15, learning_rate='optimal', loss='log', max_iter=1000, n_iter_no_change=5, n_jobs=1, penalty='l2', power_t=0.5, random_state=None, shuffle=True, tol=0.0001, validation_fraction=0.1, verbose=0, warm_start=False)"
     
     if verbose == True:
@@ -52,18 +52,18 @@ def iniciarObjClassificador(data, target, classificador=None, verbose=False):
     
     return objClassificador
 
-def main(caminhoCSV, verbose=False):
+def main(caminhoCSV, classificador=None, verbose=False):
     
     # OBTENDO X E Y
     data, target = ajustarDatasetTreinamento(caminhoCSV, verbose)
     
     # NORMALIZANDO AS FEATURES E OBTENDO O OBJ NORMALIZADOR
-    data, objNormalizador = normalizarDados(data, verbose)
+    data, objNormalizador = iniciarObjNormalizador(data, verbose)
 
     # TREINANDO UM CLASSIFICADOR COM TODAS AS DIMENSOES    
     objClassificador = iniciarObjClassificador(data, target, classificador, verbose)
     
-    if verbose == True
+    if verbose == True:
         print("objClassificador e objNormalizador prontos: operação finalizada.")
         
     return objClassificador, objNormalizador   
