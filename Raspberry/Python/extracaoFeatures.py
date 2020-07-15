@@ -18,46 +18,46 @@ def extrairFeaturesUnicoFrame(sinal, freqAmostragem):
     arrayFeaturesFrame = []
     
     # CRIANDO O DICIONARIO QUE VAI GUARDAR O TEMPO DE EXTRACAO DE CADA FEATURE INDIVIDUALMENTE
-    dictTempoExtracaoCadaFeature = {}
+    #dictTempoExtracaoCadaFeature = {}
 
     # COMECANDO A EXTRACAO -------------------------------------------------------
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.append(float(extrairRMS(sinal, frameLength, overlapLength)))
-    dictTempoExtracaoCadaFeature["RMS"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["RMS"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.append(float(extrairCentroideEspectral(sinal, freqAmostragem, frameLength, overlapLength)))
-    dictTempoExtracaoCadaFeature["Centroide"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["Centroide"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.append(float(extrairLarguraBanda(sinal, freqAmostragem, frameLength, overlapLength)))
-    dictTempoExtracaoCadaFeature["LarguraBanda"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["LarguraBanda"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.append(float(extrairPlanicidade(sinal, frameLength, overlapLength)))
-    dictTempoExtracaoCadaFeature["Planicidade"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["Planicidade"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.append(float(extrairRolloff(sinal, freqAmostragem, frameLength, overlapLength)))
-    dictTempoExtracaoCadaFeature["Rolloff"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["Rolloff"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.append(float(extrairZCR(sinal, frameLength, overlapLength)))
-    dictTempoExtracaoCadaFeature["ZCR"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["ZCR"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.extend(extrairMFCCs(extrairMatrizMFCC(sinal, freqAmostragem)))
-    dictTempoExtracaoCadaFeature["20MFCCs"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["20MFCCs"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.extend(extrairMelEspectrograma(sinal, freqAmostragem))
-    dictTempoExtracaoCadaFeature["20MelEspectrogramas"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["20MelEspectrogramas"] = time() - tempoInicio
     
-    tempoInicio = time()
+    #tempoInicio = time()
     arrayFeaturesFrame.extend(extrairCromagramas(sinal, freqAmostragem, frameLength, overlapLength))
-    dictTempoExtracaoCadaFeature["12Cromagramas"] = time() - tempoInicio
+    #dictTempoExtracaoCadaFeature["12Cromagramas"] = time() - tempoInicio
     
-    return np.array(arrayFeaturesFrame), dictTempoExtracaoCadaFeature
+    return np.array(arrayFeaturesFrame)#, dictTempoExtracaoCadaFeature
 
 
 
