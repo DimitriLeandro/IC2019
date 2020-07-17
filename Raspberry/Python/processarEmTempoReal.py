@@ -15,7 +15,7 @@ from iniciarNormalizadorEClassificador import main as IniciarObjetos
 
 def processarJanelaCompleta(idJanela, metadeInicialJanelaAtual, metadeFinalJanelaAtual):
     
-    objFile.write("(id:"+str(idJanela)+"): Iniciando processamento. Timestamp "+str(time())+"\n")
+    objFile.write("(id:"+str(idJanela)+"): Inicio processamento. Timestamp "+str(time())+"\n")
     
     # COPIANDO OS ARRAYS NA MEMORIA PRA GARANTIR QUE NAO VAI DAR BOSTA
     metadeInicial = np.copy(metadeInicialJanelaAtual)
@@ -46,13 +46,13 @@ def processarJanelaCompleta(idJanela, metadeInicialJanelaAtual, metadeFinalJanel
     predicao = objClassificador.predict([features])[0]
     
     print("(id:"+str(idJanela)+"):", predicao)
-    objFile.write("(id:"+str(idJanela)+"): Processamento finalizado -> " + str(predicao) + ". Timestamp "+str(time())+"\n")
+    objFile.write("(id:"+str(idJanela)+"): Fim processamento. " + str(predicao) + ". Timestamp "+str(time())+"\n")
 
 # RODANDO O ALGORITMO -----------------------------------------------
-print("Iniciando a aplicação...")
+print("Iniciando a aplicacao...")
 
 # PARAMETROS INICIAIS
-executarAteIdJanela   = 100
+executarAteIdJanela   = 1000
 idDispositivoGravacao = 0
 tempoJanela           = 0.200
 freqAmostragem        = 16000
@@ -66,73 +66,75 @@ caminhoGravarLog      = "/home/pi/Programming/IC2019/Raspberry/Resultados/Logs/l
 objClassificador, objNormalizador = IniciarObjetos(caminhoCSVDataset, verbose=True)
 objFile = open(caminhoGravarLog, "w")
 
+# INICIANDO O PYAUDIO E STREAM
+objPyAudio = pyaudio.PyAudio()
+stream = objPyAudio.open(
+    input_device_index = idDispositivoGravacao,
+    rate               = freqAmostragem,
+    format             = objPyAudio.get_format_from_width(profundidadeBytes),
+    channels           = qtdCanais,
+    input              = True
+)
+
 # LOOP
 idJanela = 1
 while idJanela <= executarAteIdJanela:
-    
-    # INICIANDO O PYAUDIO E STREAM
-    objPyAudio = pyaudio.PyAudio()
-    stream = objPyAudio.open(
-        input_device_index = idDispositivoGravacao,
-        rate               = freqAmostragem,
-        format             = objPyAudio.get_format_from_width(profundidadeBytes),
-        channels           = qtdCanais,
-        input              = True
-    )
 
     # GRAVANDO
     janelasParciais = []
     for i in range(5):
         
         if i == 0:
-            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            objFile.write("(id:"+str(idJanela)+"): Inicio gravacao. Timestamp "+str(time())+"\n")
+            stream.start_stream()
             janelasParciais.append(stream.read(metadeTamanhoJanela))
-            
+            stream.stop_stream()            
             idJanela += 1
             
         elif i == 1:
-            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            objFile.write("(id:"+str(idJanela)+"): Inicio gravacao. Timestamp "+str(time())+"\n")
+            stream.start_stream()
             janelasParciais.append(stream.read(metadeTamanhoJanela))
-            objFile.write("(id:"+str(idJanela-1)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
-            
+            stream.stop_stream()
+            objFile.write("(id:"+str(idJanela-1)+"): Fim gravacao. Timestamp "+str(time())+"\n")            
             objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela-1, janelasParciais[i-1], janelasParciais[i]))
-            objThread.start()
-            
+            objThread.start()            
             idJanela += 1
             
         elif i == 2:
-            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            objFile.write("(id:"+str(idJanela)+"): Inicio gravacao. Timestamp "+str(time())+"\n")
+            stream.start_stream()
             janelasParciais.append(stream.read(metadeTamanhoJanela))
-            objFile.write("(id:"+str(idJanela-1)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
-            
+            stream.stop_stream()
+            objFile.write("(id:"+str(idJanela-1)+"): Fim gravacao. Timestamp "+str(time())+"\n")            
             objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela-1, janelasParciais[i-1], janelasParciais[i]))
-            objThread.start()
-            
+            objThread.start()            
             idJanela += 1
             
         elif i == 3:
-            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            objFile.write("(id:"+str(idJanela)+"): Inicio gravacao. Timestamp "+str(time())+"\n")
+            stream.start_stream()
             janelasParciais.append(stream.read(metadeTamanhoJanela))
-            objFile.write("(id:"+str(idJanela-1)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
-            
+            stream.stop_stream()
+            objFile.write("(id:"+str(idJanela-1)+"): Fim gravacao. Timestamp "+str(time())+"\n")            
             objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela-1, janelasParciais[i-1], janelasParciais[i]))
             objThread.start()
             
         else:
+            stream.start_stream()
             janelasParciais.append(stream.read(metadeTamanhoJanela))
-            objFile.write("(id:"+str(idJanela)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
-            
+            stream.stop_stream()
+            objFile.write("(id:"+str(idJanela)+"): Fim gravacao. Timestamp "+str(time())+"\n")            
             objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela, janelasParciais[i-1], janelasParciais[i]))
-            objThread.start()
-            
+            objThread.start()            
             idJanela += 1
 
-    # PARANDO O AMBIENTE
-    stream.stop_stream()
-    stream.close()
-    objPyAudio.terminate()
-    #del objPyAudio
-    #del stream
+# PARANDO O AMBIENTE
+stream.stop_stream()
+stream.close()
+objPyAudio.terminate()
+del objPyAudio
+del stream
 
 sleep(5)
 print("Finalizando a aplicação...")

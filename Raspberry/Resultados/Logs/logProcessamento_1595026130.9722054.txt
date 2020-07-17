@@ -1,0 +1,400 @@
+(id:1): Inicio gravacao. Timestamp 1595026151.433859
+(id:2): Inicio gravacao. Timestamp 1595026151.5636787
+(id:1): Fim gravacao. Timestamp 1595026151.6952322
+(id:1): Inicio processamento. Timestamp 1595026151.6958013
+(id:3): Inicio gravacao. Timestamp 1595026151.6965277
+(id:2): Fim gravacao. Timestamp 1595026151.8297365
+(id:2): Inicio processamento. Timestamp 1595026151.8304026
+(id:4): Inicio gravacao. Timestamp 1595026151.8309932
+(id:1): Fim processamento. siren. Timestamp 1595026151.8486326
+(id:3): Fim gravacao. Timestamp 1595026151.962957
+(id:3): Inicio processamento. Timestamp 1595026151.963522
+(id:2): Fim processamento. casual. Timestamp 1595026151.9967268
+(id:4): Fim gravacao. Timestamp 1595026152.095918
+(id:4): Inicio processamento. Timestamp 1595026152.0964415
+(id:5): Inicio gravacao. Timestamp 1595026152.0970728
+(id:3): Fim processamento. casual. Timestamp 1595026152.1251862
+(id:6): Inicio gravacao. Timestamp 1595026152.2289772
+(id:4): Fim processamento. explosion. Timestamp 1595026152.2515764
+(id:5): Fim gravacao. Timestamp 1595026152.3605647
+(id:5): Inicio processamento. Timestamp 1595026152.3610675
+(id:7): Inicio gravacao. Timestamp 1595026152.36166
+(id:6): Fim gravacao. Timestamp 1595026152.4974566
+(id:6): Inicio processamento. Timestamp 1595026152.4984162
+(id:8): Inicio gravacao. Timestamp 1595026152.4992378
+(id:5): Fim processamento. explosion. Timestamp 1595026152.5829577
+(id:7): Fim gravacao. Timestamp 1595026152.6328142
+(id:7): Inicio processamento. Timestamp 1595026152.6333508
+(id:6): Fim processamento. casual. Timestamp 1595026152.7158937
+(id:8): Fim gravacao. Timestamp 1595026152.7657242
+(id:8): Inicio processamento. Timestamp 1595026152.7663667
+(id:9): Inicio gravacao. Timestamp 1595026152.7669683
+(id:7): Fim processamento. casual. Timestamp 1595026152.8328223
+(id:10): Inicio gravacao. Timestamp 1595026152.9006057
+(id:8): Fim processamento. casual. Timestamp 1595026152.9374597
+(id:9): Fim gravacao. Timestamp 1595026153.0322976
+(id:9): Inicio processamento. Timestamp 1595026153.0328388
+(id:11): Inicio gravacao. Timestamp 1595026153.0334067
+(id:10): Fim gravacao. Timestamp 1595026153.1652021
+(id:10): Inicio processamento. Timestamp 1595026153.1659474
+(id:12): Inicio gravacao. Timestamp 1595026153.1667225
+(id:9): Fim processamento. casual. Timestamp 1595026153.1830544
+(id:11): Fim gravacao. Timestamp 1595026153.302073
+(id:11): Inicio processamento. Timestamp 1595026153.302873
+(id:10): Fim processamento. casual. Timestamp 1595026153.4009569
+(id:12): Fim gravacao. Timestamp 1595026153.4384463
+(id:12): Inicio processamento. Timestamp 1595026153.4389787
+(id:13): Inicio gravacao. Timestamp 1595026153.439553
+(id:11): Fim processamento. casual. Timestamp 1595026153.520139
+(id:14): Inicio gravacao. Timestamp 1595026153.5721571
+(id:12): Fim processamento. gunshot. Timestamp 1595026153.6154444
+(id:13): Fim gravacao. Timestamp 1595026153.703788
+(id:13): Inicio processamento. Timestamp 1595026153.7042973
+(id:15): Inicio gravacao. Timestamp 1595026153.704891
+(id:14): Fim gravacao. Timestamp 1595026153.8366814
+(id:14): Inicio processamento. Timestamp 1595026153.8373513
+(id:16): Inicio gravacao. Timestamp 1595026153.838034
+(id:13): Fim processamento. casual. Timestamp 1595026153.852187
+(id:15): Fim gravacao. Timestamp 1595026153.970025
+(id:15): Inicio processamento. Timestamp 1595026153.970567
+(id:14): Fim processamento. casual. Timestamp 1595026154.0011656
+(id:16): Fim gravacao. Timestamp 1595026154.1039712
+(id:16): Inicio processamento. Timestamp 1595026154.1047962
+(id:17): Inicio gravacao. Timestamp 1595026154.105866
+(id:18): Inicio gravacao. Timestamp 1595026154.3631763
+(id:15): Fim processamento. casual. Timestamp 1595026154.3919857
+(id:16): Fim processamento. casual. Timestamp 1595026154.4831426
+(id:17): Fim gravacao. Timestamp 1595026154.495
+(id:17): Inicio processamento. Timestamp 1595026154.4955556
+(id:19): Inicio gravacao. Timestamp 1595026154.496163
+(id:18): Fim gravacao. Timestamp 1595026154.6280239
+(id:18): Inicio processamento. Timestamp 1595026154.6285584
+(id:20): Inicio gravacao. Timestamp 1595026154.6291
+(id:17): Fim processamento. casual. Timestamp 1595026154.6593823
+(id:19): Fim gravacao. Timestamp 1595026154.7619746
+(id:19): Inicio processamento. Timestamp 1595026154.762555
+(id:18): Fim processamento. explosion. Timestamp 1595026154.820149
+(id:20): Fim gravacao. Timestamp 1595026154.8951426
+(id:20): Inicio processamento. Timestamp 1595026154.89571
+(id:21): Inicio gravacao. Timestamp 1595026154.896333
+(id:19): Fim processamento. explosion. Timestamp 1595026154.9735322
+(id:22): Inicio gravacao. Timestamp 1595026155.02906
+(id:20): Fim processamento. explosion. Timestamp 1595026155.078753
+(id:21): Fim gravacao. Timestamp 1595026155.160963
+(id:21): Inicio processamento. Timestamp 1595026155.1615312
+(id:23): Inicio gravacao. Timestamp 1595026155.1622226
+(id:22): Fim gravacao. Timestamp 1595026155.2945933
+(id:22): Inicio processamento. Timestamp 1595026155.2953603
+(id:24): Inicio gravacao. Timestamp 1595026155.2960541
+(id:21): Fim processamento. casual. Timestamp 1595026155.3246493
+(id:23): Fim gravacao. Timestamp 1595026155.4283683
+(id:23): Inicio processamento. Timestamp 1595026155.429021
+(id:22): Fim processamento. casual. Timestamp 1595026155.4683871
+(id:24): Fim gravacao. Timestamp 1595026155.5622633
+(id:24): Inicio processamento. Timestamp 1595026155.562753
+(id:25): Inicio gravacao. Timestamp 1595026155.5633485
+(id:23): Fim processamento. casual. Timestamp 1595026155.6116767
+(id:26): Inicio gravacao. Timestamp 1595026155.6952655
+(id:24): Fim processamento. casual. Timestamp 1595026155.7367327
+(id:25): Fim gravacao. Timestamp 1595026155.827156
+(id:25): Inicio processamento. Timestamp 1595026155.8277507
+(id:27): Inicio gravacao. Timestamp 1595026155.8283875
+(id:26): Fim gravacao. Timestamp 1595026155.9602969
+(id:26): Inicio processamento. Timestamp 1595026155.9610822
+(id:28): Inicio gravacao. Timestamp 1595026155.9616425
+(id:25): Fim processamento. casual. Timestamp 1595026155.993466
+(id:27): Fim gravacao. Timestamp 1595026156.0957
+(id:27): Inicio processamento. Timestamp 1595026156.096225
+(id:26): Fim processamento. casual. Timestamp 1595026156.1572287
+(id:28): Fim gravacao. Timestamp 1595026156.228962
+(id:28): Inicio processamento. Timestamp 1595026156.2295234
+(id:29): Inicio gravacao. Timestamp 1595026156.2301373
+(id:27): Fim processamento. casual. Timestamp 1595026156.2977157
+(id:30): Inicio gravacao. Timestamp 1595026156.3622677
+(id:28): Fim processamento. casual. Timestamp 1595026156.4110994
+(id:29): Fim gravacao. Timestamp 1595026156.4942021
+(id:29): Inicio processamento. Timestamp 1595026156.494737
+(id:31): Inicio gravacao. Timestamp 1595026156.4953535
+(id:30): Fim gravacao. Timestamp 1595026156.6276002
+(id:30): Inicio processamento. Timestamp 1595026156.6284454
+(id:32): Inicio gravacao. Timestamp 1595026156.629275
+(id:29): Fim processamento. casual. Timestamp 1595026156.6552343
+(id:31): Fim gravacao. Timestamp 1595026156.7619853
+(id:31): Inicio processamento. Timestamp 1595026156.7627242
+(id:30): Fim processamento. casual. Timestamp 1595026156.8072944
+(id:32): Fim gravacao. Timestamp 1595026156.8958626
+(id:32): Inicio processamento. Timestamp 1595026156.8964193
+(id:33): Inicio gravacao. Timestamp 1595026156.897286
+(id:31): Fim processamento. explosion. Timestamp 1595026156.948277
+(id:34): Inicio gravacao. Timestamp 1595026157.031907
+(id:32): Fim processamento. explosion. Timestamp 1595026157.0691187
+(id:33): Fim gravacao. Timestamp 1595026157.1638236
+(id:33): Inicio processamento. Timestamp 1595026157.1643636
+(id:35): Inicio gravacao. Timestamp 1595026157.1650295
+(id:34): Fim gravacao. Timestamp 1595026157.297277
+(id:34): Inicio processamento. Timestamp 1595026157.2982383
+(id:36): Inicio gravacao. Timestamp 1595026157.2990925
+(id:33): Fim processamento. casual. Timestamp 1595026157.323038
+(id:35): Fim gravacao. Timestamp 1595026157.4310477
+(id:35): Inicio processamento. Timestamp 1595026157.4315767
+(id:34): Fim processamento. casual. Timestamp 1595026157.4657984
+(id:36): Fim gravacao. Timestamp 1595026157.5643902
+(id:36): Inicio processamento. Timestamp 1595026157.5648687
+(id:37): Inicio gravacao. Timestamp 1595026157.5654776
+(id:35): Fim processamento. casual. Timestamp 1595026157.6233115
+(id:38): Inicio gravacao. Timestamp 1595026157.6996524
+(id:36): Fim processamento. explosion. Timestamp 1595026157.7381737
+(id:37): Fim gravacao. Timestamp 1595026157.8314342
+(id:37): Inicio processamento. Timestamp 1595026157.831955
+(id:39): Inicio gravacao. Timestamp 1595026157.83255
+(id:38): Fim gravacao. Timestamp 1595026157.9647317
+(id:38): Inicio processamento. Timestamp 1595026157.9654856
+(id:40): Inicio gravacao. Timestamp 1595026157.9661858
+(id:37): Fim processamento. explosion. Timestamp 1595026157.9929852
+(id:39): Fim gravacao. Timestamp 1595026158.098789
+(id:39): Inicio processamento. Timestamp 1595026158.0994885
+(id:38): Fim processamento. explosion. Timestamp 1595026158.1433976
+(id:40): Fim gravacao. Timestamp 1595026158.2336166
+(id:40): Inicio processamento. Timestamp 1595026158.234172
+(id:41): Inicio gravacao. Timestamp 1595026158.234807
+(id:39): Fim processamento. explosion. Timestamp 1595026158.292646
+(id:42): Inicio gravacao. Timestamp 1595026158.3667371
+(id:40): Fim processamento. casual. Timestamp 1595026158.4122517
+(id:41): Fim gravacao. Timestamp 1595026158.4989545
+(id:41): Inicio processamento. Timestamp 1595026158.4994862
+(id:43): Inicio gravacao. Timestamp 1595026158.500086
+(id:42): Fim gravacao. Timestamp 1595026158.6320012
+(id:42): Inicio processamento. Timestamp 1595026158.6325688
+(id:44): Inicio gravacao. Timestamp 1595026158.6330817
+(id:41): Fim processamento. casual. Timestamp 1595026158.6638436
+(id:43): Fim gravacao. Timestamp 1595026158.764983
+(id:43): Inicio processamento. Timestamp 1595026158.765493
+(id:42): Fim processamento. casual. Timestamp 1595026158.8073633
+(id:44): Fim gravacao. Timestamp 1595026158.898229
+(id:44): Inicio processamento. Timestamp 1595026158.8988807
+(id:45): Inicio gravacao. Timestamp 1595026158.8995466
+(id:43): Fim processamento. explosion. Timestamp 1595026158.935275
+(id:46): Inicio gravacao. Timestamp 1595026159.0318303
+(id:44): Fim processamento. casual. Timestamp 1595026159.0609405
+(id:45): Fim gravacao. Timestamp 1595026159.1643054
+(id:45): Inicio processamento. Timestamp 1595026159.1651475
+(id:47): Inicio gravacao. Timestamp 1595026159.1662078
+(id:46): Fim gravacao. Timestamp 1595026159.300004
+(id:46): Inicio processamento. Timestamp 1595026159.3005354
+(id:48): Inicio gravacao. Timestamp 1595026159.3010325
+(id:45): Fim processamento. casual. Timestamp 1595026159.4217782
+(id:47): Fim gravacao. Timestamp 1595026159.4342217
+(id:47): Inicio processamento. Timestamp 1595026159.4347527
+(id:46): Fim processamento. casual. Timestamp 1595026159.5181723
+(id:48): Fim gravacao. Timestamp 1595026159.5683413
+(id:48): Inicio processamento. Timestamp 1595026159.5689316
+(id:49): Inicio gravacao. Timestamp 1595026159.5695276
+(id:47): Fim processamento. casual. Timestamp 1595026159.6401055
+(id:50): Inicio gravacao. Timestamp 1595026159.701375
+(id:48): Fim processamento. casual. Timestamp 1595026159.7429962
+(id:49): Fim gravacao. Timestamp 1595026159.833062
+(id:49): Inicio processamento. Timestamp 1595026159.833574
+(id:51): Inicio gravacao. Timestamp 1595026159.8341365
+(id:50): Fim gravacao. Timestamp 1595026159.9659243
+(id:50): Inicio processamento. Timestamp 1595026159.9664721
+(id:52): Inicio gravacao. Timestamp 1595026159.9669805
+(id:49): Fim processamento. casual. Timestamp 1595026159.9846878
+(id:51): Fim gravacao. Timestamp 1595026160.100099
+(id:51): Inicio processamento. Timestamp 1595026160.100823
+(id:50): Fim processamento. casual. Timestamp 1595026160.1260314
+(id:52): Fim gravacao. Timestamp 1595026160.233786
+(id:52): Inicio processamento. Timestamp 1595026160.2343135
+(id:53): Inicio gravacao. Timestamp 1595026160.2349565
+(id:51): Fim processamento. casual. Timestamp 1595026160.2629225
+(id:54): Inicio gravacao. Timestamp 1595026160.3667798
+(id:52): Fim processamento. casual. Timestamp 1595026160.3896377
+(id:53): Fim gravacao. Timestamp 1595026160.4984307
+(id:53): Inicio processamento. Timestamp 1595026160.4989407
+(id:55): Inicio gravacao. Timestamp 1595026160.499542
+(id:54): Fim gravacao. Timestamp 1595026160.6313436
+(id:54): Inicio processamento. Timestamp 1595026160.631892
+(id:56): Inicio gravacao. Timestamp 1595026160.632438
+(id:53): Fim processamento. casual. Timestamp 1595026160.6512277
+(id:55): Fim gravacao. Timestamp 1595026160.764969
+(id:55): Inicio processamento. Timestamp 1595026160.7656894
+(id:54): Fim processamento. casual. Timestamp 1595026160.7883532
+(id:56): Fim gravacao. Timestamp 1595026160.8990653
+(id:56): Inicio processamento. Timestamp 1595026160.8995721
+(id:57): Inicio gravacao. Timestamp 1595026160.9001703
+(id:55): Fim processamento. casual. Timestamp 1595026160.933112
+(id:58): Inicio gravacao. Timestamp 1595026161.0320022
+(id:56): Fim processamento. casual. Timestamp 1595026161.0547237
+(id:57): Fim gravacao. Timestamp 1595026161.163621
+(id:57): Inicio processamento. Timestamp 1595026161.1641278
+(id:59): Inicio gravacao. Timestamp 1595026161.1646953
+(id:58): Fim gravacao. Timestamp 1595026161.2966528
+(id:58): Inicio processamento. Timestamp 1595026161.297275
+(id:60): Inicio gravacao. Timestamp 1595026161.2980044
+(id:57): Fim processamento. casual. Timestamp 1595026161.3074079
+(id:59): Fim gravacao. Timestamp 1595026161.4316828
+(id:59): Inicio processamento. Timestamp 1595026161.4326925
+(id:58): Fim processamento. casual. Timestamp 1595026161.478972
+(id:60): Fim gravacao. Timestamp 1595026161.5675013
+(id:60): Inicio processamento. Timestamp 1595026161.568206
+(id:61): Inicio gravacao. Timestamp 1595026161.569295
+(id:59): Fim processamento. casual. Timestamp 1595026161.6640773
+(id:62): Inicio gravacao. Timestamp 1595026161.701563
+(id:60): Fim processamento. casual. Timestamp 1595026161.7509117
+(id:61): Fim gravacao. Timestamp 1595026161.8332455
+(id:61): Inicio processamento. Timestamp 1595026161.8337483
+(id:63): Inicio gravacao. Timestamp 1595026161.834311
+(id:62): Fim gravacao. Timestamp 1595026161.9661112
+(id:62): Inicio processamento. Timestamp 1595026161.9669313
+(id:64): Inicio gravacao. Timestamp 1595026161.967585
+(id:61): Fim processamento. casual. Timestamp 1595026161.9819121
+(id:63): Fim gravacao. Timestamp 1595026162.0995612
+(id:63): Inicio processamento. Timestamp 1595026162.1003134
+(id:62): Fim processamento. casual. Timestamp 1595026162.126373
+(id:64): Fim gravacao. Timestamp 1595026162.2329001
+(id:64): Inicio processamento. Timestamp 1595026162.2335145
+(id:65): Inicio gravacao. Timestamp 1595026162.2342882
+(id:63): Fim processamento. casual. Timestamp 1595026162.2834482
+(id:66): Inicio gravacao. Timestamp 1595026162.3676605
+(id:64): Fim processamento. casual. Timestamp 1595026162.4383311
+(id:65): Fim gravacao. Timestamp 1595026162.4993663
+(id:65): Inicio processamento. Timestamp 1595026162.4998775
+(id:67): Inicio gravacao. Timestamp 1595026162.500445
+(id:66): Fim gravacao. Timestamp 1595026162.6322725
+(id:66): Inicio processamento. Timestamp 1595026162.633072
+(id:68): Inicio gravacao. Timestamp 1595026162.6337776
+(id:65): Fim processamento. casual. Timestamp 1595026162.6479821
+(id:67): Fim gravacao. Timestamp 1595026162.76616
+(id:67): Inicio processamento. Timestamp 1595026162.7670507
+(id:66): Fim processamento. casual. Timestamp 1595026162.78955
+(id:68): Fim gravacao. Timestamp 1595026162.899962
+(id:68): Inicio processamento. Timestamp 1595026162.9006953
+(id:69): Inicio gravacao. Timestamp 1595026162.9013538
+(id:67): Fim processamento. casual. Timestamp 1595026162.9264767
+(id:70): Inicio gravacao. Timestamp 1595026163.0333724
+(id:68): Fim processamento. explosion. Timestamp 1595026163.0535748
+(id:69): Fim gravacao. Timestamp 1595026163.1650949
+(id:69): Inicio processamento. Timestamp 1595026163.165611
+(id:71): Inicio gravacao. Timestamp 1595026163.1661742
+(id:70): Fim gravacao. Timestamp 1595026163.2987018
+(id:70): Inicio processamento. Timestamp 1595026163.2993135
+(id:72): Inicio gravacao. Timestamp 1595026163.3000467
+(id:69): Fim processamento. casual. Timestamp 1595026163.3099966
+(id:71): Fim gravacao. Timestamp 1595026163.4326441
+(id:71): Inicio processamento. Timestamp 1595026163.4333549
+(id:70): Fim processamento. casual. Timestamp 1595026163.45726
+(id:72): Fim gravacao. Timestamp 1595026163.5661662
+(id:72): Inicio processamento. Timestamp 1595026163.5669498
+(id:73): Inicio gravacao. Timestamp 1595026163.5678499
+(id:71): Fim processamento. casual. Timestamp 1595026163.5957139
+(id:74): Inicio gravacao. Timestamp 1595026163.6999586
+(id:72): Fim processamento. casual. Timestamp 1595026163.7259984
+(id:73): Fim gravacao. Timestamp 1595026163.8324752
+(id:73): Inicio processamento. Timestamp 1595026163.8333335
+(id:75): Inicio gravacao. Timestamp 1595026163.8343132
+(id:74): Fim gravacao. Timestamp 1595026163.9673762
+(id:74): Inicio processamento. Timestamp 1595026163.967982
+(id:76): Inicio gravacao. Timestamp 1595026163.9684975
+(id:73): Fim processamento. casual. Timestamp 1595026164.0735648
+(id:75): Fim gravacao. Timestamp 1595026164.1021295
+(id:75): Inicio processamento. Timestamp 1595026164.1026638
+(id:74): Fim processamento. casual. Timestamp 1595026164.1858504
+(id:76): Fim gravacao. Timestamp 1595026164.235092
+(id:76): Inicio processamento. Timestamp 1595026164.235643
+(id:77): Inicio gravacao. Timestamp 1595026164.2366233
+(id:75): Fim processamento. casual. Timestamp 1595026164.308934
+(id:78): Inicio gravacao. Timestamp 1595026164.3687344
+(id:76): Fim processamento. casual. Timestamp 1595026164.4104636
+(id:77): Fim gravacao. Timestamp 1595026164.5003853
+(id:77): Inicio processamento. Timestamp 1595026164.5008867
+(id:79): Inicio gravacao. Timestamp 1595026164.5014524
+(id:78): Fim gravacao. Timestamp 1595026164.6332417
+(id:78): Inicio processamento. Timestamp 1595026164.634003
+(id:80): Inicio gravacao. Timestamp 1595026164.634527
+(id:77): Fim processamento. casual. Timestamp 1595026164.6504443
+(id:79): Fim gravacao. Timestamp 1595026164.7667353
+(id:79): Inicio processamento. Timestamp 1595026164.7675729
+(id:78): Fim processamento. explosion. Timestamp 1595026164.7896934
+(id:80): Fim gravacao. Timestamp 1595026164.9008565
+(id:80): Inicio processamento. Timestamp 1595026164.901565
+(id:81): Inicio gravacao. Timestamp 1595026164.9024282
+(id:79): Fim processamento. casual. Timestamp 1595026164.9263377
+(id:82): Inicio gravacao. Timestamp 1595026165.0353072
+(id:80): Fim processamento. casual. Timestamp 1595026165.0527816
+(id:81): Fim gravacao. Timestamp 1595026165.1671512
+(id:81): Inicio processamento. Timestamp 1595026165.1677172
+(id:83): Inicio gravacao. Timestamp 1595026165.1683292
+(id:82): Fim gravacao. Timestamp 1595026165.3001902
+(id:82): Inicio processamento. Timestamp 1595026165.3009398
+(id:84): Inicio gravacao. Timestamp 1595026165.3018398
+(id:81): Fim processamento. casual. Timestamp 1595026165.3108146
+(id:83): Fim gravacao. Timestamp 1595026165.4336324
+(id:83): Inicio processamento. Timestamp 1595026165.4341865
+(id:82): Fim processamento. explosion. Timestamp 1595026165.454801
+(id:84): Fim gravacao. Timestamp 1595026165.5666344
+(id:84): Inicio processamento. Timestamp 1595026165.5671735
+(id:85): Inicio gravacao. Timestamp 1595026165.5678241
+(id:83): Fim processamento. explosion. Timestamp 1595026165.5955913
+(id:86): Inicio gravacao. Timestamp 1595026165.6997194
+(id:84): Fim processamento. casual. Timestamp 1595026165.723167
+(id:85): Fim gravacao. Timestamp 1595026165.8314252
+(id:85): Inicio processamento. Timestamp 1595026165.831953
+(id:87): Inicio gravacao. Timestamp 1595026165.8325906
+(id:86): Fim gravacao. Timestamp 1595026165.9646118
+(id:86): Inicio processamento. Timestamp 1595026165.965167
+(id:88): Inicio gravacao. Timestamp 1595026165.9657114
+(id:85): Fim processamento. casual. Timestamp 1595026165.985787
+(id:87): Fim gravacao. Timestamp 1595026166.098647
+(id:87): Inicio processamento. Timestamp 1595026166.0995524
+(id:86): Fim processamento. casual. Timestamp 1595026166.1684272
+(id:88): Fim gravacao. Timestamp 1595026166.2361076
+(id:88): Inicio processamento. Timestamp 1595026166.2368748
+(id:89): Inicio gravacao. Timestamp 1595026166.2374923
+(id:87): Fim processamento. casual. Timestamp 1595026166.3353744
+(id:90): Inicio gravacao. Timestamp 1595026166.3720334
+(id:88): Fim processamento. casual. Timestamp 1595026166.423765
+(id:89): Fim gravacao. Timestamp 1595026166.5038598
+(id:89): Inicio processamento. Timestamp 1595026166.504375
+(id:91): Inicio gravacao. Timestamp 1595026166.5050087
+(id:90): Fim gravacao. Timestamp 1595026166.6368575
+(id:90): Inicio processamento. Timestamp 1595026166.6374178
+(id:92): Inicio gravacao. Timestamp 1595026166.63802
+(id:89): Fim processamento. casual. Timestamp 1595026166.6569147
+(id:91): Fim gravacao. Timestamp 1595026166.769849
+(id:91): Inicio processamento. Timestamp 1595026166.7704008
+(id:90): Fim processamento. casual. Timestamp 1595026166.7993512
+(id:92): Fim gravacao. Timestamp 1595026166.9031856
+(id:92): Inicio processamento. Timestamp 1595026166.9038117
+(id:93): Inicio gravacao. Timestamp 1595026166.9044657
+(id:91): Fim processamento. casual. Timestamp 1595026166.9299996
+(id:94): Inicio gravacao. Timestamp 1595026167.036424
+(id:92): Fim processamento. casual. Timestamp 1595026167.0587447
+(id:93): Fim gravacao. Timestamp 1595026167.1681097
+(id:93): Inicio processamento. Timestamp 1595026167.168626
+(id:95): Inicio gravacao. Timestamp 1595026167.169187
+(id:94): Fim gravacao. Timestamp 1595026167.300951
+(id:94): Inicio processamento. Timestamp 1595026167.3016922
+(id:96): Inicio gravacao. Timestamp 1595026167.3022132
+(id:93): Fim processamento. casual. Timestamp 1595026167.3183477
+(id:95): Fim gravacao. Timestamp 1595026167.4341366
+(id:95): Inicio processamento. Timestamp 1595026167.4346683
+(id:94): Fim processamento. casual. Timestamp 1595026167.461862
+(id:96): Fim gravacao. Timestamp 1595026167.5671105
+(id:96): Inicio processamento. Timestamp 1595026167.567682
+(id:97): Inicio gravacao. Timestamp 1595026167.5685728
+(id:95): Fim processamento. casual. Timestamp 1595026167.5951886
+(id:98): Inicio gravacao. Timestamp 1595026167.7013993
+(id:96): Fim processamento. casual. Timestamp 1595026167.7736084
+(id:97): Fim gravacao. Timestamp 1595026167.834295
+(id:97): Inicio processamento. Timestamp 1595026167.8347948
+(id:99): Inicio gravacao. Timestamp 1595026167.8353941
+(id:98): Fim gravacao. Timestamp 1595026167.967478
+(id:98): Inicio processamento. Timestamp 1595026167.9681866
+(id:100): Inicio gravacao. Timestamp 1595026167.9690487
+(id:97): Fim processamento. casual. Timestamp 1595026167.9783196
+(id:99): Fim gravacao. Timestamp 1595026168.1108315
+(id:99): Inicio processamento. Timestamp 1595026168.1115515
+(id:98): Fim processamento. casual. Timestamp 1595026168.1252928
+(id:100): Fim gravacao. Timestamp 1595026168.2443423
+(id:100): Inicio processamento. Timestamp 1595026168.2448757
+(id:99): Fim processamento. casual. Timestamp 1595026168.2687552
+(id:100): Fim processamento. casual. Timestamp 1595026168.4035254
