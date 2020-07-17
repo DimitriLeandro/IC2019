@@ -1,0 +1,400 @@
+(id:1): Iniciando gravação. Timestamp 1595021151.747676
+(id:2): Iniciando gravação. Timestamp 1595021151.876436
+(id:1): Finalizando gravação. Timestamp 1595021152.004154
+(id:1): Iniciando processamento. Timestamp 1595021152.0046933
+(id:3): Iniciando gravação. Timestamp 1595021152.005378
+(id:2): Finalizando gravação. Timestamp 1595021152.0685673
+(id:2): Iniciando processamento. Timestamp 1595021152.0692465
+(id:4): Iniciando gravação. Timestamp 1595021152.0698733
+(id:3): Finalizando gravação. Timestamp 1595021152.1963832
+(id:3): Iniciando processamento. Timestamp 1595021152.19738
+(id:1): Processamento finalizado -> siren. Timestamp 1595021152.2115746
+(id:4): Finalizando gravação. Timestamp 1595021152.2613564
+(id:4): Iniciando processamento. Timestamp 1595021152.2619824
+(id:2): Processamento finalizado -> gunshot. Timestamp 1595021152.305707
+(id:3): Processamento finalizado -> casual. Timestamp 1595021152.4785168
+(id:4): Processamento finalizado -> explosion. Timestamp 1595021152.4994972
+(id:5): Iniciando gravação. Timestamp 1595021152.6019266
+(id:6): Iniciando gravação. Timestamp 1595021152.7307022
+(id:5): Finalizando gravação. Timestamp 1595021152.8582942
+(id:5): Iniciando processamento. Timestamp 1595021152.8591006
+(id:7): Iniciando gravação. Timestamp 1595021152.860127
+(id:6): Finalizando gravação. Timestamp 1595021152.9228404
+(id:6): Iniciando processamento. Timestamp 1595021152.9237142
+(id:8): Iniciando gravação. Timestamp 1595021152.9245913
+(id:7): Finalizando gravação. Timestamp 1595021153.0515058
+(id:7): Iniciando processamento. Timestamp 1595021153.0520906
+(id:8): Finalizando gravação. Timestamp 1595021153.1148477
+(id:8): Iniciando processamento. Timestamp 1595021153.1161427
+(id:5): Processamento finalizado -> siren. Timestamp 1595021153.1691859
+(id:6): Processamento finalizado -> casual. Timestamp 1595021153.2543967
+(id:7): Processamento finalizado -> casual. Timestamp 1595021153.379946
+(id:8): Processamento finalizado -> casual. Timestamp 1595021153.4018896
+(id:9): Iniciando gravação. Timestamp 1595021153.4726126
+(id:10): Iniciando gravação. Timestamp 1595021153.6014075
+(id:9): Finalizando gravação. Timestamp 1595021153.729119
+(id:9): Iniciando processamento. Timestamp 1595021153.729614
+(id:11): Iniciando gravação. Timestamp 1595021153.7302144
+(id:10): Finalizando gravação. Timestamp 1595021153.7935271
+(id:10): Iniciando processamento. Timestamp 1595021153.7940688
+(id:12): Iniciando gravação. Timestamp 1595021153.7945552
+(id:9): Processamento finalizado -> siren. Timestamp 1595021153.9187346
+(id:11): Finalizando gravação. Timestamp 1595021153.9212692
+(id:11): Iniciando processamento. Timestamp 1595021153.9217818
+(id:12): Finalizando gravação. Timestamp 1595021153.9866226
+(id:12): Iniciando processamento. Timestamp 1595021153.9875107
+(id:10): Processamento finalizado -> explosion. Timestamp 1595021154.0246341
+(id:11): Processamento finalizado -> explosion. Timestamp 1595021154.1938465
+(id:12): Processamento finalizado -> explosion. Timestamp 1595021154.226642
+(id:13): Iniciando gravação. Timestamp 1595021154.3242981
+(id:14): Iniciando gravação. Timestamp 1595021154.4535441
+(id:13): Finalizando gravação. Timestamp 1595021154.5809257
+(id:13): Iniciando processamento. Timestamp 1595021154.581798
+(id:15): Iniciando gravação. Timestamp 1595021154.5828385
+(id:14): Finalizando gravação. Timestamp 1595021154.645799
+(id:14): Iniciando processamento. Timestamp 1595021154.646941
+(id:16): Iniciando gravação. Timestamp 1595021154.647807
+(id:15): Finalizando gravação. Timestamp 1595021154.773939
+(id:15): Iniciando processamento. Timestamp 1595021154.7746572
+(id:16): Finalizando gravação. Timestamp 1595021154.8374355
+(id:16): Iniciando processamento. Timestamp 1595021154.8384306
+(id:13): Processamento finalizado -> siren. Timestamp 1595021154.888765
+(id:17): Iniciando gravação. Timestamp 1595021155.1632845
+(id:14): Processamento finalizado -> explosion. Timestamp 1595021155.1960876
+(id:18): Iniciando gravação. Timestamp 1595021155.29249
+(id:15): Processamento finalizado -> explosion. Timestamp 1595021155.3005376
+(id:16): Processamento finalizado -> explosion. Timestamp 1595021155.3047922
+(id:17): Finalizando gravação. Timestamp 1595021155.4198318
+(id:17): Iniciando processamento. Timestamp 1595021155.4203563
+(id:19): Iniciando gravação. Timestamp 1595021155.4209578
+(id:18): Finalizando gravação. Timestamp 1595021155.4842138
+(id:18): Iniciando processamento. Timestamp 1595021155.4847589
+(id:20): Iniciando gravação. Timestamp 1595021155.4852405
+(id:17): Processamento finalizado -> siren. Timestamp 1595021155.6105196
+(id:19): Finalizando gravação. Timestamp 1595021155.6137533
+(id:19): Iniciando processamento. Timestamp 1595021155.6144252
+(id:20): Finalizando gravação. Timestamp 1595021155.676315
+(id:20): Iniciando processamento. Timestamp 1595021155.6768446
+(id:18): Processamento finalizado -> casual. Timestamp 1595021155.708462
+(id:19): Processamento finalizado -> explosion. Timestamp 1595021155.8872004
+(id:20): Processamento finalizado -> explosion. Timestamp 1595021155.909855
+(id:21): Iniciando gravação. Timestamp 1595021156.0162172
+(id:22): Iniciando gravação. Timestamp 1595021156.1452148
+(id:21): Finalizando gravação. Timestamp 1595021156.272797
+(id:21): Iniciando processamento. Timestamp 1595021156.2736194
+(id:23): Iniciando gravação. Timestamp 1595021156.2745852
+(id:22): Finalizando gravação. Timestamp 1595021156.3375447
+(id:22): Iniciando processamento. Timestamp 1595021156.338786
+(id:24): Iniciando gravação. Timestamp 1595021156.3395934
+(id:23): Finalizando gravação. Timestamp 1595021156.4650218
+(id:23): Iniciando processamento. Timestamp 1595021156.4656239
+(id:24): Finalizando gravação. Timestamp 1595021156.5292652
+(id:24): Iniciando processamento. Timestamp 1595021156.5298805
+(id:21): Processamento finalizado -> siren. Timestamp 1595021156.5718086
+(id:22): Processamento finalizado -> gunshot. Timestamp 1595021156.6441145
+(id:23): Processamento finalizado -> casual. Timestamp 1595021156.8013248
+(id:24): Processamento finalizado -> explosion. Timestamp 1595021156.8203611
+(id:25): Iniciando gravação. Timestamp 1595021156.8825583
+(id:26): Iniciando gravação. Timestamp 1595021157.011347
+(id:25): Finalizando gravação. Timestamp 1595021157.139138
+(id:25): Iniciando processamento. Timestamp 1595021157.1399562
+(id:27): Iniciando gravação. Timestamp 1595021157.1409938
+(id:26): Finalizando gravação. Timestamp 1595021157.204008
+(id:26): Iniciando processamento. Timestamp 1595021157.205297
+(id:28): Iniciando gravação. Timestamp 1595021157.2061002
+(id:27): Finalizando gravação. Timestamp 1595021157.3312957
+(id:27): Iniciando processamento. Timestamp 1595021157.3318763
+(id:28): Finalizando gravação. Timestamp 1595021157.3958695
+(id:28): Iniciando processamento. Timestamp 1595021157.3965611
+(id:25): Processamento finalizado -> siren. Timestamp 1595021157.483542
+(id:26): Processamento finalizado -> explosion. Timestamp 1595021157.606295
+(id:27): Processamento finalizado -> casual. Timestamp 1595021157.7005694
+(id:28): Processamento finalizado -> explosion. Timestamp 1595021157.733769
+(id:29): Iniciando gravação. Timestamp 1595021157.7585518
+(id:30): Iniciando gravação. Timestamp 1595021157.8873057
+(id:29): Finalizando gravação. Timestamp 1595021158.0151052
+(id:29): Iniciando processamento. Timestamp 1595021158.0159385
+(id:31): Iniciando gravação. Timestamp 1595021158.0169723
+(id:30): Finalizando gravação. Timestamp 1595021158.079673
+(id:30): Iniciando processamento. Timestamp 1595021158.0806372
+(id:32): Iniciando gravação. Timestamp 1595021158.0814502
+(id:31): Finalizando gravação. Timestamp 1595021158.2073827
+(id:31): Iniciando processamento. Timestamp 1595021158.2081559
+(id:32): Finalizando gravação. Timestamp 1595021158.273269
+(id:32): Iniciando processamento. Timestamp 1595021158.2747076
+(id:29): Processamento finalizado -> siren. Timestamp 1595021158.3105211
+(id:30): Processamento finalizado -> gunshot. Timestamp 1595021158.3968167
+(id:31): Processamento finalizado -> explosion. Timestamp 1595021158.5365388
+(id:32): Processamento finalizado -> explosion. Timestamp 1595021158.5583591
+(id:33): Iniciando gravação. Timestamp 1595021158.6274374
+(id:34): Iniciando gravação. Timestamp 1595021158.756231
+(id:33): Finalizando gravação. Timestamp 1595021158.8840222
+(id:33): Iniciando processamento. Timestamp 1595021158.8848522
+(id:35): Iniciando gravação. Timestamp 1595021158.885893
+(id:34): Finalizando gravação. Timestamp 1595021158.9488728
+(id:34): Iniciando processamento. Timestamp 1595021158.950167
+(id:36): Iniciando gravação. Timestamp 1595021158.9509625
+(id:35): Finalizando gravação. Timestamp 1595021159.076183
+(id:35): Iniciando processamento. Timestamp 1595021159.0768394
+(id:36): Finalizando gravação. Timestamp 1595021159.1405895
+(id:36): Iniciando processamento. Timestamp 1595021159.1411643
+(id:33): Processamento finalizado -> siren. Timestamp 1595021159.2632174
+(id:34): Processamento finalizado -> explosion. Timestamp 1595021159.3865893
+(id:35): Processamento finalizado -> explosion. Timestamp 1595021159.4388115
+(id:36): Processamento finalizado -> explosion. Timestamp 1595021159.4877234
+(id:37): Iniciando gravação. Timestamp 1595021159.5071697
+(id:38): Iniciando gravação. Timestamp 1595021159.635961
+(id:37): Finalizando gravação. Timestamp 1595021159.7636735
+(id:37): Iniciando processamento. Timestamp 1595021159.7641664
+(id:39): Iniciando gravação. Timestamp 1595021159.764724
+(id:38): Finalizando gravação. Timestamp 1595021159.8281376
+(id:38): Iniciando processamento. Timestamp 1595021159.828691
+(id:40): Iniciando gravação. Timestamp 1595021159.8291807
+(id:39): Finalizando gravação. Timestamp 1595021159.9570477
+(id:39): Iniciando processamento. Timestamp 1595021159.9579787
+(id:37): Processamento finalizado -> siren. Timestamp 1595021159.9586258
+(id:40): Finalizando gravação. Timestamp 1595021160.020463
+(id:40): Iniciando processamento. Timestamp 1595021160.022084
+(id:38): Processamento finalizado -> gunshot. Timestamp 1595021160.0564868
+(id:39): Processamento finalizado -> explosion. Timestamp 1595021160.2338655
+(id:40): Processamento finalizado -> explosion. Timestamp 1595021160.2567918
+(id:41): Iniciando gravação. Timestamp 1595021160.3624065
+(id:42): Iniciando gravação. Timestamp 1595021160.4914193
+(id:41): Finalizando gravação. Timestamp 1595021160.619041
+(id:41): Iniciando processamento. Timestamp 1595021160.619947
+(id:43): Iniciando gravação. Timestamp 1595021160.6209238
+(id:42): Finalizando gravação. Timestamp 1595021160.6835728
+(id:42): Iniciando processamento. Timestamp 1595021160.684598
+(id:44): Iniciando gravação. Timestamp 1595021160.6862085
+(id:43): Finalizando gravação. Timestamp 1595021160.8111174
+(id:43): Iniciando processamento. Timestamp 1595021160.811703
+(id:44): Finalizando gravação. Timestamp 1595021160.875596
+(id:44): Iniciando processamento. Timestamp 1595021160.876573
+(id:41): Processamento finalizado -> siren. Timestamp 1595021160.9617286
+(id:42): Processamento finalizado -> explosion. Timestamp 1595021161.0862594
+(id:43): Processamento finalizado -> casual. Timestamp 1595021161.168495
+(id:44): Processamento finalizado -> gunshot. Timestamp 1595021161.201144
+(id:45): Iniciando gravação. Timestamp 1595021161.266426
+(id:46): Iniciando gravação. Timestamp 1595021161.39523
+(id:45): Finalizando gravação. Timestamp 1595021161.5229354
+(id:45): Iniciando processamento. Timestamp 1595021161.5234256
+(id:47): Iniciando gravação. Timestamp 1595021161.5240242
+(id:46): Finalizando gravação. Timestamp 1595021161.5873666
+(id:46): Iniciando processamento. Timestamp 1595021161.587989
+(id:48): Iniciando gravação. Timestamp 1595021161.5884812
+(id:45): Processamento finalizado -> siren. Timestamp 1595021161.7135952
+(id:47): Finalizando gravação. Timestamp 1595021161.7150836
+(id:47): Iniciando processamento. Timestamp 1595021161.716024
+(id:48): Finalizando gravação. Timestamp 1595021161.779703
+(id:48): Iniciando processamento. Timestamp 1595021161.7805274
+(id:46): Processamento finalizado -> explosion. Timestamp 1595021161.8194566
+(id:47): Processamento finalizado -> gunshot. Timestamp 1595021162.004511
+(id:48): Processamento finalizado -> explosion. Timestamp 1595021162.027217
+(id:49): Iniciando gravação. Timestamp 1595021162.1221585
+(id:50): Iniciando gravação. Timestamp 1595021162.251005
+(id:49): Finalizando gravação. Timestamp 1595021162.3787396
+(id:49): Iniciando processamento. Timestamp 1595021162.3795567
+(id:51): Iniciando gravação. Timestamp 1595021162.380595
+(id:50): Finalizando gravação. Timestamp 1595021162.4436245
+(id:50): Iniciando processamento. Timestamp 1595021162.4447784
+(id:52): Iniciando gravação. Timestamp 1595021162.445607
+(id:51): Finalizando gravação. Timestamp 1595021162.5711782
+(id:51): Iniciando processamento. Timestamp 1595021162.5719204
+(id:52): Finalizando gravação. Timestamp 1595021162.6353767
+(id:52): Iniciando processamento. Timestamp 1595021162.6359758
+(id:49): Processamento finalizado -> siren. Timestamp 1595021162.6888034
+(id:50): Processamento finalizado -> explosion. Timestamp 1595021162.7998703
+(id:51): Processamento finalizado -> casual. Timestamp 1595021162.9246302
+(id:52): Processamento finalizado -> explosion. Timestamp 1595021162.9340546
+(id:53): Iniciando gravação. Timestamp 1595021162.9965951
+(id:54): Iniciando gravação. Timestamp 1595021163.1254048
+(id:53): Finalizando gravação. Timestamp 1595021163.2531798
+(id:53): Iniciando processamento. Timestamp 1595021163.2539895
+(id:55): Iniciando gravação. Timestamp 1595021163.2549515
+(id:54): Finalizando gravação. Timestamp 1595021163.318154
+(id:54): Iniciando processamento. Timestamp 1595021163.3192854
+(id:56): Iniciando gravação. Timestamp 1595021163.3201044
+(id:55): Finalizando gravação. Timestamp 1595021163.445268
+(id:55): Iniciando processamento. Timestamp 1595021163.4458416
+(id:56): Finalizando gravação. Timestamp 1595021163.5096624
+(id:56): Iniciando processamento. Timestamp 1595021163.510387
+(id:53): Processamento finalizado -> siren. Timestamp 1595021163.6120644
+(id:54): Processamento finalizado -> explosion. Timestamp 1595021163.7606907
+(id:55): Processamento finalizado -> casual. Timestamp 1595021163.8203845
+(id:56): Processamento finalizado -> casual. Timestamp 1595021163.8803465
+(id:57): Iniciando gravação. Timestamp 1595021163.8959122
+(id:58): Iniciando gravação. Timestamp 1595021164.0247169
+(id:57): Finalizando gravação. Timestamp 1595021164.152501
+(id:57): Iniciando processamento. Timestamp 1595021164.153311
+(id:59): Iniciando gravação. Timestamp 1595021164.1543386
+(id:58): Finalizando gravação. Timestamp 1595021164.2171395
+(id:58): Iniciando processamento. Timestamp 1595021164.2177079
+(id:60): Iniciando gravação. Timestamp 1595021164.2181854
+(id:59): Finalizando gravação. Timestamp 1595021164.34479
+(id:59): Iniciando processamento. Timestamp 1595021164.346187
+(id:57): Processamento finalizado -> siren. Timestamp 1595021164.4037535
+(id:60): Finalizando gravação. Timestamp 1595021164.4094138
+(id:60): Iniciando processamento. Timestamp 1595021164.4101288
+(id:58): Processamento finalizado -> casual. Timestamp 1595021164.487729
+(id:59): Processamento finalizado -> explosion. Timestamp 1595021164.655152
+(id:60): Processamento finalizado -> explosion. Timestamp 1595021164.6768968
+(id:61): Iniciando gravação. Timestamp 1595021164.751831
+(id:62): Iniciando gravação. Timestamp 1595021164.8806343
+(id:61): Finalizando gravação. Timestamp 1595021165.0084105
+(id:61): Iniciando processamento. Timestamp 1595021165.009222
+(id:63): Iniciando gravação. Timestamp 1595021165.0102522
+(id:62): Finalizando gravação. Timestamp 1595021165.0730214
+(id:62): Iniciando processamento. Timestamp 1595021165.0740073
+(id:64): Iniciando gravação. Timestamp 1595021165.074895
+(id:63): Finalizando gravação. Timestamp 1595021165.2005208
+(id:63): Iniciando processamento. Timestamp 1595021165.2011268
+(id:64): Finalizando gravação. Timestamp 1595021165.2651207
+(id:64): Iniciando processamento. Timestamp 1595021165.2656932
+(id:61): Processamento finalizado -> siren. Timestamp 1595021165.4210782
+(id:62): Processamento finalizado -> casual. Timestamp 1595021165.4967926
+(id:63): Processamento finalizado -> casual. Timestamp 1595021165.5640838
+(id:64): Processamento finalizado -> explosion. Timestamp 1595021165.5932221
+(id:65): Iniciando gravação. Timestamp 1595021165.6292078
+(id:66): Iniciando gravação. Timestamp 1595021165.7580278
+(id:65): Finalizando gravação. Timestamp 1595021165.8857338
+(id:65): Iniciando processamento. Timestamp 1595021165.8862193
+(id:67): Iniciando gravação. Timestamp 1595021165.8868055
+(id:66): Finalizando gravação. Timestamp 1595021165.9501562
+(id:66): Iniciando processamento. Timestamp 1595021165.9507136
+(id:68): Iniciando gravação. Timestamp 1595021165.9512033
+(id:65): Processamento finalizado -> siren. Timestamp 1595021166.0726798
+(id:67): Finalizando gravação. Timestamp 1595021166.077896
+(id:67): Iniciando processamento. Timestamp 1595021166.0784235
+(id:68): Finalizando gravação. Timestamp 1595021166.1430523
+(id:68): Iniciando processamento. Timestamp 1595021166.1438098
+(id:66): Processamento finalizado -> casual. Timestamp 1595021166.178062
+(id:67): Processamento finalizado -> casual. Timestamp 1595021166.3563173
+(id:68): Processamento finalizado -> casual. Timestamp 1595021166.3798475
+(id:69): Iniciando gravação. Timestamp 1595021166.4815133
+(id:70): Iniciando gravação. Timestamp 1595021166.6105752
+(id:69): Finalizando gravação. Timestamp 1595021166.7381003
+(id:69): Iniciando processamento. Timestamp 1595021166.7389162
+(id:71): Iniciando gravação. Timestamp 1595021166.739904
+(id:70): Finalizando gravação. Timestamp 1595021166.8026993
+(id:70): Iniciando processamento. Timestamp 1595021166.8036141
+(id:72): Iniciando gravação. Timestamp 1595021166.8044348
+(id:71): Finalizando gravação. Timestamp 1595021166.9305265
+(id:71): Iniciando processamento. Timestamp 1595021166.9312465
+(id:72): Finalizando gravação. Timestamp 1595021166.9947352
+(id:72): Iniciando processamento. Timestamp 1595021166.995542
+(id:69): Processamento finalizado -> siren. Timestamp 1595021167.0487864
+(id:70): Processamento finalizado -> explosion. Timestamp 1595021167.1100273
+(id:71): Processamento finalizado -> explosion. Timestamp 1595021167.2670064
+(id:72): Processamento finalizado -> explosion. Timestamp 1595021167.2775884
+(id:73): Iniciando gravação. Timestamp 1595021167.344421
+(id:74): Iniciando gravação. Timestamp 1595021167.473223
+(id:73): Finalizando gravação. Timestamp 1595021167.6010067
+(id:73): Iniciando processamento. Timestamp 1595021167.6018257
+(id:75): Iniciando gravação. Timestamp 1595021167.6027873
+(id:74): Finalizando gravação. Timestamp 1595021167.665625
+(id:74): Iniciando processamento. Timestamp 1595021167.6668081
+(id:76): Iniciando gravação. Timestamp 1595021167.667613
+(id:75): Finalizando gravação. Timestamp 1595021167.7931437
+(id:75): Iniciando processamento. Timestamp 1595021167.7937188
+(id:76): Finalizando gravação. Timestamp 1595021167.8575454
+(id:76): Iniciando processamento. Timestamp 1595021167.8585408
+(id:73): Processamento finalizado -> siren. Timestamp 1595021167.9267843
+(id:74): Processamento finalizado -> explosion. Timestamp 1595021168.0885003
+(id:75): Processamento finalizado -> casual. Timestamp 1595021168.137904
+(id:76): Processamento finalizado -> casual. Timestamp 1595021168.1979249
+(id:77): Iniciando gravação. Timestamp 1595021168.22778
+(id:78): Iniciando gravação. Timestamp 1595021168.3565383
+(id:77): Finalizando gravação. Timestamp 1595021168.4843366
+(id:77): Iniciando processamento. Timestamp 1595021168.4851682
+(id:79): Iniciando gravação. Timestamp 1595021168.486135
+(id:78): Finalizando gravação. Timestamp 1595021168.549085
+(id:78): Iniciando processamento. Timestamp 1595021168.5500276
+(id:80): Iniciando gravação. Timestamp 1595021168.5513682
+(id:79): Finalizando gravação. Timestamp 1595021168.676499
+(id:79): Iniciando processamento. Timestamp 1595021168.6772337
+(id:80): Finalizando gravação. Timestamp 1595021168.7411282
+(id:80): Iniciando processamento. Timestamp 1595021168.7420888
+(id:77): Processamento finalizado -> siren. Timestamp 1595021168.764186
+(id:78): Processamento finalizado -> casual. Timestamp 1595021168.82507
+(id:79): Processamento finalizado -> casual. Timestamp 1595021168.995621
+(id:80): Processamento finalizado -> casual. Timestamp 1595021169.0121663
+(id:81): Iniciando gravação. Timestamp 1595021169.0912402
+(id:82): Iniciando gravação. Timestamp 1595021169.2200325
+(id:81): Finalizando gravação. Timestamp 1595021169.34783
+(id:81): Iniciando processamento. Timestamp 1595021169.348654
+(id:83): Iniciando gravação. Timestamp 1595021169.3496819
+(id:82): Finalizando gravação. Timestamp 1595021169.4126205
+(id:82): Iniciando processamento. Timestamp 1595021169.413771
+(id:84): Iniciando gravação. Timestamp 1595021169.414561
+(id:83): Finalizando gravação. Timestamp 1595021169.5400991
+(id:83): Iniciando processamento. Timestamp 1595021169.5408564
+(id:84): Finalizando gravação. Timestamp 1595021169.6048942
+(id:84): Iniciando processamento. Timestamp 1595021169.6058025
+(id:81): Processamento finalizado -> gunshot. Timestamp 1595021169.6722484
+(id:82): Processamento finalizado -> casual. Timestamp 1595021169.809801
+(id:83): Processamento finalizado -> casual. Timestamp 1595021169.8873198
+(id:84): Processamento finalizado -> casual. Timestamp 1595021169.93495
+(id:85): Iniciando gravação. Timestamp 1595021169.9663787
+(id:86): Iniciando gravação. Timestamp 1595021170.0951753
+(id:85): Finalizando gravação. Timestamp 1595021170.222936
+(id:85): Iniciando processamento. Timestamp 1595021170.2234461
+(id:87): Iniciando gravação. Timestamp 1595021170.224422
+(id:86): Finalizando gravação. Timestamp 1595021170.287903
+(id:86): Iniciando processamento. Timestamp 1595021170.288851
+(id:88): Iniciando gravação. Timestamp 1595021170.289649
+(id:87): Finalizando gravação. Timestamp 1595021170.4151206
+(id:87): Iniciando processamento. Timestamp 1595021170.415671
+(id:88): Finalizando gravação. Timestamp 1595021170.4798481
+(id:88): Iniciando processamento. Timestamp 1595021170.4807305
+(id:85): Processamento finalizado -> siren. Timestamp 1595021170.5235271
+(id:86): Processamento finalizado -> explosion. Timestamp 1595021170.6243184
+(id:87): Processamento finalizado -> explosion. Timestamp 1595021170.7536192
+(id:88): Processamento finalizado -> explosion. Timestamp 1595021170.7673774
+(id:89): Iniciando gravação. Timestamp 1595021170.8380177
+(id:90): Iniciando gravação. Timestamp 1595021170.966782
+(id:89): Finalizando gravação. Timestamp 1595021171.0945756
+(id:89): Iniciando processamento. Timestamp 1595021171.0954058
+(id:91): Iniciando gravação. Timestamp 1595021171.096444
+(id:90): Finalizando gravação. Timestamp 1595021171.1599193
+(id:90): Iniciando processamento. Timestamp 1595021171.1608503
+(id:92): Iniciando gravação. Timestamp 1595021171.1618302
+(id:91): Finalizando gravação. Timestamp 1595021171.2867262
+(id:91): Iniciando processamento. Timestamp 1595021171.2873204
+(id:92): Finalizando gravação. Timestamp 1595021171.3510563
+(id:92): Iniciando processamento. Timestamp 1595021171.3517091
+(id:89): Processamento finalizado -> siren. Timestamp 1595021171.45079
+(id:90): Processamento finalizado -> casual. Timestamp 1595021171.5332313
+(id:91): Processamento finalizado -> casual. Timestamp 1595021171.6323433
+(id:92): Processamento finalizado -> casual. Timestamp 1595021171.6985085
+(id:93): Iniciando gravação. Timestamp 1595021171.7126951
+(id:94): Iniciando gravação. Timestamp 1595021171.841483
+(id:93): Finalizando gravação. Timestamp 1595021171.9692235
+(id:93): Iniciando processamento. Timestamp 1595021171.969734
+(id:95): Iniciando gravação. Timestamp 1595021171.9703383
+(id:94): Finalizando gravação. Timestamp 1595021172.0336268
+(id:94): Iniciando processamento. Timestamp 1595021172.0341945
+(id:96): Iniciando gravação. Timestamp 1595021172.034769
+(id:93): Processamento finalizado -> siren. Timestamp 1595021172.159462
+(id:95): Finalizando gravação. Timestamp 1595021172.1613271
+(id:95): Iniciando processamento. Timestamp 1595021172.1618252
+(id:96): Finalizando gravação. Timestamp 1595021172.2262826
+(id:96): Iniciando processamento. Timestamp 1595021172.2269702
+(id:94): Processamento finalizado -> explosion. Timestamp 1595021172.2563186
+(id:95): Processamento finalizado -> casual. Timestamp 1595021172.4448173
+(id:96): Processamento finalizado -> explosion. Timestamp 1595021172.4669576
+(id:97): Iniciando gravação. Timestamp 1595021172.567434
+(id:98): Iniciando gravação. Timestamp 1595021172.696501
+(id:97): Finalizando gravação. Timestamp 1595021172.824057
+(id:97): Iniciando processamento. Timestamp 1595021172.8249085
+(id:99): Iniciando gravação. Timestamp 1595021172.8259435
+(id:98): Finalizando gravação. Timestamp 1595021172.8891869
+(id:98): Iniciando processamento. Timestamp 1595021172.890333
+(id:100): Iniciando gravação. Timestamp 1595021172.891139
+(id:99): Finalizando gravação. Timestamp 1595021173.0177956
+(id:99): Iniciando processamento. Timestamp 1595021173.0183806
+(id:100): Finalizando gravação. Timestamp 1595021173.082215
+(id:100): Iniciando processamento. Timestamp 1595021173.0834365
+(id:97): Processamento finalizado -> siren. Timestamp 1595021173.132382
+(id:98): Processamento finalizado -> explosion. Timestamp 1595021173.2089517
+(id:99): Processamento finalizado -> explosion. Timestamp 1595021173.3198636
+(id:100): Processamento finalizado -> explosion. Timestamp 1595021173.341142

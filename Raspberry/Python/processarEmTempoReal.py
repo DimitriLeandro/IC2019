@@ -1,53 +1,76 @@
-import sys
+# PARA RODAR ESSE COMANDO: (venv1)$ python Programming/IC2019/Raspberry/Python/processarEmTempoReal.py 2>/dev/null
+# COLOCAR 2>/dev/null NO FINAL SUPRIME OS ALERTAS DO ALSA
+
+import warnings
+warnings.filterwarnings("ignore")
 import pyaudio
 import numpy as np
-import warnings
 import threading
 from time import time, sleep
 from delayAndSum import delayAndSum as DaS
 from extracaoFeatures import extrairFeaturesUnicoFrame as ExtrairFeatures
 from iniciarNormalizadorEClassificador import main as IniciarObjetos
-warnings.filterwarnings("ignore")
 
+# DEFINICAO DE FUNCOES --------------------------------------------------
 
-# DEFINICAO DE FUNCOES ---------------------------------------------------------------------------
-def processarJanela(arraySinais, idJanela, freqAmostragem, objNormalizador, objClassificador):
-	# Função para realizar todo o processamento em uma janela
-	# A função receberá uma janela gravada, aplicará o Delay and Sum, extrairá as features do sinal beamformado, normalizará o vetor de features obtido, e irá classificar o dado gerado.
-
-    # INICIANDO A MEDICAO DE TEMPO
-    tempoInicio = time()
-    stringID = "(id:" + str(idJanela) + ")"
-    print(stringID, "Iniciando o processamento")
-
+def processarJanelaCompleta(idJanela, metadeInicialJanelaAtual, metadeFinalJanelaAtual):
+    
+    objFile.write("(id:"+str(idJanela)+"): Iniciando processamento. Timestamp "+str(time())+"\n")
+    
+    # COPIANDO OS ARRAYS NA MEMORIA PRA GARANTIR QUE NAO VAI DAR BOSTA
+    metadeInicial = np.copy(metadeInicialJanelaAtual)
+    metadeFinal   = np.copy(metadeFinalJanelaAtual)
+    
+    # CONVERTO A JANELA PRA INT 16
+    janelaInt16_A = np.fromstring(metadeInicial, dtype=np.int16)
+    janelaInt16_B = np.fromstring(metadeFinal, dtype=np.int16)
+    
+    # COMO TEM OS 4 MICS NA JANELA, VOU DAR UM RESHAPE PRA CADA MIC FICAR EM UMA LINHA
+    janelaInt16_A = janelaInt16_A.reshape((metadeTamanhoJanela, qtdCanais)).T   
+    janelaInt16_B = janelaInt16_B.reshape((metadeTamanhoJanela, qtdCanais)).T
+    
     # DELAY AND SUM
-    sinalDaS = DaS(arraySinais)
-
+    sinalDaS_A = DaS(janelaInt16_A)
+    sinalDaS_B = DaS(janelaInt16_B)
+    
+    # JUNTO AS METADES
+    janelaCompleta = np.concatenate((sinalDaS_A, sinalDaS_B))
+    
     # EXTRACAO DE FEATURES
-    features = ExtrairFeatures(sinalDaS, freqAmostragem)
+    features = ExtrairFeatures(janelaCompleta, freqAmostragem)
 
     # NORMALIZANDO AS FEATURES
     features = objNormalizador.transform([features])[0]
 
     # CLASSIFICACAO
     predicao = objClassificador.predict([features])[0]
+    
+    print("(id:"+str(idJanela)+"):", predicao)
+    objFile.write("(id:"+str(idJanela)+"): Processamento finalizado -> " + str(predicao) + ". Timestamp "+str(time())+"\n")
 
-    # FINALIZANDO A MEDICAO DE TEMPO
-    tempoFim = time()
-    print(stringID, "Classificado como", predicao)
-    print(stringID, "Processamento finalizado em", tempoFim - tempoInicio, "s")
+# RODANDO O ALGORITMO -----------------------------------------------
+print("Iniciando a aplicação...")
 
+# PARAMETROS INICIAIS
+executarAteIdJanela   = 100
+idDispositivoGravacao = 0
+tempoJanela           = 0.200
+freqAmostragem        = 16000
+profundidadeBytes     = 2
+qtdCanais             = 4
+metadeTamanhoJanela   = int((tempoJanela * freqAmostragem)/2)
+caminhoCSVDataset     = "/home/pi/Datasets/SESA_v2_16kHz_16bits_200ms_58features_desescalonado_remocaoSilencio.csv"
+caminhoGravarLog      = "/home/pi/Programming/IC2019/Raspberry/Resultados/Logs/logProcessamento_"+str(time())+".txt"
 
-def gravarJanela(idJanela, objNormalizador, objClassificador, idDispositivoGravacao, tempoJanela, freqAmostragem, profundidadeBytes, qtdCanais):
-	#Função para gravar uma janela com o dispositivo
-	#A função abaixo deverá gravar uma janela e depois enviá-la para a função anterior. A função anterior deve ser rodada como uma thread.
+# INICIANDO OS OBJETOS NECESSARIOS (CLASSIFICADOR, NORMALIZADOR E ESCREVER EM TXT)
+objClassificador, objNormalizador = IniciarObjetos(caminhoCSVDataset, verbose=True)
+objFile = open(caminhoGravarLog, "w")
 
-    #assert profundidadeBytes == 2, "Profundidade de bytes diferente de 2! Você deve alterar o sistema manualmente."
-
-    # DEFININDO O TAMANHO DA JANELA EM AMOSTRAS
-    tamanhoJanela = int(tempoJanela * freqAmostragem)
-
-    # INSTANCIANDO UM OBJ PY AUDIO E MANDANDO OS PARAMETROS INICIAIS
+# LOOP
+idJanela = 1
+while idJanela <= executarAteIdJanela:
+    
+    # INICIANDO O PYAUDIO E STREAM
     objPyAudio = pyaudio.PyAudio()
     stream = objPyAudio.open(
         input_device_index = idDispositivoGravacao,
@@ -57,63 +80,60 @@ def gravarJanela(idJanela, objNormalizador, objClassificador, idDispositivoGrava
         input              = True
     )
 
-    # VERBOSE
-    stringID = "(id:" + str(idJanela) + ")"
-    print(stringID, "Iniciando gravação. Timestamp:", time())
+    # GRAVANDO
+    janelasParciais = []
+    for i in range(5):
+        
+        if i == 0:
+            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            janelasParciais.append(stream.read(metadeTamanhoJanela))
+            
+            idJanela += 1
+            
+        elif i == 1:
+            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            janelasParciais.append(stream.read(metadeTamanhoJanela))
+            objFile.write("(id:"+str(idJanela-1)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
+            
+            objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela-1, janelasParciais[i-1], janelasParciais[i]))
+            objThread.start()
+            
+            idJanela += 1
+            
+        elif i == 2:
+            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            janelasParciais.append(stream.read(metadeTamanhoJanela))
+            objFile.write("(id:"+str(idJanela-1)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
+            
+            objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela-1, janelasParciais[i-1], janelasParciais[i]))
+            objThread.start()
+            
+            idJanela += 1
+            
+        elif i == 3:
+            objFile.write("(id:"+str(idJanela)+"): Iniciando gravação. Timestamp "+str(time())+"\n")
+            janelasParciais.append(stream.read(metadeTamanhoJanela))
+            objFile.write("(id:"+str(idJanela-1)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
+            
+            objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela-1, janelasParciais[i-1], janelasParciais[i]))
+            objThread.start()
+            
+        else:
+            janelasParciais.append(stream.read(metadeTamanhoJanela))
+            objFile.write("(id:"+str(idJanela)+"): Finalizando gravação. Timestamp "+str(time())+"\n")
+            
+            objThread = threading.Thread(target=processarJanelaCompleta, args=(idJanela, janelasParciais[i-1], janelasParciais[i]))
+            objThread.start()
+            
+            idJanela += 1
 
-    # GRAVANDO A JANELA
-    janelaBinaria = stream.read(tamanhoJanela)
-
-    # VERBOSE
-    print(stringID, "Gravação finalizada. Timestamp:", time())
-
-    # MATANDO OS OBJETOS PRA LIMPAR MEMORIA
+    # PARANDO O AMBIENTE
     stream.stop_stream()
     stream.close()
     objPyAudio.terminate()
+    #del objPyAudio
+    #del stream
 
-    # CONVERTO A JANELA PRA INT 16
-    janelaInt16 = np.fromstring(janelaBinaria, dtype=np.int16)
-
-    # COMO TEM OS 4 MICS NA JANELA, VOU DAR UM RESHAPE PRA CADA MIC FICAR EM UMA LINHA
-    janelaInt16 = janelaInt16.reshape((tamanhoJanela, qtdCanais)).T
-
-    # GARANINDO QUE A DIMENSIONALIDADE ESTA CORRETA
-    #assert janelaInt16.shape[0] == qtdCanais and janelaInt16.shape[1] == tamanhoJanela, "Erro na dimensionalidade da janela gravada!"
-
-    # MANDANDO A JANELA GRAVADA APRA O PROCESSAMENTO
-    objThread = threading.Thread(target=processarJanela, args=(janelaInt16, idJanela, freqAmostragem, objNormalizador, objClassificador))
-    objThread.start()
-
-# RODANDO O ALGORITMO -----------------------------------------------
-
-# PARAMETROS INCIAIS
-idDispositivoGravacao = 0
-tempoJanela           = 0.200
-freqAmostragem        = 16000
-profundidadeBytes     = 2
-qtdCanais             = 4
-caminhoCSVDataset     = "/home/pi/Datasets/SESA_v2_16kHz_16bits_200ms_58features_desescalonado_remocaoSilencio.csv"
-
-# INSTANCIANDO OS OBJETOS DE NORMALIZACAO E CLASSIFICACAO
-objClassificador, objNormalizador = IniciarObjetos(caminhoCSVDataset, classificador=None, verbose=True)
-
-# VAMO QUE VAMO
-i = 1
-while True:
-
-    # INICIANDO JANELA PRINCIPAL
-    objThread = threading.Thread(target=gravarJanela, args=(i, objNormalizador, objClassificador, idDispositivoGravacao, tempoJanela, freqAmostragem, profundidadeBytes, qtdCanais))
-    objThread.start()
-
-    # DELAY PARA COMECAR A JANELA DE SOBREPOSICAO
-    i += 1
-    sleep(tempoJanela/2)
-
-    # INICIANDO JANELA DE SOBREPOSICAO
-    objThread = threading.Thread(target=gravarJanela, args=(i, objNormalizador, objClassificador, idDispositivoGravacao, tempoJanela, freqAmostragem, profundidadeBytes, qtdCanais))
-    objThread.start()
-
-    # DELAY PARA COMECAR A JANELA PRICIPAL NA PROXIMA ITERACAO
-    i += 1
-    sleep(tempoJanela/2)
+sleep(5)
+print("Finalizando a aplicação...")
+objFile.close()
