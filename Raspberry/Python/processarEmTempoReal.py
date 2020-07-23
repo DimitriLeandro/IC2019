@@ -59,7 +59,7 @@ freqAmostragem        = 16000
 profundidadeBytes     = 2
 qtdCanais             = 4
 metadeTamanhoJanela   = int((tempoJanela * freqAmostragem)/2)
-caminhoCSVDataset     = "/home/pi/Datasets/SESA_v2_16kHz_16bits_200ms_58features_desescalonado_remocaoSilencio.csv"
+caminhoCSVDataset     = "/home/pi/Datasets/SESA_ReSpeaker_16kHz_16bits_200ms_58features_desescalonado_2.csv"
 caminhoGravarLog      = "/home/pi/Programming/IC2019/Raspberry/Resultados/Logs/logProcessamento_"+str(time())+".txt"
 
 # INICIANDO OS OBJETOS NECESSARIOS (CLASSIFICADOR, NORMALIZADOR E ESCREVER EM TXT)
