@@ -22,6 +22,8 @@ def extrairFeaturesUnicoFrame(sinal, freqAmostragem):
 
     # COMECANDO A EXTRACAO -------------------------------------------------------
     #tempoInicio = time()
+    #print(type(sinal))
+    #print(type(sinal[0]))
     arrayFeaturesFrame.append(float(extrairRMS(sinal, frameLength, overlapLength)))
     #dictTempoExtracaoCadaFeature["RMS"] = time() - tempoInicio
     

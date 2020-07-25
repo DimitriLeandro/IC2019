@@ -1,0 +1,1282 @@
+(id:1): Inicio gravacao. Timestamp 1595614858.9356308
+(id:2): Inicio gravacao. Timestamp 1595614859.1936247
+(id:1): Fim gravacao. Timestamp 1595614859.4533324
+(id:1): Inicio processamento. Timestamp 1595614859.4539542
+(id:3): Inicio gravacao. Timestamp 1595614859.4547927
+(id:1): Fim processamento. chainsaw. Timestamp 1595614859.6769428
+(id:2): Fim gravacao. Timestamp 1595614859.7147875
+(id:2): Inicio processamento. Timestamp 1595614859.7152953
+(id:4): Inicio gravacao. Timestamp 1595614859.715932
+(id:3): Fim gravacao. Timestamp 1595614859.9760823
+(id:3): Inicio processamento. Timestamp 1595614859.9769847
+(id:2): Fim processamento. chainsaw. Timestamp 1595614859.9996014
+(id:3): Fim processamento. chainsaw. Timestamp 1595614860.2204409
+(id:4): Fim gravacao. Timestamp 1595614860.237885
+(id:4): Inicio processamento. Timestamp 1595614860.2383792
+(id:5): Inicio gravacao. Timestamp 1595614860.2390304
+(id:4): Fim processamento. chainsaw. Timestamp 1595614860.4699893
+(id:6): Inicio gravacao. Timestamp 1595614860.498978
+(id:5): Fim gravacao. Timestamp 1595614860.7586877
+(id:5): Inicio processamento. Timestamp 1595614860.7591898
+(id:7): Inicio gravacao. Timestamp 1595614860.7598372
+(id:5): Fim processamento. chainsaw. Timestamp 1595614861.0000584
+(id:6): Fim gravacao. Timestamp 1595614861.019743
+(id:6): Inicio processamento. Timestamp 1595614861.0202208
+(id:8): Inicio gravacao. Timestamp 1595614861.020841
+(id:6): Fim processamento. chainsaw. Timestamp 1595614861.2582037
+(id:7): Fim gravacao. Timestamp 1595614861.2807422
+(id:7): Inicio processamento. Timestamp 1595614861.2812297
+(id:7): Fim processamento. chainsaw. Timestamp 1595614861.5176892
+(id:8): Fim gravacao. Timestamp 1595614861.5417407
+(id:8): Inicio processamento. Timestamp 1595614861.542241
+(id:9): Inicio gravacao. Timestamp 1595614861.5428982
+(id:8): Fim processamento. chainsaw. Timestamp 1595614861.7763882
+(id:10): Inicio gravacao. Timestamp 1595614861.8029284
+(id:9): Fim gravacao. Timestamp 1595614862.0626953
+(id:9): Inicio processamento. Timestamp 1595614862.0632496
+(id:11): Inicio gravacao. Timestamp 1595614862.063909
+(id:9): Fim processamento. chainsaw. Timestamp 1595614862.3016646
+(id:10): Fim gravacao. Timestamp 1595614862.32381
+(id:10): Inicio processamento. Timestamp 1595614862.3242996
+(id:12): Inicio gravacao. Timestamp 1595614862.3249435
+(id:11): Fim gravacao. Timestamp 1595614862.71688
+(id:11): Inicio processamento. Timestamp 1595614862.7192502
+(id:10): Fim processamento. chainsaw. Timestamp 1595614862.719965
+(id:11): Fim processamento. chainsaw. Timestamp 1595614862.9529798
+(id:12): Fim gravacao. Timestamp 1595614862.979765
+(id:12): Inicio processamento. Timestamp 1595614862.980256
+(id:13): Inicio gravacao. Timestamp 1595614862.9809117
+(id:12): Fim processamento. chainsaw. Timestamp 1595614863.217564
+(id:14): Inicio gravacao. Timestamp 1595614863.2408617
+(id:13): Fim gravacao. Timestamp 1595614863.5006106
+(id:13): Inicio processamento. Timestamp 1595614863.5011492
+(id:15): Inicio gravacao. Timestamp 1595614863.5018353
+(id:14): Fim gravacao. Timestamp 1595614863.7635942
+(id:14): Inicio processamento. Timestamp 1595614863.764422
+(id:16): Inicio gravacao. Timestamp 1595614863.765056
+(id:13): Fim processamento. chainsaw. Timestamp 1595614863.7929666
+(id:14): Fim processamento. chainsaw. Timestamp 1595614864.017208
+(id:15): Fim gravacao. Timestamp 1595614864.0251606
+(id:15): Inicio processamento. Timestamp 1595614864.0256436
+(id:15): Fim processamento. chainsaw. Timestamp 1595614864.2633061
+(id:16): Fim gravacao. Timestamp 1595614864.2861838
+(id:16): Inicio processamento. Timestamp 1595614864.28668
+(id:17): Inicio gravacao. Timestamp 1595614864.2873397
+(id:16): Fim processamento. chainsaw. Timestamp 1595614864.5248172
+(id:18): Inicio gravacao. Timestamp 1595614864.5472782
+(id:17): Fim gravacao. Timestamp 1595614864.8070424
+(id:17): Inicio processamento. Timestamp 1595614864.8075721
+(id:19): Inicio gravacao. Timestamp 1595614864.8082144
+(id:17): Fim processamento. chainsaw. Timestamp 1595614865.0454977
+(id:18): Fim gravacao. Timestamp 1595614865.06813
+(id:18): Inicio processamento. Timestamp 1595614865.0686193
+(id:20): Inicio gravacao. Timestamp 1595614865.069257
+(id:18): Fim processamento. chainsaw. Timestamp 1595614865.3074863
+(id:19): Fim gravacao. Timestamp 1595614865.3291893
+(id:19): Inicio processamento. Timestamp 1595614865.3296938
+(id:19): Fim processamento. chainsaw. Timestamp 1595614865.5644383
+(id:20): Fim gravacao. Timestamp 1595614865.5902147
+(id:20): Inicio processamento. Timestamp 1595614865.5907094
+(id:21): Inicio gravacao. Timestamp 1595614865.5913568
+(id:20): Fim processamento. chainsaw. Timestamp 1595614865.8276415
+(id:22): Inicio gravacao. Timestamp 1595614865.851277
+(id:21): Fim gravacao. Timestamp 1595614866.1110108
+(id:21): Inicio processamento. Timestamp 1595614866.1115499
+(id:23): Inicio gravacao. Timestamp 1595614866.1122081
+(id:21): Fim processamento. chainsaw. Timestamp 1595614866.349723
+(id:22): Fim gravacao. Timestamp 1595614866.3735032
+(id:22): Inicio processamento. Timestamp 1595614866.374012
+(id:24): Inicio gravacao. Timestamp 1595614866.3746579
+(id:22): Fim processamento. chainsaw. Timestamp 1595614866.611472
+(id:23): Fim gravacao. Timestamp 1595614866.634631
+(id:23): Inicio processamento. Timestamp 1595614866.635134
+(id:23): Fim processamento. chainsaw. Timestamp 1595614866.8734813
+(id:24): Fim gravacao. Timestamp 1595614866.89565
+(id:24): Inicio processamento. Timestamp 1595614866.8961473
+(id:25): Inicio gravacao. Timestamp 1595614866.8968065
+(id:24): Fim processamento. chainsaw. Timestamp 1595614867.1302617
+(id:26): Inicio gravacao. Timestamp 1595614867.1567686
+(id:25): Fim gravacao. Timestamp 1595614867.416509
+(id:25): Inicio processamento. Timestamp 1595614867.4170384
+(id:27): Inicio gravacao. Timestamp 1595614867.41769
+(id:25): Fim processamento. cryingbaby. Timestamp 1595614867.6538875
+(id:26): Fim gravacao. Timestamp 1595614867.677599
+(id:26): Inicio processamento. Timestamp 1595614867.678085
+(id:28): Inicio gravacao. Timestamp 1595614867.6787162
+(id:26): Fim processamento. chainsaw. Timestamp 1595614867.917088
+(id:27): Fim gravacao. Timestamp 1595614867.938644
+(id:27): Inicio processamento. Timestamp 1595614867.9391465
+(id:27): Fim processamento. chainsaw. Timestamp 1595614868.1762094
+(id:28): Fim gravacao. Timestamp 1595614868.1996808
+(id:28): Inicio processamento. Timestamp 1595614868.2001758
+(id:29): Inicio gravacao. Timestamp 1595614868.200836
+(id:28): Fim processamento. chainsaw. Timestamp 1595614868.437252
+(id:30): Inicio gravacao. Timestamp 1595614868.4607651
+(id:29): Fim gravacao. Timestamp 1595614868.720505
+(id:29): Inicio processamento. Timestamp 1595614868.7210343
+(id:31): Inicio gravacao. Timestamp 1595614868.7217016
+(id:29): Fim processamento. chainsaw. Timestamp 1595614868.9576547
+(id:30): Fim gravacao. Timestamp 1595614868.9832113
+(id:30): Inicio processamento. Timestamp 1595614868.983712
+(id:32): Inicio gravacao. Timestamp 1595614868.9843647
+(id:30): Fim processamento. chainsaw. Timestamp 1595614869.2214475
+(id:31): Fim gravacao. Timestamp 1595614869.244346
+(id:31): Inicio processamento. Timestamp 1595614869.2448423
+(id:31): Fim processamento. chainsaw. Timestamp 1595614869.485406
+(id:32): Fim gravacao. Timestamp 1595614869.5053737
+(id:32): Inicio processamento. Timestamp 1595614869.5058806
+(id:33): Inicio gravacao. Timestamp 1595614869.5066664
+(id:32): Fim processamento. chainsaw. Timestamp 1595614869.74312
+(id:34): Inicio gravacao. Timestamp 1595614869.7666192
+(id:33): Fim gravacao. Timestamp 1595614870.0263467
+(id:33): Inicio processamento. Timestamp 1595614870.0268602
+(id:35): Inicio gravacao. Timestamp 1595614870.0275092
+(id:33): Fim processamento. chainsaw. Timestamp 1595614870.267412
+(id:34): Fim gravacao. Timestamp 1595614870.287435
+(id:34): Inicio processamento. Timestamp 1595614870.2879395
+(id:36): Inicio gravacao. Timestamp 1595614870.2885869
+(id:34): Fim processamento. chainsaw. Timestamp 1595614870.523854
+(id:35): Fim gravacao. Timestamp 1595614870.5485003
+(id:35): Inicio processamento. Timestamp 1595614870.5489948
+(id:35): Fim processamento. chainsaw. Timestamp 1595614870.7883425
+(id:36): Fim gravacao. Timestamp 1595614870.809618
+(id:36): Inicio processamento. Timestamp 1595614870.810417
+(id:37): Inicio gravacao. Timestamp 1595614870.8110957
+(id:36): Fim processamento. chainsaw. Timestamp 1595614871.0476048
+(id:38): Inicio gravacao. Timestamp 1595614871.0710328
+(id:37): Fim gravacao. Timestamp 1595614871.3307424
+(id:37): Inicio processamento. Timestamp 1595614871.3312387
+(id:39): Inicio gravacao. Timestamp 1595614871.3318884
+(id:37): Fim processamento. chainsaw. Timestamp 1595614871.56787
+(id:38): Fim gravacao. Timestamp 1595614871.5932438
+(id:38): Inicio processamento. Timestamp 1595614871.593751
+(id:40): Inicio gravacao. Timestamp 1595614871.5943966
+(id:38): Fim processamento. chainsaw. Timestamp 1595614871.830636
+(id:39): Fim gravacao. Timestamp 1595614871.8543713
+(id:39): Inicio processamento. Timestamp 1595614871.854877
+(id:39): Fim processamento. cryingbaby. Timestamp 1595614872.091701
+(id:40): Fim gravacao. Timestamp 1595614872.1153948
+(id:40): Inicio processamento. Timestamp 1595614872.1158922
+(id:41): Inicio gravacao. Timestamp 1595614872.1165438
+(id:40): Fim processamento. chainsaw. Timestamp 1595614872.3539674
+(id:42): Inicio gravacao. Timestamp 1595614872.3764951
+(id:41): Fim gravacao. Timestamp 1595614872.6362445
+(id:41): Inicio processamento. Timestamp 1595614872.636777
+(id:43): Inicio gravacao. Timestamp 1595614872.6374323
+(id:41): Fim processamento. chainsaw. Timestamp 1595614872.866593
+(id:42): Fim gravacao. Timestamp 1595614872.8973606
+(id:42): Inicio processamento. Timestamp 1595614872.8978655
+(id:44): Inicio gravacao. Timestamp 1595614872.898502
+(id:42): Fim processamento. chainsaw. Timestamp 1595614873.1330385
+(id:43): Fim gravacao. Timestamp 1595614873.1584196
+(id:43): Inicio processamento. Timestamp 1595614873.1589296
+(id:43): Fim processamento. cryingbaby. Timestamp 1595614873.3958397
+(id:44): Fim gravacao. Timestamp 1595614873.4194505
+(id:44): Inicio processamento. Timestamp 1595614873.4199545
+(id:45): Inicio gravacao. Timestamp 1595614873.420612
+(id:44): Fim processamento. cryingbaby. Timestamp 1595614873.6563263
+(id:46): Inicio gravacao. Timestamp 1595614873.6805494
+(id:45): Fim gravacao. Timestamp 1595614873.940307
+(id:45): Inicio processamento. Timestamp 1595614873.9408584
+(id:47): Inicio gravacao. Timestamp 1595614873.9415164
+(id:45): Fim processamento. chainsaw. Timestamp 1595614874.1771865
+(id:46): Fim gravacao. Timestamp 1595614874.2014325
+(id:46): Inicio processamento. Timestamp 1595614874.2019196
+(id:48): Inicio gravacao. Timestamp 1595614874.2025545
+(id:46): Fim processamento. chainsaw. Timestamp 1595614874.4397466
+(id:47): Fim gravacao. Timestamp 1595614874.4625416
+(id:47): Inicio processamento. Timestamp 1595614874.4630623
+(id:47): Fim processamento. chainsaw. Timestamp 1595614874.700505
+(id:48): Fim gravacao. Timestamp 1595614874.723648
+(id:48): Inicio processamento. Timestamp 1595614874.724152
+(id:49): Inicio gravacao. Timestamp 1595614874.7248082
+(id:48): Fim processamento. chainsaw. Timestamp 1595614874.9604754
+(id:50): Inicio gravacao. Timestamp 1595614874.9847798
+(id:49): Fim gravacao. Timestamp 1595614875.24459
+(id:49): Inicio processamento. Timestamp 1595614875.2451322
+(id:51): Inicio gravacao. Timestamp 1595614875.245991
+(id:49): Fim processamento. cryingbaby. Timestamp 1595614875.4827366
+(id:50): Fim gravacao. Timestamp 1595614875.5059273
+(id:50): Inicio processamento. Timestamp 1595614875.5064397
+(id:52): Inicio gravacao. Timestamp 1595614875.5070884
+(id:50): Fim processamento. cryingbaby. Timestamp 1595614875.7408695
+(id:51): Fim gravacao. Timestamp 1595614875.767905
+(id:51): Inicio processamento. Timestamp 1595614875.7687278
+(id:52): Fim gravacao. Timestamp 1595614876.0311546
+(id:52): Inicio processamento. Timestamp 1595614876.031811
+(id:53): Inicio gravacao. Timestamp 1595614876.0328174
+(id:51): Fim processamento. cryingbaby. Timestamp 1595614876.0538876
+(id:52): Fim processamento. chainsaw. Timestamp 1595614876.2840726
+(id:54): Inicio gravacao. Timestamp 1595614876.2929227
+(id:53): Fim gravacao. Timestamp 1595614876.5526767
+(id:53): Inicio processamento. Timestamp 1595614876.5532265
+(id:55): Inicio gravacao. Timestamp 1595614876.553872
+(id:54): Fim gravacao. Timestamp 1595614876.8141422
+(id:54): Inicio processamento. Timestamp 1595614876.8148263
+(id:56): Inicio gravacao. Timestamp 1595614876.8156693
+(id:53): Fim processamento. cryingbaby. Timestamp 1595614876.8373291
+(id:54): Fim processamento. cryingbaby. Timestamp 1595614877.0711086
+(id:55): Fim gravacao. Timestamp 1595614877.0759757
+(id:55): Inicio processamento. Timestamp 1595614877.0764713
+(id:55): Fim processamento. cryingbaby. Timestamp 1595614877.3093061
+(id:56): Fim gravacao. Timestamp 1595614877.337143
+(id:56): Inicio processamento. Timestamp 1595614877.3376458
+(id:57): Inicio gravacao. Timestamp 1595614877.3382971
+(id:56): Fim processamento. cryingbaby. Timestamp 1595614877.5718281
+(id:58): Inicio gravacao. Timestamp 1595614877.5982466
+(id:57): Fim gravacao. Timestamp 1595614877.8579814
+(id:57): Inicio processamento. Timestamp 1595614877.8585036
+(id:59): Inicio gravacao. Timestamp 1595614877.8591459
+(id:57): Fim processamento. chainsaw. Timestamp 1595614878.096521
+(id:58): Fim gravacao. Timestamp 1595614878.1199508
+(id:58): Inicio processamento. Timestamp 1595614878.1207702
+(id:60): Inicio gravacao. Timestamp 1595614878.1218271
+(id:59): Fim gravacao. Timestamp 1595614878.3881302
+(id:58): Fim processamento. cryingbaby. Timestamp 1595614878.3887544
+(id:59): Inicio processamento. Timestamp 1595614878.3889964
+(id:59): Fim processamento. cryingbaby. Timestamp 1595614878.6233873
+(id:60): Fim gravacao. Timestamp 1595614878.6495004
+(id:60): Inicio processamento. Timestamp 1595614878.6499977
+(id:61): Inicio gravacao. Timestamp 1595614878.6506531
+(id:60): Fim processamento. cryingbaby. Timestamp 1595614878.8873434
+(id:62): Inicio gravacao. Timestamp 1595614878.9105883
+(id:61): Fim gravacao. Timestamp 1595614879.1703258
+(id:61): Inicio processamento. Timestamp 1595614879.1708486
+(id:63): Inicio gravacao. Timestamp 1595614879.171487
+(id:61): Fim processamento. chainsaw. Timestamp 1595614879.4029045
+(id:62): Fim gravacao. Timestamp 1595614879.4313886
+(id:62): Inicio processamento. Timestamp 1595614879.4318798
+(id:64): Inicio gravacao. Timestamp 1595614879.4325142
+(id:62): Fim processamento. chainsaw. Timestamp 1595614879.6645474
+(id:63): Fim gravacao. Timestamp 1595614879.692456
+(id:63): Inicio processamento. Timestamp 1595614879.6929324
+(id:63): Fim processamento. chainsaw. Timestamp 1595614879.931772
+(id:64): Fim gravacao. Timestamp 1595614879.9535515
+(id:64): Inicio processamento. Timestamp 1595614879.9540567
+(id:65): Inicio gravacao. Timestamp 1595614879.9547164
+(id:64): Fim processamento. cryingbaby. Timestamp 1595614880.1926959
+(id:66): Inicio gravacao. Timestamp 1595614880.2146788
+(id:65): Fim gravacao. Timestamp 1595614880.4744308
+(id:65): Inicio processamento. Timestamp 1595614880.4749596
+(id:67): Inicio gravacao. Timestamp 1595614880.4756024
+(id:65): Fim processamento. chainsaw. Timestamp 1595614880.7098334
+(id:66): Fim gravacao. Timestamp 1595614880.7355385
+(id:66): Inicio processamento. Timestamp 1595614880.736035
+(id:68): Inicio gravacao. Timestamp 1595614880.7366781
+(id:66): Fim processamento. chainsaw. Timestamp 1595614880.9734614
+(id:67): Fim gravacao. Timestamp 1595614880.9965975
+(id:67): Inicio processamento. Timestamp 1595614880.9970906
+(id:68): Fim gravacao. Timestamp 1595614881.2579174
+(id:68): Inicio processamento. Timestamp 1595614881.2586277
+(id:69): Inicio gravacao. Timestamp 1595614881.259737
+(id:67): Fim processamento. chainsaw. Timestamp 1595614881.290458
+(id:68): Fim processamento. chainsaw. Timestamp 1595614881.51557
+(id:70): Inicio gravacao. Timestamp 1595614881.519877
+(id:69): Fim gravacao. Timestamp 1595614881.779587
+(id:69): Inicio processamento. Timestamp 1595614881.7801008
+(id:71): Inicio gravacao. Timestamp 1595614881.7807467
+(id:70): Fim gravacao. Timestamp 1595614882.0409873
+(id:70): Inicio processamento. Timestamp 1595614882.0416448
+(id:72): Inicio gravacao. Timestamp 1595614882.0422401
+(id:69): Fim processamento. cryingbaby. Timestamp 1595614882.0777638
+(id:70): Fim processamento. chainsaw. Timestamp 1595614882.300127
+(id:71): Fim gravacao. Timestamp 1595614882.3044891
+(id:71): Inicio processamento. Timestamp 1595614882.3052363
+(id:71): Fim processamento. chainsaw. Timestamp 1595614882.537209
+(id:72): Fim gravacao. Timestamp 1595614882.5657837
+(id:72): Inicio processamento. Timestamp 1595614882.5662785
+(id:73): Inicio gravacao. Timestamp 1595614882.5669193
+(id:74): Inicio gravacao. Timestamp 1595614882.827026
+(id:72): Fim processamento. cryingbaby. Timestamp 1595614882.8464139
+(id:73): Fim gravacao. Timestamp 1595614883.086932
+(id:73): Inicio processamento. Timestamp 1595614883.087466
+(id:75): Inicio gravacao. Timestamp 1595614883.0881267
+(id:73): Fim processamento. chainsaw. Timestamp 1595614883.32042
+(id:74): Fim gravacao. Timestamp 1595614883.3480628
+(id:74): Inicio processamento. Timestamp 1595614883.348554
+(id:76): Inicio gravacao. Timestamp 1595614883.3491986
+(id:75): Fim gravacao. Timestamp 1595614883.609333
+(id:75): Inicio processamento. Timestamp 1595614883.6100545
+(id:74): Fim processamento. chainsaw. Timestamp 1595614883.6428874
+(id:75): Fim processamento. chainsaw. Timestamp 1595614883.8638346
+(id:76): Fim gravacao. Timestamp 1595614883.8710299
+(id:76): Inicio processamento. Timestamp 1595614883.8715255
+(id:77): Inicio gravacao. Timestamp 1595614883.8721757
+(id:76): Fim processamento. chainsaw. Timestamp 1595614884.1075587
+(id:78): Inicio gravacao. Timestamp 1595614884.132107
+(id:77): Fim gravacao. Timestamp 1595614884.3927133
+(id:77): Inicio processamento. Timestamp 1595614884.3936079
+(id:79): Inicio gravacao. Timestamp 1595614884.394688
+(id:78): Fim gravacao. Timestamp 1595614884.6563096
+(id:78): Inicio processamento. Timestamp 1595614884.656944
+(id:80): Inicio gravacao. Timestamp 1595614884.6577504
+(id:77): Fim processamento. chainsaw. Timestamp 1595614884.6902342
+(id:79): Fim gravacao. Timestamp 1595614884.9201014
+(id:78): Fim processamento. chainsaw. Timestamp 1595614884.9205117
+(id:79): Inicio processamento. Timestamp 1595614884.9209673
+(id:79): Fim processamento. chainsaw. Timestamp 1595614885.158391
+(id:80): Fim gravacao. Timestamp 1595614885.181491
+(id:80): Inicio processamento. Timestamp 1595614885.181998
+(id:81): Inicio gravacao. Timestamp 1595614885.1826563
+(id:80): Fim processamento. cryingbaby. Timestamp 1595614885.4191642
+(id:82): Inicio gravacao. Timestamp 1595614885.4426055
+(id:81): Fim gravacao. Timestamp 1595614885.702354
+(id:81): Inicio processamento. Timestamp 1595614885.7028825
+(id:83): Inicio gravacao. Timestamp 1595614885.7036295
+(id:81): Fim processamento. cryingbaby. Timestamp 1595614885.9564407
+(id:82): Fim gravacao. Timestamp 1595614885.9644804
+(id:82): Inicio processamento. Timestamp 1595614885.9653585
+(id:84): Inicio gravacao. Timestamp 1595614885.9665868
+(id:83): Fim gravacao. Timestamp 1595614886.2306542
+(id:82): Fim processamento. cryingbaby. Timestamp 1595614886.2310421
+(id:83): Inicio processamento. Timestamp 1595614886.2312922
+(id:83): Fim processamento. cryingbaby. Timestamp 1595614886.473836
+(id:84): Fim gravacao. Timestamp 1595614886.4918327
+(id:84): Inicio processamento. Timestamp 1595614886.4923267
+(id:85): Inicio gravacao. Timestamp 1595614886.492983
+(id:84): Fim processamento. cryingbaby. Timestamp 1595614886.7316225
+(id:86): Inicio gravacao. Timestamp 1595614886.7529402
+(id:85): Fim gravacao. Timestamp 1595614887.0127003
+(id:85): Inicio processamento. Timestamp 1595614887.0132604
+(id:87): Inicio gravacao. Timestamp 1595614887.0139055
+(id:85): Fim processamento. chainsaw. Timestamp 1595614887.2502167
+(id:86): Fim gravacao. Timestamp 1595614887.27384
+(id:86): Inicio processamento. Timestamp 1595614887.2743368
+(id:88): Inicio gravacao. Timestamp 1595614887.2749896
+(id:87): Fim gravacao. Timestamp 1595614887.5362191
+(id:87): Inicio processamento. Timestamp 1595614887.5375938
+(id:86): Fim processamento. chainsaw. Timestamp 1595614887.567422
+(id:87): Fim processamento. chainsaw. Timestamp 1595614887.794159
+(id:88): Fim gravacao. Timestamp 1595614887.79977
+(id:88): Inicio processamento. Timestamp 1595614887.800311
+(id:89): Inicio gravacao. Timestamp 1595614887.8010106
+(id:88): Fim processamento. chainsaw. Timestamp 1595614888.0394933
+(id:90): Inicio gravacao. Timestamp 1595614888.060954
+(id:89): Fim gravacao. Timestamp 1595614888.321627
+(id:89): Inicio processamento. Timestamp 1595614888.3224967
+(id:91): Inicio gravacao. Timestamp 1595614888.32364
+(id:90): Fim gravacao. Timestamp 1595614888.5849223
+(id:90): Inicio processamento. Timestamp 1595614888.5855014
+(id:92): Inicio gravacao. Timestamp 1595614888.5861056
+(id:89): Fim processamento. chainsaw. Timestamp 1595614888.628063
+(id:90): Fim processamento. cryingbaby. Timestamp 1595614888.8427358
+(id:91): Fim gravacao. Timestamp 1595614888.8460631
+(id:91): Inicio processamento. Timestamp 1595614888.8465497
+(id:91): Fim processamento. cryingbaby. Timestamp 1595614889.0835161
+(id:92): Fim gravacao. Timestamp 1595614889.1073017
+(id:92): Inicio processamento. Timestamp 1595614889.1078057
+(id:93): Inicio gravacao. Timestamp 1595614889.1084514
+(id:92): Fim processamento. cryingbaby. Timestamp 1595614889.341076
+(id:94): Inicio gravacao. Timestamp 1595614889.3683825
+(id:93): Fim gravacao. Timestamp 1595614889.628148
+(id:93): Inicio processamento. Timestamp 1595614889.6286793
+(id:95): Inicio gravacao. Timestamp 1595614889.6293225
+(id:93): Fim processamento. cryingbaby. Timestamp 1595614889.865958
+(id:94): Fim gravacao. Timestamp 1595614889.8901684
+(id:94): Inicio processamento. Timestamp 1595614889.8909883
+(id:96): Inicio gravacao. Timestamp 1595614889.8920667
+(id:95): Fim gravacao. Timestamp 1595614890.1538725
+(id:95): Inicio processamento. Timestamp 1595614890.1560822
+(id:94): Fim processamento. chainsaw. Timestamp 1595614890.1705077
+(id:95): Fim processamento. chainsaw. Timestamp 1595614890.399451
+(id:96): Fim gravacao. Timestamp 1595614890.4171793
+(id:96): Inicio processamento. Timestamp 1595614890.4176605
+(id:97): Inicio gravacao. Timestamp 1595614890.4183037
+(id:96): Fim processamento. chainsaw. Timestamp 1595614890.6551976
+(id:98): Inicio gravacao. Timestamp 1595614890.6782577
+(id:97): Fim gravacao. Timestamp 1595614890.9382508
+(id:97): Inicio processamento. Timestamp 1595614890.9387517
+(id:99): Inicio gravacao. Timestamp 1595614890.9394057
+(id:97): Fim processamento. chainsaw. Timestamp 1595614891.1754355
+(id:98): Fim gravacao. Timestamp 1595614891.1993432
+(id:98): Inicio processamento. Timestamp 1595614891.1998367
+(id:100): Inicio gravacao. Timestamp 1595614891.2004697
+(id:98): Fim processamento. chainsaw. Timestamp 1595614891.437191
+(id:99): Fim gravacao. Timestamp 1595614891.4603817
+(id:99): Inicio processamento. Timestamp 1595614891.46089
+(id:99): Fim processamento. chainsaw. Timestamp 1595614891.6945536
+(id:100): Fim gravacao. Timestamp 1595614891.7214127
+(id:100): Inicio processamento. Timestamp 1595614891.7219174
+(id:101): Inicio gravacao. Timestamp 1595614891.722571
+(id:100): Fim processamento. chainsaw. Timestamp 1595614891.9590485
+(id:102): Inicio gravacao. Timestamp 1595614891.982543
+(id:101): Fim gravacao. Timestamp 1595614892.2432835
+(id:101): Inicio processamento. Timestamp 1595614892.2441888
+(id:103): Inicio gravacao. Timestamp 1595614892.2452762
+(id:102): Fim gravacao. Timestamp 1595614892.5075362
+(id:102): Inicio processamento. Timestamp 1595614892.5085397
+(id:104): Inicio gravacao. Timestamp 1595614892.5094116
+(id:101): Fim processamento. chainsaw. Timestamp 1595614892.522301
+(id:102): Fim processamento. chainsaw. Timestamp 1595614892.7528234
+(id:103): Fim gravacao. Timestamp 1595614892.7694387
+(id:103): Inicio processamento. Timestamp 1595614892.7699254
+(id:103): Fim processamento. chainsaw. Timestamp 1595614893.0063238
+(id:104): Fim gravacao. Timestamp 1595614893.030459
+(id:104): Inicio processamento. Timestamp 1595614893.0309527
+(id:105): Inicio gravacao. Timestamp 1595614893.031612
+(id:104): Fim processamento. chainsaw. Timestamp 1595614893.2673442
+(id:106): Inicio gravacao. Timestamp 1595614893.291536
+(id:105): Fim gravacao. Timestamp 1595614893.5512466
+(id:105): Inicio processamento. Timestamp 1595614893.5517712
+(id:107): Inicio gravacao. Timestamp 1595614893.552404
+(id:105): Fim processamento. chainsaw. Timestamp 1595614893.7953455
+(id:106): Fim gravacao. Timestamp 1595614893.8126647
+(id:106): Inicio processamento. Timestamp 1595614893.8134246
+(id:108): Inicio gravacao. Timestamp 1595614893.8141184
+(id:106): Fim processamento. chainsaw. Timestamp 1595614894.0541048
+(id:107): Fim gravacao. Timestamp 1595614894.0741248
+(id:107): Inicio processamento. Timestamp 1595614894.0746229
+(id:107): Fim processamento. chainsaw. Timestamp 1595614894.3149571
+(id:108): Fim gravacao. Timestamp 1595614894.335163
+(id:108): Inicio processamento. Timestamp 1595614894.335665
+(id:109): Inicio gravacao. Timestamp 1595614894.3363173
+(id:108): Fim processamento. chainsaw. Timestamp 1595614894.5772111
+(id:110): Inicio gravacao. Timestamp 1595614894.5962307
+(id:109): Fim gravacao. Timestamp 1595614894.855961
+(id:109): Inicio processamento. Timestamp 1595614894.8564854
+(id:111): Inicio gravacao. Timestamp 1595614894.8571336
+(id:109): Fim processamento. chainsaw. Timestamp 1595614895.0940564
+(id:110): Fim gravacao. Timestamp 1595614895.117094
+(id:110): Inicio processamento. Timestamp 1595614895.1176448
+(id:112): Inicio gravacao. Timestamp 1595614895.1182988
+(id:110): Fim processamento. chainsaw. Timestamp 1595614895.3565443
+(id:111): Fim gravacao. Timestamp 1595614895.3782184
+(id:111): Inicio processamento. Timestamp 1595614895.3787246
+(id:111): Fim processamento. chainsaw. Timestamp 1595614895.6156707
+(id:112): Fim gravacao. Timestamp 1595614895.639242
+(id:112): Inicio processamento. Timestamp 1595614895.6397307
+(id:113): Inicio gravacao. Timestamp 1595614895.640378
+(id:112): Fim processamento. chainsaw. Timestamp 1595614895.8783472
+(id:114): Inicio gravacao. Timestamp 1595614895.9003036
+(id:113): Fim gravacao. Timestamp 1595614896.1600292
+(id:113): Inicio processamento. Timestamp 1595614896.1605625
+(id:115): Inicio gravacao. Timestamp 1595614896.161215
+(id:113): Fim processamento. cryingbaby. Timestamp 1595614896.3979657
+(id:114): Fim gravacao. Timestamp 1595614896.4211578
+(id:114): Inicio processamento. Timestamp 1595614896.4216514
+(id:116): Inicio gravacao. Timestamp 1595614896.4222844
+(id:114): Fim processamento. cryingbaby. Timestamp 1595614896.6601038
+(id:115): Fim gravacao. Timestamp 1595614896.6823015
+(id:115): Inicio processamento. Timestamp 1595614896.6828039
+(id:115): Fim processamento. chainsaw. Timestamp 1595614896.916822
+(id:116): Fim gravacao. Timestamp 1595614896.9433892
+(id:116): Inicio processamento. Timestamp 1595614896.9438972
+(id:117): Inicio gravacao. Timestamp 1595614896.9445612
+(id:116): Fim processamento. cryingbaby. Timestamp 1595614897.1770976
+(id:118): Inicio gravacao. Timestamp 1595614897.2045317
+(id:117): Fim gravacao. Timestamp 1595614897.46524
+(id:117): Inicio processamento. Timestamp 1595614897.466109
+(id:119): Inicio gravacao. Timestamp 1595614897.4671903
+(id:118): Fim gravacao. Timestamp 1595614897.728767
+(id:118): Inicio processamento. Timestamp 1595614897.729752
+(id:120): Inicio gravacao. Timestamp 1595614897.7306628
+(id:117): Fim processamento. chainsaw. Timestamp 1595614897.7591248
+(id:118): Fim processamento. chainsaw. Timestamp 1595614897.988454
+(id:119): Fim gravacao. Timestamp 1595614897.9907818
+(id:119): Inicio processamento. Timestamp 1595614897.9912457
+(id:119): Fim processamento. cryingbaby. Timestamp 1595614898.2315407
+(id:120): Fim gravacao. Timestamp 1595614898.251946
+(id:120): Inicio processamento. Timestamp 1595614898.2524433
+(id:121): Inicio gravacao. Timestamp 1595614898.2531097
+(id:120): Fim processamento. chainsaw. Timestamp 1595614898.4883947
+(id:122): Inicio gravacao. Timestamp 1595614898.5131094
+(id:121): Fim gravacao. Timestamp 1595614898.7728736
+(id:121): Inicio processamento. Timestamp 1595614898.7734253
+(id:123): Inicio gravacao. Timestamp 1595614898.7740886
+(id:121): Fim processamento. chainsaw. Timestamp 1595614899.007747
+(id:122): Fim gravacao. Timestamp 1595614899.0340116
+(id:122): Inicio processamento. Timestamp 1595614899.0345159
+(id:124): Inicio gravacao. Timestamp 1595614899.0351667
+(id:122): Fim processamento. chainsaw. Timestamp 1595614899.2690675
+(id:123): Fim gravacao. Timestamp 1595614899.295076
+(id:123): Inicio processamento. Timestamp 1595614899.2955775
+(id:123): Fim processamento. cryingbaby. Timestamp 1595614899.5313249
+(id:124): Fim gravacao. Timestamp 1595614899.5561428
+(id:124): Inicio processamento. Timestamp 1595614899.5566397
+(id:125): Inicio gravacao. Timestamp 1595614899.5573025
+(id:124): Fim processamento. cryingbaby. Timestamp 1595614899.7886572
+(id:126): Inicio gravacao. Timestamp 1595614899.8172393
+(id:125): Fim gravacao. Timestamp 1595614900.0769715
+(id:125): Inicio processamento. Timestamp 1595614900.077499
+(id:127): Inicio gravacao. Timestamp 1595614900.0781522
+(id:125): Fim processamento. chainsaw. Timestamp 1595614900.3158026
+(id:126): Fim gravacao. Timestamp 1595614900.3381648
+(id:126): Inicio processamento. Timestamp 1595614900.3386714
+(id:128): Inicio gravacao. Timestamp 1595614900.3393202
+(id:126): Fim processamento. chainsaw. Timestamp 1595614900.5783865
+(id:127): Fim gravacao. Timestamp 1595614900.5992422
+(id:127): Inicio processamento. Timestamp 1595614900.5997405
+(id:127): Fim processamento. chainsaw. Timestamp 1595614900.8383708
+(id:128): Fim gravacao. Timestamp 1595614900.8602498
+(id:128): Inicio processamento. Timestamp 1595614900.860739
+(id:129): Inicio gravacao. Timestamp 1595614900.8613818
+(id:128): Fim processamento. chainsaw. Timestamp 1595614901.100273
+(id:130): Inicio gravacao. Timestamp 1595614901.1213098
+(id:129): Fim gravacao. Timestamp 1595614901.3810475
+(id:129): Inicio processamento. Timestamp 1595614901.381563
+(id:131): Inicio gravacao. Timestamp 1595614901.3822365
+(id:129): Fim processamento. cryingbaby. Timestamp 1595614901.6184273
+(id:130): Fim gravacao. Timestamp 1595614901.6422114
+(id:130): Inicio processamento. Timestamp 1595614901.6427119
+(id:132): Inicio gravacao. Timestamp 1595614901.643385
+(id:130): Fim processamento. cryingbaby. Timestamp 1595614901.883602
+(id:131): Fim gravacao. Timestamp 1595614901.9032974
+(id:131): Inicio processamento. Timestamp 1595614901.9037986
+(id:131): Fim processamento. cryingbaby. Timestamp 1595614902.1423852
+(id:132): Fim gravacao. Timestamp 1595614902.164355
+(id:132): Inicio processamento. Timestamp 1595614902.1648602
+(id:133): Inicio gravacao. Timestamp 1595614902.16552
+(id:132): Fim processamento. cryingbaby. Timestamp 1595614902.4056711
+(id:134): Inicio gravacao. Timestamp 1595614902.4254541
+(id:133): Fim gravacao. Timestamp 1595614902.686164
+(id:133): Inicio processamento. Timestamp 1595614902.6870687
+(id:135): Inicio gravacao. Timestamp 1595614902.688242
+(id:134): Fim gravacao. Timestamp 1595614902.9498615
+(id:134): Inicio processamento. Timestamp 1595614902.9506218
+(id:136): Inicio gravacao. Timestamp 1595614902.9513946
+(id:133): Fim processamento. cryingbaby. Timestamp 1595614902.98055
+(id:134): Fim processamento. chainsaw. Timestamp 1595614903.2034357
+(id:135): Fim gravacao. Timestamp 1595614903.2115388
+(id:135): Inicio processamento. Timestamp 1595614903.2120142
+(id:135): Fim processamento. chainsaw. Timestamp 1595614903.4483666
+(id:136): Fim gravacao. Timestamp 1595614903.4725454
+(id:136): Inicio processamento. Timestamp 1595614903.4730437
+(id:137): Inicio gravacao. Timestamp 1595614903.473743
+(id:136): Fim processamento. chainsaw. Timestamp 1595614903.7090187
+(id:138): Inicio gravacao. Timestamp 1595614903.7336793
+(id:137): Fim gravacao. Timestamp 1595614903.993413
+(id:137): Inicio processamento. Timestamp 1595614903.9939356
+(id:139): Inicio gravacao. Timestamp 1595614903.9945905
+(id:137): Fim processamento. chainsaw. Timestamp 1595614904.232723
+(id:138): Fim gravacao. Timestamp 1595614904.2545557
+(id:138): Inicio processamento. Timestamp 1595614904.2550597
+(id:140): Inicio gravacao. Timestamp 1595614904.255705
+(id:138): Fim processamento. cryingbaby. Timestamp 1595614904.4887502
+(id:139): Fim gravacao. Timestamp 1595614904.5156143
+(id:139): Inicio processamento. Timestamp 1595614904.516101
+(id:139): Fim processamento. chainsaw. Timestamp 1595614904.751854
+(id:140): Fim gravacao. Timestamp 1595614904.7766347
+(id:140): Inicio processamento. Timestamp 1595614904.777135
+(id:141): Inicio gravacao. Timestamp 1595614904.7777896
+(id:140): Fim processamento. chainsaw. Timestamp 1595614905.012989
+(id:142): Inicio gravacao. Timestamp 1595614905.0377247
+(id:141): Fim gravacao. Timestamp 1595614905.2974617
+(id:141): Inicio processamento. Timestamp 1595614905.2979784
+(id:143): Inicio gravacao. Timestamp 1595614905.2986274
+(id:141): Fim processamento. chainsaw. Timestamp 1595614905.53394
+(id:142): Fim gravacao. Timestamp 1595614905.558542
+(id:142): Inicio processamento. Timestamp 1595614905.559037
+(id:144): Inicio gravacao. Timestamp 1595614905.5596724
+(id:142): Fim processamento. chainsaw. Timestamp 1595614905.795964
+(id:143): Fim gravacao. Timestamp 1595614905.8200858
+(id:143): Inicio processamento. Timestamp 1595614905.8205726
+(id:143): Fim processamento. chainsaw. Timestamp 1595614906.0577922
+(id:144): Fim gravacao. Timestamp 1595614906.081117
+(id:144): Inicio processamento. Timestamp 1595614906.0816052
+(id:145): Inicio gravacao. Timestamp 1595614906.0822568
+(id:144): Fim processamento. chainsaw. Timestamp 1595614906.3218055
+(id:146): Inicio gravacao. Timestamp 1595614906.342231
+(id:145): Fim gravacao. Timestamp 1595614906.6020806
+(id:145): Inicio processamento. Timestamp 1595614906.602608
+(id:147): Inicio gravacao. Timestamp 1595614906.603305
+(id:145): Fim processamento. cryingbaby. Timestamp 1595614906.839667
+(id:146): Fim gravacao. Timestamp 1595614906.8632581
+(id:146): Inicio processamento. Timestamp 1595614906.8637562
+(id:148): Inicio gravacao. Timestamp 1595614906.8644013
+(id:146): Fim processamento. cryingbaby. Timestamp 1595614907.1027298
+(id:147): Fim gravacao. Timestamp 1595614907.1243382
+(id:147): Inicio processamento. Timestamp 1595614907.1248403
+(id:147): Fim processamento. cryingbaby. Timestamp 1595614907.3603504
+(id:148): Fim gravacao. Timestamp 1595614907.3853805
+(id:148): Inicio processamento. Timestamp 1595614907.385883
+(id:149): Inicio gravacao. Timestamp 1595614907.386535
+(id:148): Fim processamento. cryingbaby. Timestamp 1595614907.6185083
+(id:150): Inicio gravacao. Timestamp 1595614907.6464827
+(id:149): Fim gravacao. Timestamp 1595614907.9062097
+(id:149): Inicio processamento. Timestamp 1595614907.9067454
+(id:151): Inicio gravacao. Timestamp 1595614907.907396
+(id:149): Fim processamento. cryingbaby. Timestamp 1595614908.1412613
+(id:150): Fim gravacao. Timestamp 1595614908.1673126
+(id:150): Inicio processamento. Timestamp 1595614908.1678019
+(id:152): Inicio gravacao. Timestamp 1595614908.1684296
+(id:150): Fim processamento. cryingbaby. Timestamp 1595614908.4070847
+(id:151): Fim gravacao. Timestamp 1595614908.4283462
+(id:151): Inicio processamento. Timestamp 1595614908.428847
+(id:151): Fim processamento. cryingbaby. Timestamp 1595614908.6636918
+(id:152): Fim gravacao. Timestamp 1595614908.6893904
+(id:152): Inicio processamento. Timestamp 1595614908.689887
+(id:153): Inicio gravacao. Timestamp 1595614908.690565
+(id:152): Fim processamento. cryingbaby. Timestamp 1595614908.920612
+(id:154): Inicio gravacao. Timestamp 1595614908.9505343
+(id:153): Fim gravacao. Timestamp 1595614909.210289
+(id:153): Inicio processamento. Timestamp 1595614909.210814
+(id:155): Inicio gravacao. Timestamp 1595614909.2114644
+(id:153): Fim processamento. chainsaw. Timestamp 1595614909.446936
+(id:154): Fim gravacao. Timestamp 1595614909.471378
+(id:154): Inicio processamento. Timestamp 1595614909.4718728
+(id:156): Inicio gravacao. Timestamp 1595614909.472512
+(id:154): Fim processamento. cryingbaby. Timestamp 1595614909.7078404
+(id:155): Fim gravacao. Timestamp 1595614909.7324734
+(id:155): Inicio processamento. Timestamp 1595614909.7329705
+(id:155): Fim processamento. cryingbaby. Timestamp 1595614909.969137
+(id:156): Fim gravacao. Timestamp 1595614909.9935708
+(id:156): Inicio processamento. Timestamp 1595614909.9940734
+(id:157): Inicio gravacao. Timestamp 1595614909.9947357
+(id:156): Fim processamento. cryingbaby. Timestamp 1595614910.231347
+(id:158): Inicio gravacao. Timestamp 1595614910.254706
+(id:157): Fim gravacao. Timestamp 1595614910.514486
+(id:157): Inicio processamento. Timestamp 1595614910.5150275
+(id:159): Inicio gravacao. Timestamp 1595614910.515682
+(id:157): Fim processamento. chainsaw. Timestamp 1595614910.7493322
+(id:158): Fim gravacao. Timestamp 1595614910.775607
+(id:158): Inicio processamento. Timestamp 1595614910.776111
+(id:160): Inicio gravacao. Timestamp 1595614910.7767541
+(id:158): Fim processamento. chainsaw. Timestamp 1595614911.008107
+(id:159): Fim gravacao. Timestamp 1595614911.0366964
+(id:159): Inicio processamento. Timestamp 1595614911.0371916
+(id:159): Fim processamento. cryingbaby. Timestamp 1595614911.2695463
+(id:160): Fim gravacao. Timestamp 1595614911.2977462
+(id:160): Inicio processamento. Timestamp 1595614911.2982447
+(id:161): Inicio gravacao. Timestamp 1595614911.2989044
+(id:160): Fim processamento. cryingbaby. Timestamp 1595614911.5327556
+(id:162): Inicio gravacao. Timestamp 1595614911.5588472
+(id:161): Fim gravacao. Timestamp 1595614911.8186285
+(id:161): Inicio processamento. Timestamp 1595614911.8191748
+(id:163): Inicio gravacao. Timestamp 1595614911.820017
+(id:161): Fim processamento. cryingbaby. Timestamp 1595614912.0562737
+(id:162): Fim gravacao. Timestamp 1595614912.0799367
+(id:162): Inicio processamento. Timestamp 1595614912.0804353
+(id:164): Inicio gravacao. Timestamp 1595614912.0810804
+(id:162): Fim processamento. cryingbaby. Timestamp 1595614912.3136153
+(id:163): Fim gravacao. Timestamp 1595614912.340996
+(id:163): Inicio processamento. Timestamp 1595614912.3415089
+(id:163): Fim processamento. cryingbaby. Timestamp 1595614912.572588
+(id:164): Fim gravacao. Timestamp 1595614912.602483
+(id:164): Inicio processamento. Timestamp 1595614912.6029902
+(id:165): Inicio gravacao. Timestamp 1595614912.6037154
+(id:164): Fim processamento. cryingbaby. Timestamp 1595614912.8341055
+(id:166): Inicio gravacao. Timestamp 1595614912.8636398
+(id:165): Fim gravacao. Timestamp 1595614913.1233776
+(id:165): Inicio processamento. Timestamp 1595614913.1239035
+(id:167): Inicio gravacao. Timestamp 1595614913.124561
+(id:165): Fim processamento. cryingbaby. Timestamp 1595614913.3604882
+(id:166): Fim gravacao. Timestamp 1595614913.3845541
+(id:166): Inicio processamento. Timestamp 1595614913.385061
+(id:168): Inicio gravacao. Timestamp 1595614913.3857172
+(id:167): Fim gravacao. Timestamp 1595614913.6459334
+(id:167): Inicio processamento. Timestamp 1595614913.6466527
+(id:166): Fim processamento. cryingbaby. Timestamp 1595614913.6806264
+(id:167): Fim processamento. cryingbaby. Timestamp 1595614913.9039137
+(id:168): Fim gravacao. Timestamp 1595614913.9078305
+(id:168): Inicio processamento. Timestamp 1595614913.908297
+(id:169): Inicio gravacao. Timestamp 1595614913.908944
+(id:168): Fim processamento. cryingbaby. Timestamp 1595614914.144361
+(id:170): Inicio gravacao. Timestamp 1595614914.1688986
+(id:169): Fim gravacao. Timestamp 1595614914.4295695
+(id:169): Inicio processamento. Timestamp 1595614914.430447
+(id:171): Inicio gravacao. Timestamp 1595614914.4315393
+(id:170): Fim gravacao. Timestamp 1595614914.692876
+(id:170): Inicio processamento. Timestamp 1595614914.693658
+(id:172): Inicio gravacao. Timestamp 1595614914.6942143
+(id:169): Fim processamento. chainsaw. Timestamp 1595614914.7290947
+(id:170): Fim processamento. chainsaw. Timestamp 1595614914.9539082
+(id:171): Fim gravacao. Timestamp 1595614914.9548688
+(id:171): Inicio processamento. Timestamp 1595614914.955311
+(id:171): Fim processamento. chainsaw. Timestamp 1595614915.193838
+(id:172): Fim gravacao. Timestamp 1595614915.2157996
+(id:172): Inicio processamento. Timestamp 1595614915.216293
+(id:173): Inicio gravacao. Timestamp 1595614915.216956
+(id:172): Fim processamento. chainsaw. Timestamp 1595614915.4478464
+(id:174): Inicio gravacao. Timestamp 1595614915.4768953
+(id:173): Fim gravacao. Timestamp 1595614915.7366424
+(id:173): Inicio processamento. Timestamp 1595614915.737175
+(id:175): Inicio gravacao. Timestamp 1595614915.7378244
+(id:173): Fim processamento. cryingbaby. Timestamp 1595614915.9706166
+(id:174): Fim gravacao. Timestamp 1595614915.9977577
+(id:174): Inicio processamento. Timestamp 1595614915.9982626
+(id:176): Inicio gravacao. Timestamp 1595614915.9989
+(id:174): Fim processamento. cryingbaby. Timestamp 1595614916.22314
+(id:175): Fim gravacao. Timestamp 1595614916.258825
+(id:175): Inicio processamento. Timestamp 1595614916.2595453
+(id:175): Fim processamento. cryingbaby. Timestamp 1595614916.4913182
+(id:176): Fim gravacao. Timestamp 1595614916.5200875
+(id:176): Inicio processamento. Timestamp 1595614916.5205927
+(id:177): Inicio gravacao. Timestamp 1595614916.5212464
+(id:176): Fim processamento. cryingbaby. Timestamp 1595614916.751459
+(id:178): Inicio gravacao. Timestamp 1595614916.7811637
+(id:177): Fim gravacao. Timestamp 1595614917.040896
+(id:177): Inicio processamento. Timestamp 1595614917.041434
+(id:179): Inicio gravacao. Timestamp 1595614917.0420792
+(id:177): Fim processamento. cryingbaby. Timestamp 1595614917.2743022
+(id:178): Fim gravacao. Timestamp 1595614917.3022354
+(id:178): Inicio processamento. Timestamp 1595614917.3027356
+(id:180): Inicio gravacao. Timestamp 1595614917.3034153
+(id:179): Fim gravacao. Timestamp 1595614917.5641985
+(id:179): Inicio processamento. Timestamp 1595614917.5651422
+(id:178): Fim processamento. cryingbaby. Timestamp 1595614917.5935702
+(id:179): Fim processamento. cryingbaby. Timestamp 1595614917.8195324
+(id:180): Fim gravacao. Timestamp 1595614917.8259265
+(id:180): Inicio processamento. Timestamp 1595614917.8264146
+(id:181): Inicio gravacao. Timestamp 1595614917.827066
+(id:180): Fim processamento. cryingbaby. Timestamp 1595614918.0658984
+(id:182): Inicio gravacao. Timestamp 1595614918.0872624
+(id:181): Fim gravacao. Timestamp 1595614918.3469832
+(id:181): Inicio processamento. Timestamp 1595614918.3475218
+(id:183): Inicio gravacao. Timestamp 1595614918.3481786
+(id:181): Fim processamento. chainsaw. Timestamp 1595614918.5793579
+(id:182): Fim gravacao. Timestamp 1595614918.6081097
+(id:182): Inicio processamento. Timestamp 1595614918.608625
+(id:184): Inicio gravacao. Timestamp 1595614918.6092703
+(id:182): Fim processamento. chainsaw. Timestamp 1595614918.8459558
+(id:183): Fim gravacao. Timestamp 1595614918.869183
+(id:183): Inicio processamento. Timestamp 1595614918.8697143
+(id:183): Fim processamento. chainsaw. Timestamp 1595614919.106922
+(id:184): Fim gravacao. Timestamp 1595614919.1302376
+(id:184): Inicio processamento. Timestamp 1595614919.1307418
+(id:185): Inicio gravacao. Timestamp 1595614919.1314037
+(id:184): Fim processamento. cryingbaby. Timestamp 1595614919.3652728
+(id:186): Inicio gravacao. Timestamp 1595614919.3914149
+(id:185): Fim gravacao. Timestamp 1595614919.6522381
+(id:185): Inicio processamento. Timestamp 1595614919.6531165
+(id:187): Inicio gravacao. Timestamp 1595614919.6542983
+(id:186): Fim gravacao. Timestamp 1595614919.915821
+(id:186): Inicio processamento. Timestamp 1595614919.916348
+(id:188): Inicio gravacao. Timestamp 1595614919.9169376
+(id:185): Fim processamento. cryingbaby. Timestamp 1595614919.9330604
+(id:186): Fim processamento. cryingbaby. Timestamp 1595614920.1577034
+(id:187): Fim gravacao. Timestamp 1595614920.1769264
+(id:187): Inicio processamento. Timestamp 1595614920.1774273
+(id:187): Fim processamento. cryingbaby. Timestamp 1595614920.4067066
+(id:188): Fim gravacao. Timestamp 1595614920.4379392
+(id:188): Inicio processamento. Timestamp 1595614920.4384732
+(id:189): Inicio gravacao. Timestamp 1595614920.4391396
+(id:188): Fim processamento. cryingbaby. Timestamp 1595614920.6759994
+(id:190): Inicio gravacao. Timestamp 1595614920.699062
+(id:189): Fim gravacao. Timestamp 1595614920.9588368
+(id:189): Inicio processamento. Timestamp 1595614920.9593723
+(id:191): Inicio gravacao. Timestamp 1595614920.9600282
+(id:189): Fim processamento. chainsaw. Timestamp 1595614921.190017
+(id:190): Fim gravacao. Timestamp 1595614921.2199547
+(id:190): Inicio processamento. Timestamp 1595614921.220457
+(id:192): Inicio gravacao. Timestamp 1595614921.2211053
+(id:190): Fim processamento. chainsaw. Timestamp 1595614921.454091
+(id:191): Fim gravacao. Timestamp 1595614921.4810276
+(id:191): Inicio processamento. Timestamp 1595614921.481524
+(id:191): Fim processamento. chainsaw. Timestamp 1595614921.716078
+(id:192): Fim gravacao. Timestamp 1595614921.7422433
+(id:192): Inicio processamento. Timestamp 1595614921.742745
+(id:193): Inicio gravacao. Timestamp 1595614921.74345
+(id:192): Fim processamento. chainsaw. Timestamp 1595614921.9788263
+(id:194): Inicio gravacao. Timestamp 1595614922.0033906
+(id:193): Fim gravacao. Timestamp 1595614922.2631211
+(id:193): Inicio processamento. Timestamp 1595614922.2642028
+(id:195): Inicio gravacao. Timestamp 1595614922.2648635
+(id:193): Fim processamento. chainsaw. Timestamp 1595614922.497011
+(id:194): Fim gravacao. Timestamp 1595614922.5247865
+(id:194): Inicio processamento. Timestamp 1595614922.5252855
+(id:196): Inicio gravacao. Timestamp 1595614922.5259607
+(id:194): Fim processamento. chainsaw. Timestamp 1595614922.761027
+(id:195): Fim gravacao. Timestamp 1595614922.7858768
+(id:195): Inicio processamento. Timestamp 1595614922.7863824
+(id:195): Fim processamento. chainsaw. Timestamp 1595614923.0234468
+(id:196): Fim gravacao. Timestamp 1595614923.0469222
+(id:196): Inicio processamento. Timestamp 1595614923.0474212
+(id:197): Inicio gravacao. Timestamp 1595614923.048067
+(id:196): Fim processamento. chainsaw. Timestamp 1595614923.2860644
+(id:198): Inicio gravacao. Timestamp 1595614923.307997
+(id:197): Fim gravacao. Timestamp 1595614923.5677292
+(id:197): Inicio processamento. Timestamp 1595614923.5682604
+(id:199): Inicio gravacao. Timestamp 1595614923.5689187
+(id:197): Fim processamento. chainsaw. Timestamp 1595614923.7978992
+(id:198): Fim gravacao. Timestamp 1595614923.8288457
+(id:198): Inicio processamento. Timestamp 1595614923.8293333
+(id:200): Inicio gravacao. Timestamp 1595614923.8300138
+(id:198): Fim processamento. chainsaw. Timestamp 1595614924.0643027
+(id:199): Fim gravacao. Timestamp 1595614924.0899374
+(id:199): Inicio processamento. Timestamp 1595614924.0904481
+(id:199): Fim processamento. chainsaw. Timestamp 1595614924.3230596
+(id:200): Fim gravacao. Timestamp 1595614924.3509786
+(id:200): Inicio processamento. Timestamp 1595614924.3514693
+(id:201): Inicio gravacao. Timestamp 1595614924.3521175
+(id:200): Fim processamento. chainsaw. Timestamp 1595614924.5810792
+(id:202): Inicio gravacao. Timestamp 1595614924.6122398
+(id:201): Fim gravacao. Timestamp 1595614924.8721132
+(id:201): Inicio processamento. Timestamp 1595614924.8726475
+(id:203): Inicio gravacao. Timestamp 1595614924.8733497
+(id:201): Fim processamento. chainsaw. Timestamp 1595614925.1088533
+(id:202): Fim gravacao. Timestamp 1595614925.1332767
+(id:202): Inicio processamento. Timestamp 1595614925.133778
+(id:204): Inicio gravacao. Timestamp 1595614925.1344123
+(id:202): Fim processamento. cryingbaby. Timestamp 1595614925.3699527
+(id:203): Fim gravacao. Timestamp 1595614925.3943422
+(id:203): Inicio processamento. Timestamp 1595614925.3948386
+(id:204): Fim gravacao. Timestamp 1595614925.6557615
+(id:204): Inicio processamento. Timestamp 1595614925.6565096
+(id:205): Inicio gravacao. Timestamp 1595614925.657307
+(id:203): Fim processamento. cryingbaby. Timestamp 1595614925.6899698
+(id:204): Fim processamento. cryingbaby. Timestamp 1595614925.909809
+(id:206): Inicio gravacao. Timestamp 1595614925.9175432
+(id:205): Fim gravacao. Timestamp 1595614926.1772656
+(id:205): Inicio processamento. Timestamp 1595614926.177796
+(id:207): Inicio gravacao. Timestamp 1595614926.1784472
+(id:206): Fim gravacao. Timestamp 1595614926.438612
+(id:206): Inicio processamento. Timestamp 1595614926.4393213
+(id:208): Inicio gravacao. Timestamp 1595614926.440452
+(id:205): Fim processamento. chainsaw. Timestamp 1595614926.4607165
+(id:206): Fim processamento. chainsaw. Timestamp 1595614926.6811662
+(id:207): Fim gravacao. Timestamp 1595614926.7006009
+(id:207): Inicio processamento. Timestamp 1595614926.701098
+(id:207): Fim processamento. chainsaw. Timestamp 1595614926.932145
+(id:208): Fim gravacao. Timestamp 1595614926.961922
+(id:208): Inicio processamento. Timestamp 1595614926.96242
+(id:209): Inicio gravacao. Timestamp 1595614926.9630764
+(id:208): Fim processamento. cryingbaby. Timestamp 1595614927.1934843
+(id:210): Inicio gravacao. Timestamp 1595614927.2230458
+(id:209): Fim gravacao. Timestamp 1595614927.4828131
+(id:209): Inicio processamento. Timestamp 1595614927.4833758
+(id:211): Inicio gravacao. Timestamp 1595614927.4840431
+(id:209): Fim processamento. chainsaw. Timestamp 1595614927.7132213
+(id:210): Fim gravacao. Timestamp 1595614927.7442305
+(id:210): Inicio processamento. Timestamp 1595614927.7447298
+(id:212): Inicio gravacao. Timestamp 1595614927.7453842
+(id:210): Fim processamento. chainsaw. Timestamp 1595614927.9704854
+(id:211): Fim gravacao. Timestamp 1595614928.0052953
+(id:211): Inicio processamento. Timestamp 1595614928.0057905
+(id:211): Fim processamento. chainsaw. Timestamp 1595614928.235556
+(id:212): Fim gravacao. Timestamp 1595614928.2668278
+(id:212): Inicio processamento. Timestamp 1595614928.2673118
+(id:213): Inicio gravacao. Timestamp 1595614928.2679732
+(id:212): Fim processamento. cryingbaby. Timestamp 1595614928.503009
+(id:214): Inicio gravacao. Timestamp 1595614928.5279424
+(id:213): Fim gravacao. Timestamp 1595614928.7876785
+(id:213): Inicio processamento. Timestamp 1595614928.7882037
+(id:215): Inicio gravacao. Timestamp 1595614928.7888544
+(id:213): Fim processamento. chainsaw. Timestamp 1595614929.0238438
+(id:214): Fim gravacao. Timestamp 1595614929.048785
+(id:214): Inicio processamento. Timestamp 1595614929.049286
+(id:216): Inicio gravacao. Timestamp 1595614929.0499337
+(id:215): Fim gravacao. Timestamp 1595614929.310181
+(id:215): Inicio processamento. Timestamp 1595614929.310853
+(id:214): Fim processamento. chainsaw. Timestamp 1595614929.333616
+(id:215): Fim processamento. chainsaw. Timestamp 1595614929.5595202
+(id:216): Fim gravacao. Timestamp 1595614929.5721488
+(id:216): Inicio processamento. Timestamp 1595614929.5726337
+(id:217): Inicio gravacao. Timestamp 1595614929.573329
+(id:216): Fim processamento. chainsaw. Timestamp 1595614929.8083887
+(id:218): Inicio gravacao. Timestamp 1595614929.8332503
+(id:217): Fim gravacao. Timestamp 1595614930.0930285
+(id:217): Inicio processamento. Timestamp 1595614930.093615
+(id:219): Inicio gravacao. Timestamp 1595614930.0942752
+(id:217): Fim processamento. cryingbaby. Timestamp 1595614930.325766
+(id:218): Fim gravacao. Timestamp 1595614930.3542316
+(id:218): Inicio processamento. Timestamp 1595614930.3547342
+(id:220): Inicio gravacao. Timestamp 1595614930.3553655
+(id:218): Fim processamento. chainsaw. Timestamp 1595614930.5869632
+(id:219): Fim gravacao. Timestamp 1595614930.6152685
+(id:219): Inicio processamento. Timestamp 1595614930.6157746
+(id:219): Fim processamento. chainsaw. Timestamp 1595614930.8493516
+(id:220): Fim gravacao. Timestamp 1595614930.8762848
+(id:220): Inicio processamento. Timestamp 1595614930.8767939
+(id:221): Inicio gravacao. Timestamp 1595614930.8774734
+(id:220): Fim processamento. chainsaw. Timestamp 1595614931.1108148
+(id:222): Inicio gravacao. Timestamp 1595614931.1374059
+(id:221): Fim gravacao. Timestamp 1595614931.3971362
+(id:221): Inicio processamento. Timestamp 1595614931.397657
+(id:223): Inicio gravacao. Timestamp 1595614931.3983116
+(id:221): Fim processamento. chainsaw. Timestamp 1595614931.6378205
+(id:222): Fim gravacao. Timestamp 1595614931.6582322
+(id:222): Inicio processamento. Timestamp 1595614931.6587305
+(id:224): Inicio gravacao. Timestamp 1595614931.6593587
+(id:222): Fim processamento. chainsaw. Timestamp 1595614931.8946686
+(id:223): Fim gravacao. Timestamp 1595614931.9192824
+(id:223): Inicio processamento. Timestamp 1595614931.9198081
+(id:223): Fim processamento. cryingbaby. Timestamp 1595614932.1549907
+(id:224): Fim gravacao. Timestamp 1595614932.1803455
+(id:224): Inicio processamento. Timestamp 1595614932.1808512
+(id:225): Inicio gravacao. Timestamp 1595614932.181507
+(id:224): Fim processamento. sneezing. Timestamp 1595614932.4152482
+(id:226): Inicio gravacao. Timestamp 1595614932.4414375
+(id:225): Fim gravacao. Timestamp 1595614932.70117
+(id:225): Inicio processamento. Timestamp 1595614932.7017236
+(id:227): Inicio gravacao. Timestamp 1595614932.702383
+(id:226): Fim gravacao. Timestamp 1595614932.9641652
+(id:226): Inicio processamento. Timestamp 1595614932.9650135
+(id:228): Inicio gravacao. Timestamp 1595614932.965886
+(id:225): Fim processamento. chainsaw. Timestamp 1595614933.000232
+(id:227): Fim gravacao. Timestamp 1595614933.226184
+(id:227): Inicio processamento. Timestamp 1595614933.2271147
+(id:226): Fim processamento. chainsaw. Timestamp 1595614933.2286148
+(id:227): Fim processamento. cryingbaby. Timestamp 1595614933.4680676
+(id:228): Fim gravacao. Timestamp 1595614933.4877024
+(id:228): Inicio processamento. Timestamp 1595614933.4881973
+(id:229): Inicio gravacao. Timestamp 1595614933.488854
+(id:228): Fim processamento. cryingbaby. Timestamp 1595614933.7262604
+(id:230): Inicio gravacao. Timestamp 1595614933.748783
+(id:229): Fim gravacao. Timestamp 1595614934.0085144
+(id:229): Inicio processamento. Timestamp 1595614934.0090365
+(id:231): Inicio gravacao. Timestamp 1595614934.0096767
+(id:229): Fim processamento. sneezing. Timestamp 1595614934.249074
+(id:230): Fim gravacao. Timestamp 1595614934.269602
+(id:230): Inicio processamento. Timestamp 1595614934.2700906
+(id:232): Inicio gravacao. Timestamp 1595614934.2707396
+(id:230): Fim processamento. chainsaw. Timestamp 1595614934.5081732
+(id:231): Fim gravacao. Timestamp 1595614934.5306728
+(id:231): Inicio processamento. Timestamp 1595614934.5311785
+(id:231): Fim processamento. cryingbaby. Timestamp 1595614934.7690368
+(id:232): Fim gravacao. Timestamp 1595614934.7919161
+(id:232): Inicio processamento. Timestamp 1595614934.7924232
+(id:233): Inicio gravacao. Timestamp 1595614934.793072
+(id:232): Fim processamento. chainsaw. Timestamp 1595614935.0286403
+(id:234): Inicio gravacao. Timestamp 1595614935.0530386
+(id:233): Fim gravacao. Timestamp 1595614935.3127933
+(id:233): Inicio processamento. Timestamp 1595614935.3133433
+(id:235): Inicio gravacao. Timestamp 1595614935.3140082
+(id:233): Fim processamento. chainsaw. Timestamp 1595614935.547793
+(id:234): Fim gravacao. Timestamp 1595614935.5739522
+(id:234): Inicio processamento. Timestamp 1595614935.5744588
+(id:236): Inicio gravacao. Timestamp 1595614935.5751166
+(id:234): Fim processamento. chainsaw. Timestamp 1595614935.8050327
+(id:235): Fim gravacao. Timestamp 1595614935.8350523
+(id:235): Inicio processamento. Timestamp 1595614935.8355525
+(id:235): Fim processamento. chainsaw. Timestamp 1595614936.0687685
+(id:236): Fim gravacao. Timestamp 1595614936.096118
+(id:236): Inicio processamento. Timestamp 1595614936.0968375
+(id:237): Inicio gravacao. Timestamp 1595614936.0975056
+(id:236): Fim processamento. chainsaw. Timestamp 1595614936.3344684
+(id:238): Inicio gravacao. Timestamp 1595614936.3574579
+(id:237): Fim gravacao. Timestamp 1595614936.6172132
+(id:237): Inicio processamento. Timestamp 1595614936.6177607
+(id:239): Inicio gravacao. Timestamp 1595614936.6184132
+(id:237): Fim processamento. chainsaw. Timestamp 1595614936.8588004
+(id:238): Fim gravacao. Timestamp 1595614936.878366
+(id:238): Inicio processamento. Timestamp 1595614936.8788586
+(id:240): Inicio gravacao. Timestamp 1595614936.87949
+(id:238): Fim processamento. chainsaw. Timestamp 1595614937.1174142
+(id:239): Fim gravacao. Timestamp 1595614937.139424
+(id:239): Inicio processamento. Timestamp 1595614937.1399355
+(id:239): Fim processamento. chainsaw. Timestamp 1595614937.3772929
+(id:240): Fim gravacao. Timestamp 1595614937.4004881
+(id:240): Inicio processamento. Timestamp 1595614937.4009938
+(id:241): Inicio gravacao. Timestamp 1595614937.4016566
+(id:240): Fim processamento. chainsaw. Timestamp 1595614937.6386795
+(id:242): Inicio gravacao. Timestamp 1595614937.661964
+(id:241): Fim gravacao. Timestamp 1595614937.9217858
+(id:241): Inicio processamento. Timestamp 1595614937.922321
+(id:243): Inicio gravacao. Timestamp 1595614937.9229712
+(id:241): Fim processamento. chainsaw. Timestamp 1595614938.1574216
+(id:242): Fim gravacao. Timestamp 1595614938.1829252
+(id:242): Inicio processamento. Timestamp 1595614938.1834538
+(id:244): Inicio gravacao. Timestamp 1595614938.184107
+(id:242): Fim processamento. chainsaw. Timestamp 1595614938.4195426
+(id:243): Fim gravacao. Timestamp 1595614938.4440312
+(id:243): Inicio processamento. Timestamp 1595614938.4445362
+(id:243): Fim processamento. chainsaw. Timestamp 1595614938.681872
+(id:244): Fim gravacao. Timestamp 1595614938.7050855
+(id:244): Inicio processamento. Timestamp 1595614938.7055888
+(id:245): Inicio gravacao. Timestamp 1595614938.7057633
+(id:244): Fim processamento. chainsaw. Timestamp 1595614938.942842
+(id:246): Inicio gravacao. Timestamp 1595614938.9656775
+(id:245): Fim gravacao. Timestamp 1595614939.2254384
+(id:245): Inicio processamento. Timestamp 1595614939.2259846
+(id:247): Inicio gravacao. Timestamp 1595614939.2266421
+(id:245): Fim processamento. chainsaw. Timestamp 1595614939.4634302
+(id:246): Fim gravacao. Timestamp 1595614939.486578
+(id:246): Inicio processamento. Timestamp 1595614939.4870827
+(id:248): Inicio gravacao. Timestamp 1595614939.4877355
+(id:246): Fim processamento. chainsaw. Timestamp 1595614939.7242644
+(id:247): Fim gravacao. Timestamp 1595614939.74768
+(id:247): Inicio processamento. Timestamp 1595614939.7481728
+(id:247): Fim processamento. chainsaw. Timestamp 1595614939.9867117
+(id:248): Fim gravacao. Timestamp 1595614940.0087008
+(id:248): Inicio processamento. Timestamp 1595614940.0092106
+(id:249): Inicio gravacao. Timestamp 1595614940.0098736
+(id:248): Fim processamento. chainsaw. Timestamp 1595614940.244009
+(id:250): Inicio gravacao. Timestamp 1595614940.2698033
+(id:249): Fim gravacao. Timestamp 1595614940.529553
+(id:249): Inicio processamento. Timestamp 1595614940.5300832
+(id:251): Inicio gravacao. Timestamp 1595614940.53074
+(id:249): Fim processamento. chainsaw. Timestamp 1595614940.7691853
+(id:250): Fim gravacao. Timestamp 1595614940.791564
+(id:250): Inicio processamento. Timestamp 1595614940.7923899
+(id:252): Inicio gravacao. Timestamp 1595614940.793545
+(id:251): Fim gravacao. Timestamp 1595614941.0561833
+(id:251): Inicio processamento. Timestamp 1595614941.0573611
+(id:250): Fim processamento. chainsaw. Timestamp 1595614941.0696394
+(id:251): Fim processamento. chainsaw. Timestamp 1595614941.303869
+(id:252): Fim gravacao. Timestamp 1595614941.3181167
+(id:252): Inicio processamento. Timestamp 1595614941.3186076
+(id:253): Inicio gravacao. Timestamp 1595614941.3192437
+(id:252): Fim processamento. chainsaw. Timestamp 1595614941.5552654
+(id:254): Inicio gravacao. Timestamp 1595614941.579202
+(id:253): Fim gravacao. Timestamp 1595614941.8389275
+(id:253): Inicio processamento. Timestamp 1595614941.8394306
+(id:255): Inicio gravacao. Timestamp 1595614941.8400679
+(id:253): Fim processamento. chainsaw. Timestamp 1595614942.0777504
+(id:254): Fim gravacao. Timestamp 1595614942.0999901
+(id:254): Inicio processamento. Timestamp 1595614942.1004822
+(id:256): Inicio gravacao. Timestamp 1595614942.101115
+(id:254): Fim processamento. chainsaw. Timestamp 1595614942.339293
+(id:255): Fim gravacao. Timestamp 1595614942.3610368
+(id:255): Inicio processamento. Timestamp 1595614942.3615491
+(id:255): Fim processamento. chainsaw. Timestamp 1595614942.5977564
+(id:256): Fim gravacao. Timestamp 1595614942.6222343
+(id:256): Inicio processamento. Timestamp 1595614942.6227405
+(id:257): Inicio gravacao. Timestamp 1595614942.623426
+(id:256): Fim processamento. chainsaw. Timestamp 1595614942.86084
+(id:258): Inicio gravacao. Timestamp 1595614942.883384
+(id:257): Fim gravacao. Timestamp 1595614943.1431196
+(id:257): Inicio processamento. Timestamp 1595614943.1436818
+(id:259): Inicio gravacao. Timestamp 1595614943.1443303
+(id:257): Fim processamento. cryingbaby. Timestamp 1595614943.3801122
+(id:258): Fim gravacao. Timestamp 1595614943.404305
+(id:258): Inicio processamento. Timestamp 1595614943.4048035
+(id:260): Inicio gravacao. Timestamp 1595614943.4054701
+(id:258): Fim processamento. cryingbaby. Timestamp 1595614943.6416476
+(id:259): Fim gravacao. Timestamp 1595614943.6654572
+(id:259): Inicio processamento. Timestamp 1595614943.6660185
+(id:259): Fim processamento. chainsaw. Timestamp 1595614943.9043174
+(id:260): Fim gravacao. Timestamp 1595614943.926654
+(id:260): Inicio processamento. Timestamp 1595614943.9271631
+(id:261): Inicio gravacao. Timestamp 1595614943.9278207
+(id:260): Fim processamento. chainsaw. Timestamp 1595614944.16381
+(id:262): Inicio gravacao. Timestamp 1595614944.1877406
+(id:261): Fim gravacao. Timestamp 1595614944.447501
+(id:261): Inicio processamento. Timestamp 1595614944.4480395
+(id:263): Inicio gravacao. Timestamp 1595614944.4486876
+(id:261): Fim processamento. chainsaw. Timestamp 1595614944.684374
+(id:262): Fim gravacao. Timestamp 1595614944.7086072
+(id:262): Inicio processamento. Timestamp 1595614944.7091124
+(id:264): Inicio gravacao. Timestamp 1595614944.709777
+(id:262): Fim processamento. chainsaw. Timestamp 1595614944.9456503
+(id:263): Fim gravacao. Timestamp 1595614944.9696987
+(id:263): Inicio processamento. Timestamp 1595614944.9702003
+(id:263): Fim processamento. chainsaw. Timestamp 1595614945.2082539
+(id:264): Fim gravacao. Timestamp 1595614945.230708
+(id:264): Inicio processamento. Timestamp 1595614945.231221
+(id:265): Inicio gravacao. Timestamp 1595614945.2318738
+(id:264): Fim processamento. chainsaw. Timestamp 1595614945.4617965
+(id:266): Inicio gravacao. Timestamp 1595614945.492191
+(id:265): Fim gravacao. Timestamp 1595614945.7521179
+(id:265): Inicio processamento. Timestamp 1595614945.7526605
+(id:267): Inicio gravacao. Timestamp 1595614945.753354
+(id:265): Fim processamento. chainsaw. Timestamp 1595614945.9865332
+(id:266): Fim gravacao. Timestamp 1595614946.013264
+(id:266): Inicio processamento. Timestamp 1595614946.0137732
+(id:268): Inicio gravacao. Timestamp 1595614946.0144134
+(id:266): Fim processamento. chainsaw. Timestamp 1595614946.2499669
+(id:267): Fim gravacao. Timestamp 1595614946.274382
+(id:267): Inicio processamento. Timestamp 1595614946.2748787
+(id:267): Fim processamento. chainsaw. Timestamp 1595614946.5128775
+(id:268): Fim gravacao. Timestamp 1595614946.5354042
+(id:268): Inicio processamento. Timestamp 1595614946.535896
+(id:269): Inicio gravacao. Timestamp 1595614946.536544
+(id:268): Fim processamento. chainsaw. Timestamp 1595614946.7748406
+(id:270): Inicio gravacao. Timestamp 1595614946.7964664
+(id:269): Fim gravacao. Timestamp 1595614947.056184
+(id:269): Inicio processamento. Timestamp 1595614947.0567107
+(id:271): Inicio gravacao. Timestamp 1595614947.0573497
+(id:269): Fim processamento. chainsaw. Timestamp 1595614947.2932458
+(id:270): Fim gravacao. Timestamp 1595614947.317258
+(id:270): Inicio processamento. Timestamp 1595614947.3177578
+(id:272): Inicio gravacao. Timestamp 1595614947.3184032
+(id:270): Fim processamento. chainsaw. Timestamp 1595614947.5552094
+(id:271): Fim gravacao. Timestamp 1595614947.5783257
+(id:271): Inicio processamento. Timestamp 1595614947.57883
+(id:271): Fim processamento. chainsaw. Timestamp 1595614947.813295
+(id:272): Fim gravacao. Timestamp 1595614947.8393362
+(id:272): Inicio processamento. Timestamp 1595614947.839826
+(id:273): Inicio gravacao. Timestamp 1595614947.8404787
+(id:272): Fim processamento. chainsaw. Timestamp 1595614948.0695896
+(id:274): Inicio gravacao. Timestamp 1595614948.1004357
+(id:273): Fim gravacao. Timestamp 1595614948.3601801
+(id:273): Inicio processamento. Timestamp 1595614948.3607283
+(id:275): Inicio gravacao. Timestamp 1595614948.3613741
+(id:273): Fim processamento. chainsaw. Timestamp 1595614948.5852003
+(id:274): Fim gravacao. Timestamp 1595614948.621301
+(id:274): Inicio processamento. Timestamp 1595614948.621805
+(id:276): Inicio gravacao. Timestamp 1595614948.6224349
+(id:274): Fim processamento. chainsaw. Timestamp 1595614948.8436193
+(id:275): Fim gravacao. Timestamp 1595614948.8827693
+(id:275): Inicio processamento. Timestamp 1595614948.883348
+(id:275): Fim processamento. chainsaw. Timestamp 1595614949.106386
+(id:276): Fim gravacao. Timestamp 1595614949.1438715
+(id:276): Inicio processamento. Timestamp 1595614949.1443746
+(id:277): Inicio gravacao. Timestamp 1595614949.145033
+(id:276): Fim processamento. chainsaw. Timestamp 1595614949.3690648
+(id:278): Inicio gravacao. Timestamp 1595614949.4049683
+(id:277): Fim gravacao. Timestamp 1595614949.664728
+(id:277): Inicio processamento. Timestamp 1595614949.6652691
+(id:279): Inicio gravacao. Timestamp 1595614949.6659145
+(id:277): Fim processamento. chainsaw. Timestamp 1595614949.8940203
+(id:278): Fim gravacao. Timestamp 1595614949.925838
+(id:278): Inicio processamento. Timestamp 1595614949.9263349
+(id:280): Inicio gravacao. Timestamp 1595614949.9269674
+(id:278): Fim processamento. chainsaw. Timestamp 1595614950.1531203
+(id:279): Fim gravacao. Timestamp 1595614950.1868865
+(id:279): Inicio processamento. Timestamp 1595614950.187396
+(id:279): Fim processamento. chainsaw. Timestamp 1595614950.4145546
+(id:280): Fim gravacao. Timestamp 1595614950.4479196
+(id:280): Inicio processamento. Timestamp 1595614950.4484255
+(id:281): Inicio gravacao. Timestamp 1595614950.4490752
+(id:280): Fim processamento. chainsaw. Timestamp 1595614950.6768727
+(id:282): Inicio gravacao. Timestamp 1595614950.7090049
+(id:281): Fim gravacao. Timestamp 1595614950.9687212
+(id:281): Inicio processamento. Timestamp 1595614950.9692397
+(id:283): Inicio gravacao. Timestamp 1595614950.9698784
+(id:281): Fim processamento. chainsaw. Timestamp 1595614951.1926441
+(id:282): Fim gravacao. Timestamp 1595614951.2297723
+(id:282): Inicio processamento. Timestamp 1595614951.2302823
+(id:284): Inicio gravacao. Timestamp 1595614951.2309172
+(id:282): Fim processamento. chainsaw. Timestamp 1595614951.4588525
+(id:283): Fim gravacao. Timestamp 1595614951.4908514
+(id:283): Inicio processamento. Timestamp 1595614951.4913664
+(id:284): Fim gravacao. Timestamp 1595614951.7527642
+(id:284): Inicio processamento. Timestamp 1595614951.7534287
+(id:285): Inicio gravacao. Timestamp 1595614951.7540908
+(id:283): Fim processamento. chainsaw. Timestamp 1595614951.7717507
+(id:284): Fim processamento. chainsaw. Timestamp 1595614951.992216
+(id:286): Inicio gravacao. Timestamp 1595614952.014079
+(id:285): Fim gravacao. Timestamp 1595614952.2738194
+(id:285): Inicio processamento. Timestamp 1595614952.2743163
+(id:287): Inicio gravacao. Timestamp 1595614952.2749734
+(id:286): Fim gravacao. Timestamp 1595614952.535142
+(id:286): Inicio processamento. Timestamp 1595614952.5358276
+(id:288): Inicio gravacao. Timestamp 1595614952.5366466
+(id:285): Fim processamento. chainsaw. Timestamp 1595614952.5580173
+(id:286): Fim processamento. chainsaw. Timestamp 1595614952.7779858
+(id:287): Fim gravacao. Timestamp 1595614952.7969155
+(id:287): Inicio processamento. Timestamp 1595614952.797462
+(id:287): Fim processamento. chainsaw. Timestamp 1595614953.0272357
+(id:288): Fim gravacao. Timestamp 1595614953.058001
+(id:288): Inicio processamento. Timestamp 1595614953.058507
+(id:289): Inicio gravacao. Timestamp 1595614953.0591593
+(id:288): Fim processamento. chainsaw. Timestamp 1595614953.2860126
+(id:290): Inicio gravacao. Timestamp 1595614953.319093
+(id:289): Fim gravacao. Timestamp 1595614953.5788317
+(id:289): Inicio processamento. Timestamp 1595614953.5793607
+(id:291): Inicio gravacao. Timestamp 1595614953.5799963
+(id:289): Fim processamento. chainsaw. Timestamp 1595614953.8064094
+(id:290): Fim gravacao. Timestamp 1595614953.8399208
+(id:290): Inicio processamento. Timestamp 1595614953.8404317
+(id:292): Inicio gravacao. Timestamp 1595614953.8410704
+(id:290): Fim processamento. chainsaw. Timestamp 1595614954.0663865
+(id:291): Fim gravacao. Timestamp 1595614954.101006
+(id:291): Inicio processamento. Timestamp 1595614954.101529
+(id:291): Fim processamento. chainsaw. Timestamp 1595614954.3291562
+(id:292): Fim gravacao. Timestamp 1595614954.3623033
+(id:292): Inicio processamento. Timestamp 1595614954.3628159
+(id:293): Inicio gravacao. Timestamp 1595614954.3635664
+(id:292): Fim processamento. chainsaw. Timestamp 1595614954.589097
+(id:294): Inicio gravacao. Timestamp 1595614954.623506
+(id:293): Fim gravacao. Timestamp 1595614954.883226
+(id:293): Inicio processamento. Timestamp 1595614954.8837569
+(id:295): Inicio gravacao. Timestamp 1595614954.8844106
+(id:293): Fim processamento. chainsaw. Timestamp 1595614955.1110282
+(id:294): Fim gravacao. Timestamp 1595614955.1443446
+(id:294): Inicio processamento. Timestamp 1595614955.1448493
+(id:296): Inicio gravacao. Timestamp 1595614955.1454868
+(id:294): Fim processamento. chainsaw. Timestamp 1595614955.3737137
+(id:295): Fim gravacao. Timestamp 1595614955.4054108
+(id:295): Inicio processamento. Timestamp 1595614955.4059238
+(id:295): Fim processamento. chainsaw. Timestamp 1595614955.6347852
+(id:296): Fim gravacao. Timestamp 1595614955.6664422
+(id:296): Inicio processamento. Timestamp 1595614955.6669507
+(id:297): Inicio gravacao. Timestamp 1595614955.6676013
+(id:296): Fim processamento. chainsaw. Timestamp 1595614955.897831
+(id:298): Inicio gravacao. Timestamp 1595614955.9275513
+(id:297): Fim gravacao. Timestamp 1595614956.1872942
+(id:297): Inicio processamento. Timestamp 1595614956.1878383
+(id:299): Inicio gravacao. Timestamp 1595614956.1884818
+(id:297): Fim processamento. chainsaw. Timestamp 1595614956.4184246
+(id:298): Fim gravacao. Timestamp 1595614956.448421
+(id:298): Inicio processamento. Timestamp 1595614956.448929
+(id:300): Inicio gravacao. Timestamp 1595614956.4495592
+(id:298): Fim processamento. chainsaw. Timestamp 1595614956.6762266
+(id:299): Fim gravacao. Timestamp 1595614956.7094777
+(id:299): Inicio processamento. Timestamp 1595614956.709989
+(id:300): Fim gravacao. Timestamp 1595614956.9716947
+(id:300): Inicio processamento. Timestamp 1595614956.9723277
+(id:301): Inicio gravacao. Timestamp 1595614956.9729679
+(id:299): Fim processamento. chainsaw. Timestamp 1595614956.9905412
+(id:300): Fim processamento. chainsaw. Timestamp 1595614957.2104192
+(id:302): Inicio gravacao. Timestamp 1595614957.2329957
+(id:301): Fim gravacao. Timestamp 1595614957.492806
+(id:301): Inicio processamento. Timestamp 1595614957.4933944
+(id:303): Inicio gravacao. Timestamp 1595614957.4940712
+(id:302): Fim gravacao. Timestamp 1595614957.7543447
+(id:302): Inicio processamento. Timestamp 1595614957.7550042
+(id:304): Inicio gravacao. Timestamp 1595614957.7560399
+(id:301): Fim processamento. chainsaw. Timestamp 1595614957.7774549
+(id:302): Fim processamento. chainsaw. Timestamp 1595614957.997034
+(id:303): Fim gravacao. Timestamp 1595614958.016307
+(id:303): Inicio processamento. Timestamp 1595614958.0168014
+(id:303): Fim processamento. chainsaw. Timestamp 1595614958.242357
+(id:304): Fim gravacao. Timestamp 1595614958.2772853
+(id:304): Inicio processamento. Timestamp 1595614958.2777808
+(id:305): Inicio gravacao. Timestamp 1595614958.2784343
+(id:304): Fim processamento. chainsaw. Timestamp 1595614958.5059125
+(id:306): Inicio gravacao. Timestamp 1595614958.5383708
+(id:305): Fim gravacao. Timestamp 1595614958.7981093
+(id:305): Inicio processamento. Timestamp 1595614958.798647
+(id:307): Inicio gravacao. Timestamp 1595614958.799287
+(id:305): Fim processamento. chainsaw. Timestamp 1595614959.029066
+(id:306): Fim gravacao. Timestamp 1595614959.0592172
+(id:306): Inicio processamento. Timestamp 1595614959.059733
+(id:308): Inicio gravacao. Timestamp 1595614959.0603783
+(id:306): Fim processamento. chainsaw. Timestamp 1595614959.2857308
+(id:307): Fim gravacao. Timestamp 1595614959.3202827
+(id:307): Inicio processamento. Timestamp 1595614959.3207858
+(id:307): Fim processamento. chainsaw. Timestamp 1595614959.549066
+(id:308): Fim gravacao. Timestamp 1595614959.5813053
+(id:308): Inicio processamento. Timestamp 1595614959.5818157
+(id:309): Inicio gravacao. Timestamp 1595614959.5824714
+(id:308): Fim processamento. chainsaw. Timestamp 1595614959.8114486
+(id:310): Inicio gravacao. Timestamp 1595614959.8424523
+(id:309): Fim gravacao. Timestamp 1595614960.102497
+(id:309): Inicio processamento. Timestamp 1595614960.1030304
+(id:311): Inicio gravacao. Timestamp 1595614960.1037056
+(id:309): Fim processamento. chainsaw. Timestamp 1595614960.3341157
+(id:310): Fim gravacao. Timestamp 1595614960.3636656
+(id:310): Inicio processamento. Timestamp 1595614960.3642087
+(id:312): Inicio gravacao. Timestamp 1595614960.3648472
+(id:310): Fim processamento. chainsaw. Timestamp 1595614960.5942297
+(id:311): Fim gravacao. Timestamp 1595614960.6248074
+(id:311): Inicio processamento. Timestamp 1595614960.6253183
+(id:311): Fim processamento. chainsaw. Timestamp 1595614960.8536034
+(id:312): Fim gravacao. Timestamp 1595614960.8858438
+(id:312): Inicio processamento. Timestamp 1595614960.886341
+(id:313): Inicio gravacao. Timestamp 1595614960.8869774
+(id:312): Fim processamento. chainsaw. Timestamp 1595614961.115952
+(id:314): Inicio gravacao. Timestamp 1595614961.1468897
+(id:313): Fim gravacao. Timestamp 1595614961.4065962
+(id:313): Inicio processamento. Timestamp 1595614961.4071088
+(id:315): Inicio gravacao. Timestamp 1595614961.4077613
+(id:313): Fim processamento. chainsaw. Timestamp 1595614961.6380112
+(id:314): Fim gravacao. Timestamp 1595614961.6679416
+(id:314): Inicio processamento. Timestamp 1595614961.6684484
+(id:316): Inicio gravacao. Timestamp 1595614961.669082
+(id:314): Fim processamento. chainsaw. Timestamp 1595614961.899053
+(id:315): Fim gravacao. Timestamp 1595614961.929024
+(id:315): Inicio processamento. Timestamp 1595614961.9295452
+(id:315): Fim processamento. chainsaw. Timestamp 1595614962.1573796
+(id:316): Fim gravacao. Timestamp 1595614962.190051
+(id:316): Inicio processamento. Timestamp 1595614962.190565
+(id:317): Inicio gravacao. Timestamp 1595614962.1912117
+(id:316): Fim processamento. chainsaw. Timestamp 1595614962.4204967
+(id:318): Inicio gravacao. Timestamp 1595614962.4511948
+(id:317): Fim gravacao. Timestamp 1595614962.7118359
+(id:317): Inicio processamento. Timestamp 1595614962.7136772
+(id:319): Inicio gravacao. Timestamp 1595614962.7147708
+(id:318): Fim gravacao. Timestamp 1595614962.976414
+(id:318): Inicio processamento. Timestamp 1595614962.9772327
+(id:320): Inicio gravacao. Timestamp 1595614962.9779742
+(id:317): Fim processamento. chainsaw. Timestamp 1595614963.0071242
+(id:318): Fim processamento. chainsaw. Timestamp 1595614963.2228916
+(id:319): Fim gravacao. Timestamp 1595614963.2380776
+(id:319): Inicio processamento. Timestamp 1595614963.2385778
+(id:319): Fim processamento. chainsaw. Timestamp 1595614963.468481
+(id:320): Fim gravacao. Timestamp 1595614963.4990978
+(id:320): Inicio processamento. Timestamp 1595614963.499602
+(id:321): Inicio gravacao. Timestamp 1595614963.5002692
+(id:320): Fim processamento. chainsaw. Timestamp 1595614963.728961
+(id:322): Inicio gravacao. Timestamp 1595614963.7602077

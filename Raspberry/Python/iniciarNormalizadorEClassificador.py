@@ -4,6 +4,7 @@
 # GRAVADA COM O RESPEAKER, EU APLICO O DaS, EXTRAIO AS FEATURES, NORMALIZO O VETOR DE 
 # FEATURES E DEPOIS CLASSIFICO A AMOSTRA. 
 from sklearn.linear_model import SGDClassifier
+from sklearn.neighbors import KNeighborsClassifier
 from sklearn.preprocessing import StandardScaler
 import pandas as pd
 import numpy as np

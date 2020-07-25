@@ -54,16 +54,16 @@ print("Iniciando a aplicacao...")
 # PARAMETROS INICIAIS
 executarAteIdJanela   = 1000
 idDispositivoGravacao = 0
-tempoJanela           = 0.200
+tempoJanela           = 0.500
 freqAmostragem        = 16000
 profundidadeBytes     = 2
 qtdCanais             = 4
 metadeTamanhoJanela   = int((tempoJanela * freqAmostragem)/2)
-caminhoCSVDataset     = "/home/pi/Datasets/SESA_ReSpeaker_16kHz_16bits_200ms_58features_desescalonado_2.csv"
+caminhoCSVDataset     = "/home/pi/Datasets/ESC_3_ReSpeaker_1595612342.0004687/500ms.csv"
 caminhoGravarLog      = "/home/pi/Programming/IC2019/Raspberry/Resultados/Logs/logProcessamento_"+str(time())+".txt"
 
 # INICIANDO OS OBJETOS NECESSARIOS (CLASSIFICADOR, NORMALIZADOR E ESCREVER EM TXT)
-objClassificador, objNormalizador = IniciarObjetos(caminhoCSVDataset, verbose=True)
+objClassificador, objNormalizador = IniciarObjetos(caminhoCSVDataset, classificador="KNeighborsClassifier(n_neighbors=1)", verbose=True)
 objFile = open(caminhoGravarLog, "w")
 
 # INICIANDO O PYAUDIO E STREAM
